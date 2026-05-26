@@ -1,0 +1,7 @@
+% makeindex style file for Genova 1507
+headings_flag  1
+heading_prefix "\\textbf{"
+heading_suffix "}\\nopagebreak\n"
+delim_0        "\\dotfill "
+delim_1        "\\dotfill "
+delim_2        "\\dotfill "

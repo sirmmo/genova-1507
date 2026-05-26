@@ -1,0 +1,270 @@
+% ============================================================
+% SCHEDE PG EXTRA — CASA SPINOLA
+% @rpg-schema: <https://rpg-schema.org/instances/genova1507/crew-spinola>
+%   fitd:hasOptionalMember
+%     <.../pg-fra-ambrogio> ,
+%     <.../pg-ser-drago> .
+% ============================================================
+
+\chapter{Schede PG Extra --- Casa Spinola}
+\index{schede PG!Spinola!extra}
+
+% ════════════════════════════════════════════════════════════
+% PG EXTRA 1 — FRÀ AMBROGIO
+% @rpg-schema: <https://rpg-schema.org/instances/genova1507/pg-fra-ambrogio>
+%   a fitd:Character ;
+%   rdfs:label "Frà Ambrogio da Savona" ;
+%   fitd:crew <.../crew-spinola> ;
+%   fitd:role "Il Cappellano / Il Nodo tra Fede e Finanza" ;
+%   fitd:action [ fitd:actionName "Study" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Consort" ; fitd:dots 4 ] ;
+%   fitd:action [ fitd:actionName "Sway" ; fitd:dots 2 ] .
+% ════════════════════════════════════════════════════════════
+
+\pgheader[SpinolaRed]{Frà Ambrogio da Savona}{Il Cappellano / Il Nodo tra Fede e Finanza}{Spinola}
+\pgquote{La Chiesa perdona i debiti spirituali. La famiglia perdona i debiti finanziari. Io gestisco entrambi.}
+
+\section*{Background \& Motivazione}
+
+\begin{rulebox}{}
+  \textbf{Background:} Cinquantasei anni, agostiniano, cappellano di casa
+  Spinola da ventitré anni. Non è un uomo di Dio nel senso che Fra' Matteo
+  dei Doria è un uomo di Dio — è un amministratore ecclesiastico che ha
+  capito prima di molti che le banche e le chiese servono la stessa funzione
+  sociale: gestire l'incertezza del futuro. Conosce i bilanci del banco meglio
+  di chiunque tranne Raffaele, e conosce i segreti confessionali di metà dei
+  debitori della famiglia.
+
+  \medskip\noindent\textcolor{SpinolaRed}{\textbf{Motivazione:}} Frà Ambrogio
+  crede — sinceramente, senza cinismo — che una Genova libera sia più adatta
+  alla prosperità ordinata del banco. I francesi portano instabilità, e
+  l'instabilità è nemica del credito a lungo termine. Questa è la sua teologia.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+
+\begin{multicols}{2}
+
+\begin{attributoblock}[SpinolaRed]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{1}{Trova informazioni attraverso reti parrocchiali}
+  \azione{Studio}{Study}{3}{Teologia morale, diritto canonico, contabilità ecclesiastica}
+  \azione{Osserva}{Survey}{2}{Legge le persone attraverso ciò che tacciono}
+  \azione{Ingegno}{Tinker}{2}{Sistemi di comunicazione sicura, documenti in codice}
+\end{attributoblock}
+
+\columnbreak
+
+\begin{attributoblock}[SpinolaRed]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{1}{Calligrafia impeccabile, documenti di ogni tipo}
+  \azione{Ombra}{Prowl}{1}{Si muove tra conventi e chiese senza essere notato}
+  \azione{Combattimento}{Skirmish}{0}{Non combatte}
+  \azione{Forza bruta}{Wreck}{0}{No}
+\end{attributoblock}
+
+\end{multicols}
+
+\begin{attributoblock}[SpinolaRed]{RESOLVE --- Spirito}
+  \begin{multicols}{2}
+    \azione{Percezione}{Attune}{2}{Sente la colpa e la paura altrui come un barometro}
+    \azione{Comando}{Command}{2}{Autorità quieta, mai imposta — eppure efficace}
+    \azione{Relazioni}{Consort}{4}{La rete ecclesiastica genovese è sua quanto dei Fieschi}
+    \azione{Persuasione}{Sway}{2}{Convince con la logica della coscienza}
+  \end{multicols}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+  \small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilità Speciale}
+
+% @rpg-schema: <.../pg-fra-ambrogio>
+%   fitd:specialAbility [ rdfs:label "Il Peso della Coscienza" ] .
+
+\begin{spinolabox}{Il Peso della Coscienza}
+  Frà Ambrogio può dichiarare che un PNG — debitore, funzionario, mercante —
+  ha una questione irrisolta di coscienza che lo rende vulnerabile alla
+  sua influenza. Il PNG esegue una richiesta moderata per evitare che la
+  cosa venga resa pubblica, anche senza minaccia esplicita.
+
+  \medskip\noindent\textit{Una volta per sessione. Richiede che il PNG
+  abbia plausibilmente qualcosa da nascondere — il GM conferma.
+  Non funziona su personaggi completamente privi di scrupoli.}
+\end{spinolabox}
+
+\section*{Legami}
+
+\begin{table}[h]
+\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.6cm} X@{}}
+  \toprule\rowcolor{SpinolaRed}
+  \textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+  \midrule
+  Raffaele & Sa che ho letto i libri veri del banco. Siamo complici da
+            vent'anni. Questo è più solido della lealtà. \\
+  \rowcolor{SpinolaRed!8}
+  Lucrezia & La osservo con preoccupazione genuina. Porta troppo.
+            Ho provato a dirglielo. Non ha ascoltato. \\
+  Ser Benedetto & Siamo la stessa cosa in abiti diversi. Lui lo sa.
+                 Nessuno dei due lo dice ad alta voce. \\
+  \rowcolor{SpinolaRed!8}
+  Ippolito & Lo tratto come il nipote che non ho avuto. Questo mi rende
+            cieco ai suoi difetti — e lui lo sa e ne approfitta. \\
+  \bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+  \item Breviario con inserti di carta cifrata — corrispondenza tra conventi
+  \item Copia non ufficiale del registro dei debiti di Raffaele (solo i nomi ecclesiastici)
+  \item Lettera di presentazione firmata dall'Abate di Sant'Andrea — apre ogni porta religiosa
+  \item Una piccola reliquia --- autentica. Vale più di qualsiasi documento.
+\end{goldlist}
+
+\clearpage
+
+\begin{secretbox}
+  \textbf{Segreto:} Frà Ambrogio ha scoperto — attraverso una confessione
+  indiretta, dunque senza il vincolo del sigillo — che il Monsignore Gregorio
+  Fieschi ha trattato con i francesi. Lo sa da un mese. Non lo ha detto agli
+  Spinola perché sta valutando se questa informazione valga di più usata come
+  leva su Gregorio o consegnata alla famiglia.
+
+  \medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}}
+  \textit{Usare questa informazione al momento giusto per massimizzare
+  l'influenza degli Spinola sulla rete ecclesiastica genovese dopo la rivolta.
+  Non per denunciare Gregorio — per farlo lavorare per la famiglia.}
+\end{secretbox}
+
+\clearpage
+
+% ════════════════════════════════════════════════════════════
+% PG EXTRA 2 — SER DRAGO
+% @rpg-schema: <https://rpg-schema.org/instances/genova1507/pg-ser-drago>
+%   a fitd:Character ;
+%   rdfs:label "Ser Drago detto il Silenzioso" ;
+%   fitd:crew <.../crew-spinola> ;
+%   fitd:role "Il Braccio / Il Problema Risolto" ;
+%   fitd:action [ fitd:actionName "Hunt" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Skirmish" ; fitd:dots 4 ] ;
+%   fitd:action [ fitd:actionName "Prowl" ; fitd:dots 3 ] .
+% ════════════════════════════════════════════════════════════
+
+\pgheader[SpinolaRed]{Ser Drago detto il Silenzioso}{Il Braccio / Il Problema Risolto}{Spinola}
+\pgquote{Il mio nome non è importante. Il risultato sì.}
+
+\section*{Background \& Motivazione}
+
+\begin{rulebox}{}
+  \textbf{Background:} Quarant'anni circa — non è sicuro nemmeno lui.
+  Dalmata di nascita, mercenario per vocazione, uomo degli Spinola da
+  otto anni. Non è un assassino — è un risolutore di problemi che a volte
+  i problemi richiedono di risolvere con la violenza. Raffaele lo usa per
+  le situazioni in cui i diplomatici non bastano: recupero crediti pericolosi,
+  scorte sensibili, neutralizzazione di minacce fisiche. È l'unico membro
+  della famiglia con vera competenza militare, e tutti se ne dimenticano
+  finché non serve.
+
+  \medskip\noindent\textcolor{SpinolaRed}{\textbf{Motivazione:}} Drago
+  non ha posizioni politiche. Lavora per chi lo paga. Lavora per gli
+  Spinola da abbastanza tempo da aver accumulato abbastanza per ritirarsi
+  — ma non si è ancora ritirato. Non sa esattamente perché.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+
+\begin{multicols}{2}
+
+\begin{attributoblock}[SpinolaRed]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{3}{Trova persone, valuta minacce, pianifica azioni tattiche}
+  \azione{Studio}{Study}{1}{Lingue (dalmatico, italiano, un po' di turco)}
+  \azione{Osserva}{Survey}{2}{Legge le situazioni in termini di rischio fisico}
+  \azione{Ingegno}{Tinker}{2}{Armi, trappole, ambienti modificati per la violenza}
+\end{attributoblock}
+
+\columnbreak
+
+\begin{attributoblock}[SpinolaRed]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{2}{Lama corta, lavoro preciso}
+  \azione{Ombra}{Prowl}{3}{Movimento silenzioso, posizionamento tattico}
+  \azione{Combattimento}{Skirmish}{4}{Professionale. Efficiente. Senza ornamenti.}
+  \azione{Forza bruta}{Wreck}{3}{Sfonda, disabilita, neutralizza}
+\end{attributoblock}
+
+\end{multicols}
+
+\begin{attributoblock}[SpinolaRed]{RESOLVE --- Spirito}
+  \begin{multicols}{2}
+    \azione{Percezione}{Attune}{2}{Sente quando una situazione sta per degenerare}
+    \azione{Comando}{Command}{1}{Non comanda — esegue e protegge}
+    \azione{Relazioni}{Consort}{1}{Mercenari, bassifondi, persone che non fanno domande}
+    \azione{Persuasione}{Sway}{0}{Non è il suo metodo}
+  \end{multicols}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+  \small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilità Speciale}
+
+% @rpg-schema: <.../pg-ser-drago>
+%   fitd:specialAbility [ rdfs:label "Problema Risolto" ] .
+
+\begin{spinolabox}{Problema Risolto}
+  Quando Drago esegue un'azione violenta o coercitiva, può scegliere di farlo
+  senza lasciare tracce fisiche o testimoniali riconducibili agli Spinola.
+  Il problema sparisce. Le conseguenze narrative esistono ma non toccano
+  la reputazione della famiglia.
+
+  \medskip\noindent\textit{Una volta per colpo. Se Drago subisce Conseguenze
+  Gravi nell'esecuzione, questa protezione decade — lui esiste, e parla.}
+\end{spinolabox}
+
+\section*{Legami}
+
+\begin{table}[h]
+\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.6cm} X@{}}
+  \toprule\rowcolor{SpinolaRed}
+  \textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+  \midrule
+  Raffaele & Mi paga. Non mi chiede mai come ho risolto i problemi.
+            Apprezzo questa qualità in un datore di lavoro. \\
+  \rowcolor{SpinolaRed!8}
+  Lucrezia & L'ho protetta una volta senza che me lo chiedesse.
+            Da allora mi guarda come se dovesse qualcosa. Non deve niente. \\
+  Margherita & Strana alleata. Sa muoversi in posti dove io sono troppo
+              visibile. Ci siamo capiti senza parole. \\
+  \rowcolor{SpinolaRed!8}
+  Ippolito & Mi preoccupa. Ha il coraggio di chi non ha ancora visto
+            abbastanza da capire il costo reale delle cose. \\
+  \bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+  \item Spada corta e coltello — nessuna marca, nessun ornamento
+  \item Cotta di maglia leggera sotto gli abiti borghesi
+  \item Kit per cambiare aspetto rapidamente: tre set di abiti diversi, barba posticcia
+  \item Denaro sufficiente per corrompere una guardia o pagare un passaggio su una barca
+\end{goldlist}
+
+\clearpage
+
+\begin{secretbox}
+  \textbf{Segreto:} Drago ha ricevuto un'offerta da una terza parte — non
+  francesi, non genovesi — per consegnare Raffaele Spinola vivo entro la
+  fine della notte. L'offerta è economicamente irresistibile. Non l'ha ancora
+  accettata. Non sa se è perché ha una coscienza o perché non si fida
+  dell'offerente. La differenza, per lui, è rilevante.
+
+  \medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}}
+  \textit{Capire chi c'è dietro l'offerta prima di decidere cosa farne.
+  Se la fonte è affidabile, valuterà. Se non lo è, consegnerà l'informazione
+  a Raffaele — e farà pagare bene quella lealtà improvvisata.}
+\end{secretbox}

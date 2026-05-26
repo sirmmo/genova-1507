@@ -1,0 +1,738 @@
+% =============================================================================
+% SECTION: Playbook delle Famiglie
+% =============================================================================
+
+% @rpg-schema: genova1507:Famiglia a owl:Class ;
+%   rdfs:subClassOf fitd:Crew ;
+%   rdfs:label "Famiglia" .
+
+% =============================================================================
+\chapter{Casa Doria}
+\label{ch:doria}
+% =============================================================================
+
+% @rpg-schema: genova1507:CasaDoria a genova1507:Famiglia ;
+%   rdfs:label "Casa Doria" ;
+%   rpg:motto "Il mare ci appartiene. Genova ci appartiene." ;
+%   rpg:faction "Ghibellini" ;
+%   rpg:domain "Marina e potere navale" ;
+%   fitd:tier "4" .
+
+\familyheader{doria}{Casa Doria}%
+  {Il mare ci appartiene. Genova ci appartiene.}%
+  {I signori del mare — ammiragli, corsari, costruttori di flotte.}
+
+\begin{multicols}{2}
+
+\section{Identità Storica}
+\label{sec:doria-identita}
+
+I \idx{Doria} sono la famiglia più potente del mare genovese.
+Ammiragli, corsari, costruttori di flotte: il loro nome risuona in tutto il
+\idx{Mediterraneo}. \idx{Ghibellini} per tradizione, hanno combattuto i francesi
+quando conveniva — e ora conviene di nuovo.
+
+La loro forza è la \textbf{Marina}: le galee nel porto obbediscono ai Doria
+prima che al governatore francese. Il loro tallone d'Achille è l'arroganza.
+
+\columnbreak
+
+\subsection{Statistiche di Famiglia}
+
+% @rpg-schema: genova1507:CasaDoria fitd:hasStat
+%   [ fitd:statName "Forza" ; fitd:rating 4 ] ,
+%   [ fitd:statName "Intrigo" ; fitd:rating 2 ] ,
+%   [ fitd:statName "Commercio" ; fitd:rating 3 ] ,
+%   [ fitd:statName "Influenza" ; fitd:rating 4 ] ,
+%   [ fitd:statName "Attenzione" ; fitd:rating 2 ] .
+
+\statrow{Forza}     {4}{5}{Uomini d'arme, marinai, presenza fisica}
+\statrow{Intrigo}   {2}{5}{Manovre politiche, corruzione, informatori}
+\statrow{Commercio} {3}{5}{Risorse economiche, mercanti stranieri}
+\statrow{Influenza} {4}{5}{Peso sulle decisioni della Maona e del porto}
+\statrow{Attenzione}{2}{5}{Intercettare le mosse altrui}
+
+\end{multicols}
+
+\section{Risorse Iniziali}
+\label{sec:doria-risorse}
+
+% @rpg-schema: genova1507:CasaDoria
+%   genova1507:startingMoneta "4" ;
+%   genova1507:startingReputazione "5" ;
+%   genova1507:startingInfluenza "3" ;
+%   genova1507:startingSoldati "4" .
+
+\begin{multicols}{2}
+
+\begin{itemize}
+  \item \textbf{Moneta 4} — Le flotte rendono bene.
+  \item \textbf{Reputazione 5} — Il nome Doria apre ogni porta del porto.
+  \item \textbf{Influenza 3} — Rispettati, ma non amati dai popolani.
+  \item \textbf{Soldati 4} — Marinai armati e mercenari fidati.
+\end{itemize}
+
+\columnbreak
+
+\textbf{Beni Speciali}
+\begin{itemize}
+  \item 2 Galee nel porto
+  \item Arsenale privato nel sestiere di Prè
+  \item Trattato non scritto con i corsari barbareschi
+  \item Accesso al molo privato di Sampierdarena
+\end{itemize}
+
+\end{multicols}
+
+\section{Azioni Speciali}
+\label{sec:doria-azioni}
+
+% @rpg-schema: genova1507:BloccoNavale a fitd:SpecialAbility ;
+%   rdfs:label "Blocco Navale" ;
+%   fitd:crew genova1507:CasaDoria ;
+%   fitd:actionRoll "Forza + Influenza" .
+
+\abilitybox{doria}{⚓ Blocco Navale}{%
+  I Doria ordinano alle galee di bloccare il porto. Nessuna nave francese
+  entra o esce. Effetto immediato: qualsiasi famiglia che dipende da risorse
+  marittime perde 1 Moneta. I francesi nel castello di Castelletto sono
+  isolati dai rifornimenti via mare.%
+}{%
+  Tiro su \textsc{Forza + Influenza}. Successo pieno: il blocco regge per
+  tutta la sessione. Successo parziale: regge, ma costa 1 Soldato e
+  provoca una Rappresaglia.%
+}
+
+% @rpg-schema: genova1507:ChiamataAlleArmi a fitd:SpecialAbility ;
+%   rdfs:label "Chiamata alle Armi" ;
+%   fitd:crew genova1507:CasaDoria ;
+%   fitd:actionRoll "Influenza" ;
+%   fitd:cost "2 Moneta" .
+
+\abilitybox{doria}{⚔ Chiamata alle Armi}{%
+  I Doria alzano il loro stendardo. Aggiunge +1 Soldato a ogni altra
+  famiglia genovese con almeno 1 Reputazione con i Doria. Costa 2 Moneta.%
+}{%
+  Tiro su \textsc{Influenza}. Successo pieno: tutte le famiglie ricevono
+  il bonus. Successo parziale: solo quelle con Reputazione 3+.%
+}
+
+% @rpg-schema: genova1507:ReteDiSegnalatori a fitd:SpecialAbility ;
+%   rdfs:label "Rete di Segnalatori" ;
+%   fitd:crew genova1507:CasaDoria ;
+%   fitd:actionRoll "Attenzione" ;
+%   fitd:frequency "una volta per sessione" .
+
+\abilitybox{doria}{🜲 Rete di Segnalatori}{%
+  I Doria hanno vedette in ogni torre del porto e nelle colline sopra
+  Genova. Una volta per sessione possono intercettare le comunicazioni
+  di un'altra famiglia, scoprendo il loro prossimo Colpo pianificato.%
+}{%
+  Tiro su \textsc{Attenzione}. Successo pieno: informazione completa.
+  Successo parziale: informazione parziale o ritardata.%
+}
+
+\section{Colpo Riservato: La Flotta del Tradimento}
+\label{sec:doria-colpo}
+
+% @rpg-schema: genova1507:FlottaDelTradimento a fitd:Mission ;
+%   rdfs:label "La Flotta del Tradimento" ;
+%   fitd:exclusiveTo genova1507:CasaDoria ;
+%   fitd:clockAdvance "+2" ;
+%   genova1507:vulnerability genova1507:CasaGrimaldi .
+
+\begin{rulebox}[DoriaBlue]{Scenario}
+Un convoglio francese con i pagamenti per la guarnigione è in arrivo.
+I Doria possono intercettarlo con le loro galee, privare i soldati
+francesi degli stipendi e consegnare il carico alla rivolta.
+\end{rulebox}
+
+\heistphase{1}{Ricognizione}{Individuare la rotta del convoglio. \textbf{Tiro: Attenzione.}
+  Fallimento: i francesi cambiano rotta.}
+
+\heistphase{2}{Intercettazione}{Le galee intercettano il convoglio in acque genovesi.
+  \textbf{Tiro: Forza.} Fallimento: scontro navale, perdita di Soldati.}
+
+\heistphase{3}{Distribuzione}{Il denaro confiscato va a tutte le famiglie genovesi
+  (+2 Moneta a tutti), oppure viene trattenuto dai Doria soltanto (+4 Moneta ma −2
+  Reputazione con le altre famiglie).}
+
+\textbf{Ricompensa:} +2 al Clock Condiviso. Se il denaro è distribuito, +1 Reputazione
+con tutte le famiglie.
+
+\textit{Vulnerabilità: I Grimaldi conoscono le rotte dei mercanti.
+Se interferiscono, la Fase~1 fallisce automaticamente.}
+
+\section{Contatti}
+\label{sec:doria-contatti}
+
+% @rpg-schema: genova1507:AndreaDoria a rpg:NPC ;
+%   rdfs:label "Andrea Doria" ;
+%   rpg:affiliation genova1507:CasaDoria ;
+%   rpg:role "Ammiraglio" .
+% @rpg-schema: genova1507:FraGiacomo a rpg:NPC ;
+%   rdfs:label "Fra' Giacomo" ;
+%   rpg:affiliation genova1507:CasaDoria ;
+%   rpg:role "Cappellano di flotta" .
+
+\begin{center}
+\rowcolors{2}{LightBG}{white}
+\begin{tabularx}{\textwidth}{L{2.8cm} L{2.8cm} X}
+  \toprule
+  \textbf{Nome} & \textbf{Ruolo} & \textbf{Note} \\
+  \midrule
+  Andrea Doria      & Ammiraglio, 34 anni     & Non ancora il gigante che diventerà. Ambizioso, freddo, calcolatore. \\
+  Fra' Giacomo      & Cappellano di flotta    & Conosce i segreti di confessione di metà dell'equipaggio. Leale per debito di sangue. \\
+  Caterina Spinola  & Moglie del capofamiglia & Nata Spinola. Il matrimonio è un trattato di pace — lei informa ancora la sua famiglia di origine. \\
+  Ibn Yusuf         & Mercante moro, Porto    & Intermediario con i mercati nordafricani. Fornisce informazioni sui movimenti navali francesi. \\
+  Matteo il Calafato& Caposquadra arsenale    & Controlla gli operai. Se guadagnato, i Doria possono sabotare qualsiasi nave in porto. \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Ruolo nel Colpo Globale}
+\label{sec:doria-globale}
+
+I Doria controllano il sestiere di \idx{Prè} e il porto vecchio. Il loro compito è impedire
+che le truppe francesi sbarchino dal Castelletto o ricevano rinforzi via mare.
+
+\textbf{Tiro:} Forza + Soldati disponibili. Successo: le truppe francesi rimangono
+bloccate per 3 ore. Successo parziale: bloccate per 1 ora, ma una compagnia sfonda.
+
+\textit{Interferenza: I Doria possono offrire al governatore francese una via di fuga
+in cambio di concessioni commerciali. +3 Moneta ma −3 Reputazione e nessun contributo al Clock.}
+
+% =============================================================================
+\chapter{Casa Spinola}
+\label{ch:spinola}
+% =============================================================================
+
+% @rpg-schema: genova1507:CasaSpinola a genova1507:Famiglia ;
+%   rdfs:label "Casa Spinola" ;
+%   rpg:motto "Chi conosce il prezzo di ogni cosa conosce il segreto di ogni uomo." ;
+%   rpg:faction "Ghibellini" ;
+%   rpg:domain "Finanza e diplomazia" ;
+%   fitd:tier "4" ;
+%   rpg:rival genova1507:CasaDoria .
+
+\familyheader{spinola}{Casa Spinola}%
+  {Chi conosce il prezzo di ogni cosa conosce il segreto di ogni uomo.}%
+  {Banchieri, diplomatici, prestatori a principi e papi.}
+
+\begin{multicols}{2}
+
+\section{Identità Storica}
+\label{sec:spinola-identita}
+
+Gli \idx{Spinola} giocano con parole e denaro dove i Doria giocano con spade e galee.
+La loro rete di informazioni è la più capillare di Genova.
+Storici rivali dei Doria, sanno che la rivolta è inevitabile.
+La domanda è: chi la guiderà \textit{dopo}?
+
+\columnbreak
+
+\subsection{Statistiche di Famiglia}
+
+% @rpg-schema: genova1507:CasaSpinola fitd:hasStat
+%   [ fitd:statName "Forza" ; fitd:rating 2 ] ,
+%   [ fitd:statName "Intrigo" ; fitd:rating 5 ] ,
+%   [ fitd:statName "Commercio" ; fitd:rating 5 ] ,
+%   [ fitd:statName "Influenza" ; fitd:rating 4 ] ,
+%   [ fitd:statName "Attenzione" ; fitd:rating 4 ] .
+
+\statrow{Forza}     {2}{5}{Guardie private, bravi assoldati}
+\statrow{Intrigo}   {5}{5}{Spie, ricatti, manovre diplomatiche}
+\statrow{Commercio} {5}{5}{Il Banco Spinola finanzia mezzo continente}
+\statrow{Influenza} {4}{5}{Legami con Milano, Roma, Venezia, Francia}
+\statrow{Attenzione}{4}{5}{Rete di informatori in ogni sestiere e porto}
+
+\end{multicols}
+
+\section{Risorse Iniziali}
+
+% @rpg-schema: genova1507:CasaSpinola
+%   genova1507:startingMoneta "6" ;
+%   genova1507:startingReputazione "4" ;
+%   genova1507:startingInfluenza "5" ;
+%   genova1507:startingSoldati "2" .
+
+\begin{multicols}{2}
+\begin{itemize}
+  \item \textbf{Moneta 6} — Il Banco Spinola è la famiglia più ricca.
+  \item \textbf{Reputazione 4} — Rispettati, ma considerati freddi.
+  \item \textbf{Influenza 5} — Tentacoli ovunque, anche a corte francese.
+  \item \textbf{Soldati 2} — Non la loro specialità.
+\end{itemize}
+\columnbreak
+\textbf{Beni Speciali}
+\begin{itemize}
+  \item Registro dei debiti: chi deve cosa a chi a Genova
+  \item Un agente dormiente presso il governatore francese
+  \item Lettere di credito su Milano (3 Moneta extra)
+  \item Casa sicura nel sestiere di Portoria
+\end{itemize}
+\end{multicols}
+
+\section{Azioni Speciali}
+
+% @rpg-schema: genova1507:ChiamataDelDebito a fitd:SpecialAbility ;
+%   rdfs:label "Chiamata del Debito" ;
+%   fitd:crew genova1507:CasaSpinola ;
+%   fitd:actionRoll "Intrigo" .
+
+\abilitybox{spinola}{💰 Chiamata del Debito}{%
+  Gli Spinola scelgono un PNG e riscuotono un debito pendente. Ottengono
+  immediatamente ciò che chiedono (informazioni, un favore, una risorsa),
+  oppure il bersaglio subisce una Complicazione pubblica. Funziona anche
+  sul governatore francese.%
+}{%
+  Tiro su \textsc{Intrigo}. Successo pieno: il debito è riscosso pienamente.
+  Successo parziale: riscosso parzialmente, il rapporto si deteriora.%
+}
+
+% @rpg-schema: genova1507:AgenteDoppio a fitd:SpecialAbility ;
+%   rdfs:label "Agente Doppio" ;
+%   fitd:crew genova1507:CasaSpinola ;
+%   fitd:frequency "una volta per sessione" .
+
+\abilitybox{spinola}{🕵 Agente Doppio}{%
+  Una volta per sessione, gli Spinola rivelano di avere un agente
+  nell'organizzazione di un'altra famiglia (o dei francesi). Scelgono:
+  estrarre informazioni (scoprono il prossimo Colpo) oppure inserire
+  disinformazione (la famiglia bersaglio subisce −1d al prossimo tiro).%
+}{%
+  Tiro su \textsc{Intrigo}. Successo pieno: effetto pieno. Successo
+  parziale: l'agente viene bruciato ma l'effetto si verifica.%
+}
+
+% @rpg-schema: genova1507:TrattativaInSospeso a fitd:SpecialAbility ;
+%   rdfs:label "Trattativa in Sospeso" ;
+%   fitd:crew genova1507:CasaSpinola .
+
+\abilitybox{spinola}{📜 Trattativa in Sospeso}{%
+  Gli Spinola avviano una trattativa segreta con chiunque. Non risolve
+  nulla subito, ma crea una \textbf{Pressione}: il bersaglio deve rispondere
+  prima della fine della sessione o perdere 2 Reputazione.%
+}{%
+  Nessun tiro per avviare. Il tiro avviene quando il bersaglio risponde.%
+}
+
+\section{Colpo Riservato: Il Prezzo del Silenzio}
+\label{sec:spinola-colpo}
+
+% @rpg-schema: genova1507:PrezzoDelSilenzio a fitd:Mission ;
+%   rdfs:label "Il Prezzo del Silenzio" ;
+%   fitd:exclusiveTo genova1507:CasaSpinola ;
+%   fitd:clockAdvance "+2" ;
+%   genova1507:vulnerability genova1507:CasaFieschi .
+
+\begin{rulebox}[SpinolaCrimson]{Scenario}
+Il governatore Gian Giacomo Trivulzio ha un vizio segreto e debiti con
+il banco Spinola. La famiglia può costringerlo a ritirare le truppe
+dai quartieri popolari la notte della rivolta — non tradendo la Francia,
+ma guardando altrove.
+\end{rulebox}
+
+\heistphase{1}{Raccolta prove}{Autenticare le prove del vizio del governatore.
+  \textbf{Tiro: Attenzione.} Fallimento: le prove risultano insufficienti.}
+
+\heistphase{2}{L'incontro}{Un rappresentante Spinola incontra segretamente Trivulzio.
+  \textbf{Tiro: Intrigo.} Fallimento: Trivulzio chiama le guardie.}
+
+\heistphase{3}{L'accordo}{Se riesce, il governatore garantisce la neutralità
+  delle truppe in 3 sestieri. +1 Soldato effettivo a ogni famiglia genovese.}
+
+\textbf{Ricompensa:} +2 al Clock. +1 Influenza permanente per gli Spinola.
+
+\textit{Vulnerabilità: I Fieschi hanno canali con il clero vicino a Trivulzio.
+Se interferiscono, le prove vengono «smarrite».}
+
+\section{Contatti}
+
+% @rpg-schema: genova1507:RaffaeleSpinola a rpg:NPC ;
+%   rdfs:label "Raffaele Spinola" ;
+%   rpg:affiliation genova1507:CasaSpinola ;
+%   rpg:role "Banchiere senior" .
+
+\begin{center}
+\rowcolors{2}{LightBG}{white}
+\begin{tabularx}{\textwidth}{L{2.8cm} L{2.8cm} X}
+  \toprule
+  \textbf{Nome} & \textbf{Ruolo} & \textbf{Note} \\
+  \midrule
+  Raffaele Spinola  & Banchiere senior, 58a   & Capo effettivo. Raramente visibile, sempre presente. \\
+  Lucrezia d'Este   & Nobildonna ferrarese    & Intermediaria con Ferrara. Ha informazioni su movimenti di truppe nel nord. \\
+  Ser Benedetto Adorno & Notaio, San Giorgio & Custodisce i veri libri contabili. Ricattabile. \\
+  L'Olandese        & Identità sconosciuta    & Fornisce notizie sui movimenti navali francesi. Vuole solo denaro. \\
+  Suor Agnese       & Badessa, S. Chiara      & Gestisce una rete di messaggere tra conventi — il sistema più sicuro di Genova. \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Ruolo nel Colpo Globale}
+
+Gli Spinola gestiscono la comunicazione tra i sestieri. Il loro compito è
+far circolare il segnale concordato perché i rivoltosi sappiano quando agire.
+
+\textbf{Tiro:} Intrigo + Influenza. Successo: tutti i sestieri si alzano
+simultaneamente (+1 al conteggio successi del Colpo Globale).
+
+\textit{Interferenza: Diffondono un segnale falso. +2 Influenza dalla Francia,
+−1 dal conteggio del Colpo Globale.}
+
+% =============================================================================
+\chapter{Casa Fieschi}
+\label{ch:fieschi}
+% =============================================================================
+
+% @rpg-schema: genova1507:CasaFieschi a genova1507:Famiglia ;
+%   rdfs:label "Casa Fieschi" ;
+%   rpg:motto "Dio vuole Genova libera. E Dio parla attraverso di noi." ;
+%   rpg:faction "Guelfi" ;
+%   rpg:domain "Potere feudale ed ecclesiastico" ;
+%   fitd:tier "3" .
+
+\familyheader{fieschi}{Casa Fieschi}%
+  {Dio vuole Genova libera. E Dio parla attraverso di noi.}%
+  {Conti di Lavagna — feudatari dell'entroterra, protettori della Chiesa.}
+
+\begin{multicols}{2}
+
+\section{Identità Storica}
+\label{sec:fieschi-identita}
+
+I \idx{Fieschi} sono conti di \idx{Lavagna}, feudatari dell'entroterra ligure,
+e da secoli forniscono vescovi, cardinali e papi alla Chiesa.
+\idx{Guelfi} storici. Il loro potere è duplice: le terre nell'entroterra
+e la rete ecclesiastica che nessun occupante osa toccare.
+
+\columnbreak
+
+\subsection{Statistiche di Famiglia}
+
+% @rpg-schema: genova1507:CasaFieschi fitd:hasStat
+%   [ fitd:statName "Forza" ; fitd:rating 3 ] ,
+%   [ fitd:statName "Intrigo" ; fitd:rating 3 ] ,
+%   [ fitd:statName "Commercio" ; fitd:rating 2 ] ,
+%   [ fitd:statName "Influenza" ; fitd:rating 5 ] ,
+%   [ fitd:statName "Attenzione" ; fitd:rating 3 ] .
+
+\statrow{Forza}     {3}{5}{Miliziani feudali, contadini armati}
+\statrow{Intrigo}   {3}{5}{Influenza ecclesiastica, controllo popolare}
+\statrow{Commercio} {2}{5}{Ricchezza fondiaria, non commerciale}
+\statrow{Influenza} {5}{5}{La più alta: clero e quartieri popolari}
+\statrow{Attenzione}{3}{5}{Confessionali, messaggeri monastici}
+
+\end{multicols}
+
+\section{Risorse Iniziali}
+
+% @rpg-schema: genova1507:CasaFieschi
+%   genova1507:startingMoneta "2" ;
+%   genova1507:startingReputazione "5" ;
+%   genova1507:startingInfluenza "6" ;
+%   genova1507:startingSoldati "3" .
+
+\begin{multicols}{2}
+\begin{itemize}
+  \item \textbf{Moneta 2} — Ricchi di terre, poveri di liquidi.
+  \item \textbf{Reputazione 5} — Amati dai popolani, rispettati dalla nobiltà.
+  \item \textbf{Influenza 6} — Massima. Il vescovo è un cugino.
+  \item \textbf{Soldati 3} — Miliziani fedeli, non mercenari.
+\end{itemize}
+\columnbreak
+\textbf{Beni Speciali}
+\begin{itemize}
+  \item Castello di Montoggio — rifugio inespugnabile
+  \item Bollatura papale per «azioni straordinarie»
+  \item Rete di chiese: comunicazioni sicure via clero
+  \item Censo feudale: 200 contadini armabili (1 sessione prep)
+\end{itemize}
+\end{multicols}
+
+\section{Azioni Speciali}
+
+% @rpg-schema: genova1507:VoceDelPopolo a fitd:SpecialAbility ;
+%   rdfs:label "Voce del Popolo" ;
+%   fitd:crew genova1507:CasaFieschi ;
+%   fitd:actionRoll "Influenza" .
+
+\abilitybox{fieschi}{⛪ Voce del Popolo}{%
+  I Fieschi fanno predicare dai pulpiti di tutta Genova. +2 Reputazione
+  immediata, convertibile in Soldati improvvisati (1 Rep = 1 Soldato, max 3)
+  per la durata di una sola azione.%
+}{%
+  Tiro su \textsc{Influenza}. Successo pieno: effetto pieno.
+  Successo parziale: +1 Reputazione e 1 Soldato improvvisato.%
+}
+
+% @rpg-schema: genova1507:Santuario a fitd:SpecialAbility ;
+%   rdfs:label "Santuario" ;
+%   fitd:crew genova1507:CasaFieschi ;
+%   fitd:cost "1 Influenza" .
+
+\abilitybox{fieschi}{✝ Santuario}{%
+  I Fieschi dichiarano una chiesa o un palazzo come Santuario.
+  Chiunque vi si rifugi è intoccabile per la sessione — anche dai francesi,
+  che non osano violare il diritto d'asilo pubblicamente.%
+}{%
+  Nessun tiro. Costa 1 Influenza.%
+}
+
+% @rpg-schema: genova1507:ChiamataFeudale a fitd:SpecialAbility ;
+%   rdfs:label "Chiamata Feudale" ;
+%   fitd:crew genova1507:CasaFieschi ;
+%   fitd:actionRoll "Forza" ;
+%   fitd:preparationRequired "true" .
+
+\abilitybox{fieschi}{📯 Chiamata Feudale}{%
+  Richiama i miliziani dall'entroterra. Richiede 1 sessione di preparazione
+  (dichiarata in anticipo). Quando arrivano: +3 Soldati temporanei. Se il
+  percorso non è protetto, arrivano solo in metà.%
+}{%
+  Tiro su \textsc{Forza} per il viaggio. Successo pieno: tutti arrivano.
+  Successo parziale: metà arrivano, esausti (−1 ai tiri di Forza quella notte).%
+}
+
+\section{Colpo Riservato: Le Campane di San Lorenzo}
+\label{sec:fieschi-colpo}
+
+% @rpg-schema: genova1507:CampaneDiSanLorenzo a fitd:Mission ;
+%   rdfs:label "Le Campane di San Lorenzo" ;
+%   fitd:exclusiveTo genova1507:CasaFieschi ;
+%   fitd:clockAdvance "+2" ;
+%   fitd:bonus "+1 Soldato improvvisato gratuito a tutti i tavoli" ;
+%   genova1507:vulnerability genova1507:CasaDoria .
+
+\begin{rulebox}[FieschiGreen]{Scenario}
+La cattedrale di San Lorenzo è il cuore spirituale di Genova.
+I Fieschi, tramite il vescovo cugino, possono far suonare le campane
+al momento preciso della rivolta — il segnale che tutto il popolo aspetta.
+\end{rulebox}
+
+\heistphase{1}{Ricognizione sacra}{Verificare lo stato della guarnigione nella cattedrale.
+  \textbf{Tiro: Attenzione.} Fallimento: i francesi vengono avvisati dell'interesse dei Fieschi.}
+
+\heistphase{2}{Sgomberamento}{Se ci sono soldati francesi, allontanarli (pretesto
+  religioso, forza, o corruzione). \textbf{Tiro: Influenza o Forza.}
+  Fallimento: scontro aperto davanti alla cattedrale.}
+
+\heistphase{3}{Il segnale}{Il vescovo suona le campane al momento concordato.
+  La città insorge. Tutti i tavoli guadagnano +1 Soldato improvvisato gratuito.}
+
+\textbf{Ricompensa:} +2 al Clock Condiviso.
+
+\textit{Vulnerabilità: I Doria controllano il porto e i sestieri vicini.
+Se interferiscono, distraggono il vescovo con una crisi portuale urgente.}
+
+\section{Contatti}
+
+% @rpg-schema: genova1507:NiccoloFieschi a rpg:NPC ;
+%   rdfs:label "Niccolò Fieschi" ;
+%   rpg:affiliation genova1507:CasaFieschi ;
+%   rpg:role "Conte di Lavagna" .
+
+\begin{center}
+\rowcolors{2}{LightBG}{white}
+\begin{tabularx}{\textwidth}{L{2.8cm} L{2.8cm} X}
+  \toprule
+  \textbf{Nome} & \textbf{Ruolo} & \textbf{Note} \\
+  \midrule
+  Niccolò Fieschi   & Conte di Lavagna, 45a   & Capo famiglia. Fede sincera e cinismo politico in egual misura. \\
+  Mons. Gregorio    & Vescovo ausiliare       & Controlla San Lorenzo. Vuole diventare arcivescovo — manipolabile. \\
+  Frà Tomaso        & Domenicano, predicatore & L'oratore più potente di Genova. Non si corrompe, ma può essere convinto. \\
+  Margherita Vedova & Capo quartiere Portoria & Più potere di strada di chiunque altro. Se guadagnata, porta tre sestieri. \\
+  Cap. Hernando Vaz & Comandante portoghese   & Mercenari reclutabili, ma vogliono garanzie di pagamento. \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Ruolo nel Colpo Globale}
+
+I Fieschi gestiscono la mobilitazione popolare. Senza di loro, la rivolta
+è solo una rissa tra nobili.
+
+\textbf{Tiro:} Influenza + Reputazione. Successo: +1 Soldato improvvisato per
+ogni tavolo partecipante. Successo parziale: il popolo si muove caoticamente
+(+1 Soldato e 1 Complicazione per tavolo).
+
+\textit{Interferenza: Trattano con i francesi per l'autonomia ecclesiastica.
++2 Influenza permanente ma −4 Reputazione quando emerge (e emerge sempre).}
+
+% =============================================================================
+\chapter{Casa Grimaldi}
+\label{ch:grimaldi}
+% =============================================================================
+
+% @rpg-schema: genova1507:CasaGrimaldi a genova1507:Famiglia ;
+%   rdfs:label "Casa Grimaldi" ;
+%   rpg:motto "Monaco è nostra. E Monaco non si arrende mai." ;
+%   rpg:domain "Commercio internazionale e doppio gioco" ;
+%   rpg:territory "Monaco" ;
+%   fitd:tier "3" .
+
+\familyheader{grimaldi}{Casa Grimaldi}%
+  {Monaco è nostra. E Monaco non si arrende mai.}%
+  {Signori di Monaco — l'unica famiglia con un territorio davvero autonomo.}
+
+\begin{multicols}{2}
+
+\section{Identità Storica}
+\label{sec:grimaldi-identita}
+
+I \idx{Grimaldi} sono l'unica famiglia genovese con un territorio autonomo:
+\idx{Monaco}, conquistata nel 1297 da Francesco Grimaldi travestito da monaco
+francescano. Vivono in un doppio mondo — genovesi di sangue, signori sovrani
+di fatto. Possono vincere anche perdendo.
+
+\columnbreak
+
+\subsection{Statistiche di Famiglia}
+
+% @rpg-schema: genova1507:CasaGrimaldi fitd:hasStat
+%   [ fitd:statName "Forza" ; fitd:rating 2 ] ,
+%   [ fitd:statName "Intrigo" ; fitd:rating 4 ] ,
+%   [ fitd:statName "Commercio" ; fitd:rating 5 ] ,
+%   [ fitd:statName "Influenza" ; fitd:rating 3 ] ,
+%   [ fitd:statName "Attenzione" ; fitd:rating 4 ] .
+
+\statrow{Forza}     {2}{5}{Guardie di Monaco, mercenari corsi}
+\statrow{Intrigo}   {4}{5}{Doppi giochi, contatti internazionali}
+\statrow{Commercio} {5}{5}{Porto di Monaco e rotte esclusive}
+\statrow{Influenza} {3}{5}{Rispettati ma percepiti come estranei}
+\statrow{Attenzione}{4}{5}{Informatori lungo tutte le rotte costiere}
+
+\end{multicols}
+
+\section{Risorse Iniziali}
+
+% @rpg-schema: genova1507:CasaGrimaldi
+%   genova1507:startingMoneta "5" ;
+%   genova1507:startingReputazione "3" ;
+%   genova1507:startingInfluenza "4" ;
+%   genova1507:startingSoldati "2" .
+
+\begin{multicols}{2}
+\begin{itemize}
+  \item \textbf{Moneta 5} — Monaco è un porto florido.
+  \item \textbf{Reputazione 3} — Considerati «quasi stranieri» a Genova.
+  \item \textbf{Influenza 4} — Fondamentale nei circuiti commerciali.
+  \item \textbf{Soldati 2} — Pochi, ma la posizione geografica li protegge.
+\end{itemize}
+\columnbreak
+\textbf{Beni Speciali}
+\begin{itemize}
+  \item Monaco: territorio rifugio (impossibile attaccarli fisicamente)
+  \item Rete commerciale: movimenti navali di tutto il Mediteraneo
+  \item Contatto alla corte di Luigi~XII (doppio agente)
+  \item Lettere di transito: muovono persone fuori da Genova
+\end{itemize}
+\end{multicols}
+
+\section{Azioni Speciali}
+
+% @rpg-schema: genova1507:RotteEsclusive a fitd:SpecialAbility ;
+%   rdfs:label "Rotte Esclusive" ;
+%   fitd:crew genova1507:CasaGrimaldi .
+
+\abilitybox{grimaldi}{🚢 Rotte Esclusive}{%
+  I Grimaldi controllano rotte commerciali che passano per Monaco.
+  Chiudere una rotta: una famiglia perde 1 Moneta per segmento di sessione.
+  Aprire una rotta a una famiglia amica: quella famiglia guadagna +2 Moneta.%
+}{%
+  Nessun tiro per attivare. Tiro su \textsc{Commercio} se si chiude una
+  rotta che qualcuno tenta di forzare.%
+}
+
+% @rpg-schema: genova1507:MonacoTravestito a fitd:SpecialAbility ;
+%   rdfs:label "Il Monaco Travestito" ;
+%   fitd:crew genova1507:CasaGrimaldi ;
+%   fitd:actionRoll "Intrigo" .
+
+\abilitybox{grimaldi}{🎭 Il Monaco Travestito}{%
+  In onore del fondatore, un agente Grimaldi si muove sotto falsa identità
+  in qualsiasi sestiere — incluse aree controllate dai francesi.
+  Può compiere una singola azione senza essere associato ai Grimaldi.%
+}{%
+  Tiro su \textsc{Intrigo}. Successo pieno: l'identità regge per tutta la sessione.
+  Successo parziale: l'azione riesce ma l'identità viene compromessa alla fine.%
+}
+
+% @rpg-schema: genova1507:ViaDiFuga a fitd:SpecialAbility ;
+%   rdfs:label "Via di Fuga" ;
+%   fitd:crew genova1507:CasaGrimaldi .
+
+\abilitybox{grimaldi}{🗝 Via di Fuga}{%
+  I Grimaldi offrono a qualsiasi PNG una via di fuga sicura verso Monaco.
+  Questo crea un debito — e i debiti hanno valore.%
+}{%
+  Nessun tiro per offrire. Tiro su \textsc{Intrigo} contro la Diffidenza
+  del bersaglio se non ha ragione di fidarsi.%
+}
+
+\section{Colpo Riservato: Il Prezzo dell'Autonomia}
+\label{sec:grimaldi-colpo}
+
+% @rpg-schema: genova1507:PrezzoAutonomia a fitd:Mission ;
+%   rdfs:label "Il Prezzo dell'Autonomia" ;
+%   fitd:exclusiveTo genova1507:CasaGrimaldi ;
+%   fitd:clockAdvance "+2" ;
+%   fitd:bonus "Monaco riconosciuta come feudo autonomo" ;
+%   genova1507:vulnerability genova1507:CasaSpinola .
+
+\begin{rulebox}[GrimaldiPurple]{Scenario}
+I Grimaldi contattano segretamente il rappresentante di Luigi~XII a Genova.
+In cambio del riconoscimento formale della sovranità di Monaco, si impegnano
+a non ostacolare il ritiro ordinato delle truppe francesi.
+È un tradimento? È diplomazia? Dipende da chi vince.
+\end{rulebox}
+
+\heistphase{1}{Il canale segreto}{Stabilire contatto sicuro col rappresentante francese
+  senza che le altre famiglie lo scoprano.
+  \textbf{Tiro: Intrigo.} Fallimento: una famiglia scopre la trattativa.}
+
+\heistphase{2}{La proposta}{Presentare i termini. \textbf{Tiro: Commercio}
+  (si tratta come un affare). Fallimento: i francesi chiedono troppo o non si fidano.}
+
+\heistphase{3}{L'accordo}{Monaco è riconosciuta. I francesi si ritirano «ordinatamente»
+  (il clock non arretra per il loro ritiro). Se le altre famiglie scoprono la
+  trattativa: −3 Reputazione.}
+
+\textbf{Ricompensa:} +2 al Clock. I Grimaldi ottengono Monaco riconosciuta —
+vittoria indipendente garantita.
+
+\textit{Vulnerabilità: Gli Spinola hanno un agente vicino al rappresentante francese.
+Possono intercettare il messaggio nella Fase~1.}
+
+\section{Contatti}
+
+% @rpg-schema: genova1507:RainierGrimaldi a rpg:NPC ;
+%   rdfs:label "Rainier II Grimaldi" ;
+%   rpg:affiliation genova1507:CasaGrimaldi ;
+%   rpg:role "Signore di Monaco" .
+
+\begin{center}
+\rowcolors{2}{LightBG}{white}
+\begin{tabularx}{\textwidth}{L{2.8cm} L{2.8cm} X}
+  \toprule
+  \textbf{Nome} & \textbf{Ruolo} & \textbf{Note} \\
+  \midrule
+  Rainier II Grimaldi& Signore di Monaco, 51a & Pragmatico. La sopravvivenza di Monaco viene prima di tutto. \\
+  Isabeau de Valois  & Dama di corte francese & Osserva per conto di Luigi~XII. I Grimaldi la coltivano e la usano. \\
+  Costantino il Greco& Mercante di sete       & Veneziano di adozione. Vende informazioni a chiunque paghi. \\
+  Battista Grimaldi  & Cap. guardie Monaco    & Comanda le 40 guardie. Disponibile solo se richiamato (1 sessione). \\
+  Fra' Sebastiano    & Minorita, Castelletto  & Vive sopra la guarnigione francese. Osserva tutto. A pagamento. \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Ruolo nel Colpo Globale}
+
+I Grimaldi gestiscono la logistica nascosta: merci, armi di contrabbando,
+e comunicazioni tra i sestieri durante la notte.
+
+\textbf{Tiro:} Commercio + Influenza. Successo: ogni tavolo può usare
+gratuitamente 1 Risorsa extra quella notte.
+
+\textit{Interferenza: Bloccano la logistica. Ogni tavolo perde 1 Risorsa.
++3 Moneta ai Grimaldi, −1 al conteggio del Colpo Globale.}

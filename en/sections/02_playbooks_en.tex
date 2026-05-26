@@ -1,0 +1,618 @@
+% =============================================================================
+% SECTION: House Playbooks (English)
+% =============================================================================
+
+% =============================================================================
+\chapter{House Doria}
+\label{ch:doria}
+% =============================================================================
+
+% @rpg-schema: genova1507:CasaDoria a genova1507:Famiglia ;
+%   rdfs:label "House Doria" ;
+%   rpg:motto "The sea is ours. Genoa is ours." ;
+%   rpg:faction "Ghibellines" ;
+%   rpg:domain "Naval power and military force" .
+
+\familyheader{doria}{House Doria}%
+  {The sea is ours. Genoa is ours.}%
+  {Admirals, corsairs, shipbuilders --- masters of the Mediterranean.}
+
+\begin{multicols}{2}
+
+\section{Historical Identity}
+\label{sec:doria-identity}
+
+The \idx{Doria} are Genoa's pre-eminent naval family. Admirals, privateers,
+and shipbuilders --- their name echoes across every port in the Mediterranean.
+Traditionally \idx{Ghibelline}, they have fought the French when it suited them.
+It suits them again.
+
+Their strength is the \textbf{Fleet}: the galleys in the harbour answer to
+the Doria before they answer to the French governor. Their blind spot is
+arrogance --- they believe naval power solves every problem, and they
+chronically underestimate the political manoeuvrings at which the Spinola excel.
+
+\columnbreak
+
+\subsection{House Stats}
+
+% @rpg-schema: genova1507:CasaDoria fitd:hasStat
+%   [ fitd:statName "Force" ; fitd:rating 4 ] ,
+%   [ fitd:statName "Intrigue" ; fitd:rating 2 ] ,
+%   [ fitd:statName "Commerce" ; fitd:rating 3 ] ,
+%   [ fitd:statName "Influence" ; fitd:rating 4 ] ,
+%   [ fitd:statName "Awareness" ; fitd:rating 2 ] .
+
+\statrow{Force}    {4}{5}{Armed men, sailors, physical presence in the districts}
+\statrow{Intrigue} {2}{5}{Political manoeuvres, bribery, informants}
+\statrow{Commerce} {3}{5}{Economic resources, access to foreign merchants}
+\statrow{Influence}{4}{5}{Weight in Maona decisions and harbour affairs}
+\statrow{Awareness}{2}{5}{Intercepting the moves of rival houses}
+
+\end{multicols}
+
+\section{Starting Resources}
+
+% @rpg-schema: genova1507:CasaDoria
+%   genova1507:startingCoin "4" ; genova1507:startingReputation "5" ;
+%   genova1507:startingInfluence "3" ; genova1507:startingSoldiers "4" .
+
+\begin{multicols}{2}
+\begin{itemize}
+  \item \textbf{Coin 4} --- The fleet pays well.
+  \item \textbf{Reputation 5} --- The Doria name opens every harbour door.
+  \item \textbf{Influence 3} --- Respected, but not beloved by the commons.
+  \item \textbf{Soldiers 4} --- Armed sailors and trusted mercenaries.
+\end{itemize}
+\columnbreak
+\textbf{Special Assets}
+\begin{itemize}
+  \item 2 galleys in the harbour (heavy military assets)
+  \item Private arsenal in the Prè \textit{sestiere}
+  \item Informal pact with Barbary corsairs
+  \item Private wharf at Sampierdarena
+\end{itemize}
+\end{multicols}
+
+\section{Special Actions}
+
+% @rpg-schema: genova1507:BloccoNavale a fitd:SpecialAbility ;
+%   rdfs:label "Naval Blockade" ; fitd:crew genova1507:CasaDoria .
+
+\abilitybox{doria}{⚓ Naval Blockade}{%
+  The Doria order their galleys to seal the harbour. No French vessel enters
+  or leaves. Immediate effect: any house relying on maritime resources loses
+  1 Coin. French troops at Castelletto castle are cut off from sea resupply.%
+}{%
+  Roll \textsc{Force + Influence}. Full success: the blockade holds for the
+  whole session. Partial: holds, but costs 1 Soldier and triggers a French
+  Reprisal against the Doria.%
+}
+
+% @rpg-schema: genova1507:ChiamataAlleArmi a fitd:SpecialAbility ;
+%   rdfs:label "Call to Arms" ; fitd:crew genova1507:CasaDoria .
+
+\abilitybox{doria}{⚔ Call to Arms}{%
+  The Doria raise their banner. Every other Genoese house with at least
+  1 Reputation with the Doria gains +1 Soldier. Costs 2 Coin.%
+}{%
+  Roll \textsc{Influence}. Full success: all houses gain the bonus.
+  Partial: only those with Reputation 3+.%
+}
+
+% @rpg-schema: genova1507:ReteSegnalatori a fitd:SpecialAbility ;
+%   rdfs:label "Signal Network" ; fitd:crew genova1507:CasaDoria .
+
+\abilitybox{doria}{🜲 Signal Network}{%
+  The Doria maintain lookouts in every harbour tower and on the hills
+  above Genoa. Once per session they may intercept another house's
+  communications, learning their next planned Heist.%
+}{%
+  Roll \textsc{Awareness}. Full success: complete intelligence.
+  Partial: incomplete or delayed information.%
+}
+
+\section{House Heist: The Fleet of Betrayal}
+\label{sec:doria-heist}
+
+% @rpg-schema: genova1507:FlottaDelTradimento a fitd:Mission ;
+%   rdfs:label "The Fleet of Betrayal" ;
+%   fitd:exclusiveTo genova1507:CasaDoria ;
+%   fitd:clockAdvance "+2" ;
+%   genova1507:vulnerability genova1507:CasaGrimaldi .
+
+\begin{rulebox}[DoriaBlue]{Scenario}
+A French convoy carrying the garrison's payroll is approaching the harbour.
+The Doria can intercept it with their galleys, strip the French soldiers of
+their wages (and their loyalty), and deliver the treasure to the revolt.
+\end{rulebox}
+
+\heistphase{1}{Reconnaissance}{Locate the convoy's route.
+  \textbf{Roll: Awareness.} Failure: the French change course.}
+
+\heistphase{2}{Interception}{The galleys intercept the convoy in Genoese waters.
+  \textbf{Roll: Force.} Failure: naval engagement, Soldier losses.}
+
+\heistphase{3}{Distribution}{The seized funds go to all Genoese houses
+  (+2 Coin each), \textit{or} the Doria keep it all (+4 Coin, but --2
+  Reputation with every other house).}
+
+\textbf{Reward:} +2 to the Shared Clock. If distributed, +1 Reputation
+with all houses.
+
+\textit{Vulnerability: The Grimaldi know every merchant route. If they
+interfere, Phase~1 automatically fails.}
+
+\section{Contacts}
+
+\begin{center}
+\rowcolors{2}{LightBG}{white}
+\begin{tabularx}{\textwidth}{L{2.8cm} L{2.8cm} X}
+  \toprule
+  \textbf{Name} & \textbf{Role} & \textbf{Notes} \\
+  \midrule
+  Andrea Doria      & Admiral, age 34         & Not yet the giant of history, but already Genoa's shrewdest naval strategist. Cold, calculating, ambitious. \\
+  Fra' Giacomo      & Fleet chaplain           & Knows the confessional secrets of half the crew. Loyal to the Doria by blood debt. \\
+  Caterina Spinola  & The lord's wife          & Born a Spinola. Their marriage is a peace treaty. She still reports to her birth family. \\
+  Ibn Yusuf         & Moorish merchant, harbour& Intermediary with North African markets. Trades intelligence on French naval movements for protection. \\
+  Matteo the Caulker& Arsenal foreman          & Controls the dockyard workers. Win him, and the Doria can sabotage or repair any ship in harbour. \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Role in the Global Heist}
+
+The Doria control the Prè \textit{sestiere} and the old harbour. Their task
+is to prevent French troops from landing from Castelletto or receiving
+reinforcements by sea.
+
+\textbf{Roll:} Force + available Soldiers. Success: French troops remain
+bottled up for 3 hours. Partial: blocked for 1 hour, but one company breaks through.
+
+\textit{Obstruct option: Offer the French governor a safe escape in exchange
+for future commercial concessions. Gain +3 Coin but --3 Reputation, and
+contribute nothing to the clock.}
+
+% =============================================================================
+\chapter{House Spinola}
+\label{ch:spinola}
+% =============================================================================
+
+% @rpg-schema: genova1507:CasaSpinola a genova1507:Famiglia ;
+%   rdfs:label "House Spinola" ;
+%   rpg:motto "Whoever knows the price of everything knows the secret of every man." ;
+%   rpg:faction "Ghibellines" ;
+%   rpg:domain "Finance and intelligence" ;
+%   rpg:rival genova1507:CasaDoria .
+
+\familyheader{spinola}{House Spinola}%
+  {Whoever knows the price of everything knows the secret of every man.}%
+  {Bankers, diplomats, and creditors to princes and popes.}
+
+\begin{multicols}{2}
+
+\section{Historical Identity}
+
+The \idx{Spinola} fight with ledgers and letters where the Doria fight with
+swords and galleys. Their intelligence network is the most comprehensive in
+Genoa. Historically rivals of the Doria despite sharing a Ghibelline
+allegiance, they know the revolt is inevitable. The question is who
+\textit{shapes} what comes after.
+
+\columnbreak
+
+\subsection{House Stats}
+
+\statrow{Force}    {2}{5}{Private guards, hired \textit{bravi}}
+\statrow{Intrigue} {5}{5}{Spies, blackmail, sophisticated diplomatic plays}
+\statrow{Commerce} {5}{5}{The Spinola bank finances half the continent}
+\statrow{Influence}{4}{5}{Ties to Milan, Rome, Venice, and the French court itself}
+\statrow{Awareness}{4}{5}{Informants in every \textit{sestiere} and harbour}
+
+\end{multicols}
+
+\section{Starting Resources}
+
+\begin{multicols}{2}
+\begin{itemize}
+  \item \textbf{Coin 6} --- The Spinola bank is Genoa's wealthiest house.
+  \item \textbf{Reputation 4} --- Respected, but considered cold.
+  \item \textbf{Influence 5} --- Tentacles everywhere, including the French court.
+  \item \textbf{Soldiers 2} --- Not their speciality.
+\end{itemize}
+\columnbreak
+\textbf{Special Assets}
+\begin{itemize}
+  \item The Ledger: who owes what to whom across Genoa
+  \item A sleeping agent at the French governor's residence
+  \item Letters of credit on Milan (worth 3 extra Coin)
+  \item Safe house in the Portoria \textit{sestiere}
+\end{itemize}
+\end{multicols}
+
+\section{Special Actions}
+
+\abilitybox{spinola}{💰 Call the Debt}{%
+  The Spinola choose any NPC and call in an outstanding debt. They
+  immediately receive what they ask for --- information, a favour, a resource
+  --- or the target suffers a public Complication. Works on the French
+  governor, who owes the bank.%
+}{%
+  Roll \textsc{Intrigue}. Full success: the debt is collected in full.
+  Partial: partially collected; the relationship deteriorates.%
+}
+
+\abilitybox{spinola}{🕵 Double Agent}{%
+  Once per session, the Spinola reveal they have an agent inside another
+  house's organisation (or the French). Choose: extract intelligence
+  (learn their next planned Heist) \textit{or} plant disinformation
+  (that house's next roll suffers --1d).%
+}{%
+  Roll \textsc{Intrigue}. Full success: full effect. Partial: the agent
+  is burned but the effect still fires.%
+}
+
+\abilitybox{spinola}{📜 Open Negotiation}{%
+  The Spinola open a secret negotiation with anyone --- French, rival house,
+  foreign merchant. It resolves nothing immediately but creates
+  \textbf{Pressure}: the target must respond before session end or
+  lose 2 Reputation.%
+}{No roll to open. The roll comes when the target responds.}
+
+\section{House Heist: The Price of Silence}
+\label{sec:spinola-heist}
+
+% @rpg-schema: genova1507:PrezzoDelSilenzio a fitd:Mission ;
+%   rdfs:label "The Price of Silence" ;
+%   fitd:exclusiveTo genova1507:CasaSpinola ;
+%   genova1507:vulnerability genova1507:CasaFieschi .
+
+\begin{rulebox}[SpinolaCrimson]{Scenario}
+Governor Gian Giacomo Trivulzio has a compromising secret ---
+and debts to the Spinola bank. The family can leverage this to
+make him stand his troops down in the popular districts during
+the revolt. Not betraying France --- just \textit{looking the other way}.
+\end{rulebox}
+
+\heistphase{1}{Gather evidence}{Authenticate proof of the governor's secret.
+  \textbf{Roll: Awareness.} Failure: the evidence is inadmissible.}
+
+\heistphase{2}{The meeting}{A Spinola representative meets Trivulzio in secret.
+  \textbf{Roll: Intrigue.} Failure: Trivulzio calls the guards.}
+
+\heistphase{3}{The agreement}{Success: the governor guarantees his troops
+  stand down in 3 \textit{sestieri}. Every other Genoese house gains
+  +1 effective Soldier that night.}
+
+\textbf{Reward:} +2 to the clock. +1 permanent Influence for the Spinola.
+
+\textit{Vulnerability: The Fieschi have clerical channels close to Trivulzio.
+If they interfere, the evidence gets ``mislaid.''}
+
+\section{Contacts}
+
+\begin{center}
+\rowcolors{2}{LightBG}{white}
+\begin{tabularx}{\textwidth}{L{2.8cm} L{2.8cm} X}
+  \toprule
+  \textbf{Name} & \textbf{Role} & \textbf{Notes} \\
+  \midrule
+  Raffaele Spinola & Senior banker, age 58  & The family's true head. Rarely seen, always present. \\
+  Lucrezia d'Este  & Ferrarese noblewoman   & Intermediary with the Este court. Has intelligence on troop movements in the north. \\
+  Ser Benedetto Adorno & Notary, San Giorgio & Holds the bank's real ledgers. Loyal but blackmailable. \\
+  The Dutchman     & Unknown identity       & Supplies intelligence on French naval movements. Wants only coin. Never met in person. \\
+  Sister Agnes     & Abbess, Santa Chiara   & Runs a courier network through the convents --- the most secure communications in Genoa. \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Role in the Global Heist}
+
+The Spinola manage communications. Their task is to circulate the agreed
+signal so that rebels across the city know when to move.
+
+\textbf{Roll:} Intrigue + Influence. Success: all \textit{sestieri} rise
+simultaneously (+1 to the Global Heist's success count).
+
+\textit{Obstruct option: Spread a false signal. +2 Influence from the French,
+--1 from the Global Heist's count.}
+
+% =============================================================================
+\chapter{House Fieschi}
+\label{ch:fieschi}
+% =============================================================================
+
+% @rpg-schema: genova1507:CasaFieschi a genova1507:Famiglia ;
+%   rdfs:label "House Fieschi" ;
+%   rpg:motto "God wills Genoa free. And God speaks through us." ;
+%   rpg:faction "Guelphs" ;
+%   rpg:domain "Feudal power and ecclesiastical authority" .
+
+\familyheader{fieschi}{House Fieschi}%
+  {God wills Genoa free. And God speaks through us.}%
+  {Counts of Lavagna --- feudal lords of the hinterland, protectors of the Church.}
+
+\begin{multicols}{2}
+
+\section{Historical Identity}
+
+The \idx{Fieschi} are counts of \idx{Lavagna}, feudal lords of the Ligurian
+interior, who have supplied bishops, cardinals, and popes to the Church for
+centuries. Historically \idx{Guelph}. Their power is twofold: estates in
+the hinterland (where the French struggle to project force) and an
+ecclesiastical network that no occupier dares touch openly.
+
+A single sermon from the right pulpit is worth more than a hundred armed men.
+
+\columnbreak
+
+\subsection{House Stats}
+
+\statrow{Force}    {3}{5}{Feudal militiamen, armed peasants from the interior}
+\statrow{Intrigue} {3}{5}{Ecclesiastical leverage, control of popular information}
+\statrow{Commerce} {2}{5}{Land wealth --- not liquid}
+\statrow{Influence}{5}{5}{Highest of all houses: clergy and the common people}
+\statrow{Awareness}{3}{5}{Confessionals as sources; monastic messengers}
+
+\end{multicols}
+
+\section{Starting Resources}
+
+\begin{multicols}{2}
+\begin{itemize}
+  \item \textbf{Coin 2} --- Land-rich, cash-poor.
+  \item \textbf{Reputation 5} --- Loved by the commons, respected by the nobility.
+  \item \textbf{Influence 6} --- Maximum. The bishop is a cousin.
+  \item \textbf{Soldiers 3} --- Loyal militiamen, not mercenaries.
+\end{itemize}
+\columnbreak
+\textbf{Special Assets}
+\begin{itemize}
+  \item Castle of Montoggio: impregnable inland refuge
+  \item Papal bull authorising ``extraordinary actions''
+  \item Church network: secure communications via clergy
+  \item Feudal levy: 200 peasants who can be armed (1 session prep)
+\end{itemize}
+\end{multicols}
+
+\section{Special Actions}
+
+\abilitybox{fieschi}{⛪ Voice of the People}{%
+  The Fieschi have preachers thunder from every pulpit in Genoa. Immediate
+  +2 Reputation, convertible into improvised Soldiers (1 Rep = 1 Soldier,
+  max 3) for the duration of a single action.%
+}{%
+  Roll \textsc{Influence}. Full success: full effect.
+  Partial: +1 Reputation and 1 improvised Soldier.%
+}
+
+\abilitybox{fieschi}{✝ Sanctuary}{%
+  The Fieschi declare a church or palace as Sanctuary. Anyone sheltering
+  inside is untouchable for the session --- including from the French, who
+  cannot violate right of sanctuary publicly without a scandal.%
+}{No roll. Costs 1 Influence.}
+
+\abilitybox{fieschi}{📯 Feudal Levy}{%
+  Call in militiamen from the interior estates. Requires 1 session of
+  preparation (declared in advance). When they arrive: +3 temporary Soldiers.
+  If the mountain road is unprotected, only half make it through.%
+}{%
+  Roll \textsc{Force} for the journey. Full success: all arrive.
+  Partial: half arrive, exhausted (--1 to Force rolls that night).%
+}
+
+\section{House Heist: The Bells of San Lorenzo}
+\label{sec:fieschi-heist}
+
+% @rpg-schema: genova1507:CampaneDiSanLorenzo a fitd:Mission ;
+%   rdfs:label "The Bells of San Lorenzo" ;
+%   fitd:exclusiveTo genova1507:CasaFieschi ;
+%   fitd:bonus "+1 free improvised Soldier to all tables for the Global Heist" ;
+%   genova1507:vulnerability genova1507:CasaDoria .
+
+\begin{rulebox}[FieschiGreen]{Scenario}
+The cathedral of San Lorenzo is Genoa's spiritual heart. The Fieschi,
+through their cousin the bishop, can ring the bells at the exact moment
+the revolt needs them to --- the signal that every Genoese has been
+waiting for. But first, the French garrison inside the cathedral
+must be dealt with.
+\end{rulebox}
+
+\heistphase{1}{Sacred reconnaissance}{Check the garrison's presence in the cathedral.
+  \textbf{Roll: Awareness.} Failure: the French are alerted to Fieschi interest.}
+
+\heistphase{2}{Clearance}{Remove any French soldiers (via religious pretext, force,
+  or bribery). \textbf{Roll: Influence or Force.} Failure: open fighting
+  on the cathedral steps.}
+
+\heistphase{3}{The signal}{The bishop rings the bells at the agreed moment.
+  The city erupts. Every table gains +1 free improvised Soldier for
+  the Global Heist.}
+
+\textbf{Reward:} +2 to the Shared Clock.
+
+\textit{Vulnerability: The Doria control the nearby harbour districts.
+If they interfere, a manufactured harbour crisis distracts the bishop
+at the critical moment.}
+
+\section{Contacts}
+
+\begin{center}
+\rowcolors{2}{LightBG}{white}
+\begin{tabularx}{\textwidth}{L{2.8cm} L{2.8cm} X}
+  \toprule
+  \textbf{Name} & \textbf{Role} & \textbf{Notes} \\
+  \midrule
+  Niccolò Fieschi  & Count of Lavagna, 45  & Family head. Sincere faith and equal cynicism. \\
+  Mgr Gregorio     & Auxiliary Bishop       & Controls San Lorenzo and four minor churches. Wants to become Archbishop --- manipulable. \\
+  Fra' Tomaso      & Dominican preacher     & Genoa's most powerful orator. Incorruptible, but persuadable. \\
+  Margherita the Widow & Quarter leader, Portoria & More street power than anyone with a title. Win her, win three \textit{sestieri}. \\
+  Capt. Hernando Vaz & Portuguese mercenary & His company is recruitable, but they want payment the Fieschi can't easily guarantee. \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Role in the Global Heist}
+
+The Fieschi manage the popular mobilisation. Without them, the revolt
+is a quarrel between nobles.
+
+\textbf{Roll:} Influence + Reputation. Success: +1 improvised Soldier for
+every participating table. Partial: the people move chaotically
+(+1 Soldier and 1 Complication per table).
+
+\textit{Obstruct option: Negotiate ecclesiastical autonomy with the French.
++2 permanent Influence, but --4 Reputation when it comes out --- and it
+always comes out.}
+
+% =============================================================================
+\chapter{House Grimaldi}
+\label{ch:grimaldi}
+% =============================================================================
+
+% @rpg-schema: genova1507:CasaGrimaldi a genova1507:Famiglia ;
+%   rdfs:label "House Grimaldi" ;
+%   rpg:motto "Monaco is ours. And Monaco never surrenders." ;
+%   rpg:domain "International trade and the double game" ;
+%   rpg:territory "Monaco" .
+
+\familyheader{grimaldi}{House Grimaldi}%
+  {Monaco is ours. And Monaco never surrenders.}%
+  {Lords of Monaco --- the only Genoese family with truly sovereign territory.}
+
+\begin{multicols}{2}
+
+\section{Historical Identity}
+
+The \idx{Grimaldi} are the only Genoese family with autonomous territory:
+\idx{Monaco}, seized in 1297 when François Grimaldi entered the fortress
+disguised as a Franciscan friar. They live in two worlds at once ---
+Genoese by blood, sovereign lords in fact.
+
+This makes them the most ambiguous players in the game. They have contacts
+at the French court (Monaco borders French Provence), commercial ties across
+the Mediterranean, and the genuine option of surviving \textit{regardless}
+of the revolt's outcome. They can win even if Genoa loses.
+
+\columnbreak
+
+\subsection{House Stats}
+
+\statrow{Force}    {2}{5}{Monaco guards, some Corsican mercenaries}
+\statrow{Intrigue} {4}{5}{Double games, international contacts, false identities}
+\statrow{Commerce} {5}{5}{Monaco harbour and exclusive trade routes}
+\statrow{Influence}{3}{5}{Respected but seen as outsiders in some circles}
+\statrow{Awareness}{4}{5}{Informants along every coastal trade route}
+
+\end{multicols}
+
+\section{Starting Resources}
+
+\begin{multicols}{2}
+\begin{itemize}
+  \item \textbf{Coin 5} --- Monaco is a prosperous harbour.
+  \item \textbf{Reputation 3} --- Considered ``almost foreign'' in Genoa.
+  \item \textbf{Influence 4} --- Essential in commercial networks.
+  \item \textbf{Soldiers 2} --- Few, but geography protects them.
+\end{itemize}
+\columnbreak
+\textbf{Special Assets}
+\begin{itemize}
+  \item Monaco: a refuge territory (physically unassailable)
+  \item Trade network: intelligence on all Mediterranean naval movements
+  \item Contact at Louis~XII's court (double agent)
+  \item Transit letters: can move people out of Genoa without checks
+\end{itemize}
+\end{multicols}
+
+\section{Special Actions}
+
+\abilitybox{grimaldi}{🚢 Exclusive Routes}{%
+  The Grimaldi control trade routes passing through Monaco.
+  Close a route: one house loses 1 Coin per session segment while closed.
+  Open a route to a friendly house: that house gains +2 Coin.%
+}{%
+  No roll to activate. Roll \textsc{Commerce} if someone tries to
+  force a closed route.%
+}
+
+\abilitybox{grimaldi}{🎭 The Friar's Disguise}{%
+  In homage to the family's founder, a Grimaldi agent moves under a
+  false identity in any district --- including French-controlled areas.
+  The agent may perform one action without it being traced to the Grimaldi.%
+}{%
+  Roll \textsc{Intrigue}. Full success: the identity holds for the session.
+  Partial: the action succeeds but the cover is blown at the end.%
+}
+
+\abilitybox{grimaldi}{🗝 Safe Passage}{%
+  The Grimaldi offer any NPC --- including the French governor, a beleaguered
+  ally, or an exposed traitor --- safe passage to Monaco.
+  This creates a debt. Debts have value.%
+}{%
+  No roll to offer. Roll \textsc{Intrigue} against the target's suspicion
+  if they have reason not to trust the Grimaldi.%
+}
+
+\section{House Heist: The Price of Autonomy}
+\label{sec:grimaldi-heist}
+
+% @rpg-schema: genova1507:PrezzoAutonomia a fitd:Mission ;
+%   rdfs:label "The Price of Autonomy" ;
+%   fitd:exclusiveTo genova1507:CasaGrimaldi ;
+%   fitd:bonus "Monaco formally recognised as a sovereign lordship" ;
+%   genova1507:vulnerability genova1507:CasaSpinola .
+
+\begin{rulebox}[GrimaldiPurple]{Scenario}
+The Grimaldi make secret contact with Louis~XII's representative in Genoa.
+Not to betray the revolt --- but to negotiate: in exchange for formal French
+recognition of Monaco's sovereignty (long denied), the Grimaldi undertake
+not to obstruct an \textit{orderly} French withdrawal.
+Is this betrayal? Is it diplomacy? That depends entirely on who wins.
+\end{rulebox}
+
+\heistphase{1}{The secret channel}{Establish secure contact with the French
+  representative without the other houses finding out.
+  \textbf{Roll: Intrigue.} Failure: one house discovers the negotiation.}
+
+\heistphase{2}{The proposal}{Present the terms.
+  \textbf{Roll: Commerce} (treated as a commercial deal).
+  Failure: the French demand too much, or simply don't trust the Grimaldi.}
+
+\heistphase{3}{The agreement}{Monaco is formally recognised. The French
+  withdraw ``in good order'' (the clock doesn't fall back for their
+  withdrawal). If the other houses discover the deal: --3 Reputation.}
+
+\textbf{Reward:} +2 to the clock. The Grimaldi secure Monaco's recognition ---
+an independent victory condition met regardless of the clock's final state.
+
+\textit{Vulnerability: The Spinola have an agent near the French representative.
+They can intercept the Phase~1 message.}
+
+\section{Contacts}
+
+\begin{center}
+\rowcolors{2}{LightBG}{white}
+\begin{tabularx}{\textwidth}{L{2.8cm} L{2.8cm} X}
+  \toprule
+  \textbf{Name} & \textbf{Role} & \textbf{Notes} \\
+  \midrule
+  Rainier II Grimaldi & Lord of Monaco, 51   & Pragmatist. The survival of Monaco comes before everything. \\
+  Isabeau de Valois   & French court lady    & Observing for Louis~XII. The Grimaldi cultivate --- and use --- her. \\
+  Costantino the Greek& Silk merchant        & Venetian by birth. Sells information to the highest bidder --- the Grimaldi pay best. \\
+  Battista Grimaldi   & Captain, Monaco guard& Commands 40 guards. Available only if recalled (1 session). \\
+  Fra' Sebastiano     & Franciscan, Castelletto & Lives above the French garrison. Sees everything. For a fee. \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Role in the Global Heist}
+
+The Grimaldi run the hidden logistics --- contraband weapons, inter-district
+communications, the flow of supplies on the night of the revolt.
+
+\textbf{Roll:} Commerce + Influence. Success: every participating table may
+use 1 extra Resource for free that night.
+
+\textit{Obstruct option: Shut the logistics down. Every table loses 1 Resource.
++3 Coin to the Grimaldi, --1 from the Global Heist's count.}

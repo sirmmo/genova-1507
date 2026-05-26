@@ -1,0 +1,165 @@
+% =============================================================================
+% GENOVA 1507 — LA RIVOLTA CONTRO LA FRANCIA
+% Manuale completo per TTRPG multi-tavolo
+% Sistema: Forged in the Dark / Blades in the Dark (derivative)
+%
+% COMPILAZIONE:
+%   lualatex main.tex
+%   makeindex -s preamble/indexstyle.ist main.idx
+%   lualatex main.tex
+%   lualatex main.tex   ← terza passata per indice e riferimenti incrociati
+%
+% REQUISITI:
+%   - LuaLaTeX (TeX Live 2022+ o MiKTeX 22+)
+%   - Font: Linux Libertine O, Linux Biolinum O, DejaVu Sans Mono
+%     (inclusi in TeX Live: installare il pacchetto libertine)
+%   - Pacchetti LaTeX necessari: geometry, xcolor, tcolorbox, fontawesome5,
+%     titlesec, booktabs, tabularx, fancyhdr, hyperref, imakeidx,
+%     multicol, pgffor, enumitem, babel (italian), microtype, amssymb,
+%     dashrule, calc, ifthen, array, graphicx
+%
+% NOTA SULLE ANNOTAZIONI rpg-schema:
+%   I commenti "% @rpg-schema: ..." sono triple RDF/Turtle inline.
+%   Invisibili nel PDF. Per estrarre le triple:
+%   grep -h "@rpg-schema:" **/*.tex | sed 's/.*@rpg-schema: //'
+%
+% STRUTTURA DEL PROGETTO:
+%   main.tex                    <- questo file
+%   preamble/packages.tex       <- tutti i pacchetti e comandi custom
+%   preamble/indexstyle.ist     <- stile makeindex
+%   sections/01_intro.tex       <- contesto storico e regole globali
+%   sections/02_playbooks.tex   <- i 4 playbook di famiglia
+%   sections/03_characters.tex  <- schede PG Casa Doria (complete)
+%   sections/04_appendice.tex   <- reference GM
+% =============================================================================
+
+\documentclass[11pt, a4paper, twoside]{book}
+\usepackage[italian]{babel}
+\input{preamble/packages}
+
+\begin{document}
+
+% ── Title page ───────────────────────────────────────────────────────────────
+
+\input{titlepage}
+
+% ── Front matter ─────────────────────────────────────────────────────────────
+\frontmatter
+\tableofcontents
+
+% ── Main matter ──────────────────────────────────────────────────────────────
+\mainmatter
+
+\input{sections/01_intro}
+\input{sections/02_playbooks}
+\input{sections/03_characters}
+
+% ── Capitoli PG Spinola, Fieschi, Grimaldi ───────────────────────────────────
+% I dati completi di questi 15 PG sono identici per struttura ai Doria.
+% Inclusi qui come capitoli stub con le annotazioni rpg-schema complete.
+% Per espandere: aggiungere i file characters/spinola_chars.tex ecc.
+% e sostituire il \textit{...} con \input{characters/spinola_chars}
+
+
+
+% @rpg-schema: pg:RaffaeleSpinola a fitd:Character ;
+%   rdfs:label "Raffaele Spinola il Vecchio" ;
+%   fitd:crew genova1507:CasaSpinola ; rpg:role "Banchiere / Patriarca" .
+% @rpg-schema: pg:LucreziaSpinola a fitd:Character ;
+%   rdfs:label "Lucrezia d'Oria in Spinola" ;
+%   fitd:crew genova1507:CasaSpinola ; rpg:role "Diplomatica / Agente Estero" .
+% @rpg-schema: pg:SerBenedetto a fitd:Character ;
+%   rdfs:label "Ser Benedetto Adorno" ;
+%   fitd:crew genova1507:CasaSpinola ; rpg:role "Notaio / Custode dei Segreti" .
+% @rpg-schema: pg:MargheritaGatta a fitd:Character ;
+%   rdfs:label "Margherita la Gatta" ;
+%   fitd:crew genova1507:CasaSpinola ; rpg:role "Agente di Campo / Informatrice" .
+% @rpg-schema: pg:IppolitoSpinola a fitd:Character ;
+%   rdfs:label "Ippolito Spinola" ;
+%   fitd:crew genova1507:CasaSpinola ; rpg:role "Giovane Erede / Giocatore d'Azzardo" .
+
+\input{characters/pg_spinola}
+
+
+% @rpg-schema: pg:NiccoloFieschi a fitd:Character ;
+%   rdfs:label "Niccolò Fieschi" ;
+%   fitd:crew genova1507:CasaFieschi ; rpg:role "Il Conte / Il Feudatario" .
+% @rpg-schema: pg:GregorioFieschi a fitd:Character ;
+%   rdfs:label "Monsignore Gregorio Fieschi" ;
+%   fitd:crew genova1507:CasaFieschi ; rpg:role "Vescovo Ausiliare" .
+% @rpg-schema: pg:FraTomaso a fitd:Character ;
+%   rdfs:label "Frà Tomaso da Bologna" ;
+%   fitd:crew genova1507:CasaFieschi ; rpg:role "Predicatore" .
+% @rpg-schema: pg:MargheritaVedova a fitd:Character ;
+%   rdfs:label "Margherita la Vedova" ;
+%   fitd:crew genova1507:CasaFieschi ; rpg:role "Capo Quartiere" .
+% @rpg-schema: pg:SerElia a fitd:Character ;
+%   rdfs:label "Ser Elia da Montoggio" ;
+%   fitd:crew genova1507:CasaFieschi ; rpg:role "Capitano" .
+
+\input{characters/pg_fieschi}
+
+
+% @rpg-schema: pg:RainierGrimaldi a fitd:Character ;
+%   rdfs:label "Rainier Grimaldi" ;
+%   fitd:crew genova1507:CasaGrimaldi ; rpg:role "Il Signore / Il Pragmatico" .
+% @rpg-schema: pg:IsabeauPrecy a fitd:Character ;
+%   rdfs:label "Isabeau de Précy" ;
+%   fitd:crew genova1507:CasaGrimaldi ; rpg:role "La Dame Française / Doppio Gioco" .
+% @rpg-schema: pg:CostantinoPaleologos a fitd:Character ;
+%   rdfs:label "Costantino Paleologos" ;
+%   fitd:crew genova1507:CasaGrimaldi ; rpg:role "Mercante / Informatore" .
+% @rpg-schema: pg:SerBattistaGrimaldi a fitd:Character ;
+%   rdfs:label "Ser Battista Grimaldi" ;
+%   fitd:crew genova1507:CasaGrimaldi ; rpg:role "Capitano / Custode" .
+% @rpg-schema: pg:SerafinaGrimaldi a fitd:Character ;
+%   rdfs:label "Serafina Grimaldi" ;
+%   fitd:crew genova1507:CasaGrimaldi ; rpg:role "L'Erede / La Carta Segreta" .
+
+% Legami cross-tavolo annotati
+% @rpg-schema: pg:FulvioDoria   rpg:hasContact pg:MargheritaGatta .
+% @rpg-schema: pg:BiancaDoria   rpg:hasContact pg:RainierGrimaldi .
+% @rpg-schema: pg:IppolitoSpinola rpg:hasContact pg:IsabeauPrecy .
+% @rpg-schema: pg:MargheritaGatta rpg:hasContact pg:MargheritaVedova .
+% @rpg-schema: pg:CostantinoPaleologos rpg:hasContact pg:IsabeauPrecy .
+% @rpg-schema: pg:GiacomoMoro   rpg:hasContact pg:IppolitoSpinola .
+
+\input{characters/pg_grimaldi}
+
+% ── Appendice ────────────────────────────────────────────────────────────────
+\input{sections/04_appendice}
+
+% ── Contesto storico espanso e dati OHM ──────────────────────────────────────
+\input{sections/05_storia_it}
+\input{shared/06_ohm_appendix}
+
+% ── Back matter ──────────────────────────────────────────────────────────────
+\backmatter
+\printindex
+
+\chapter*{Note Legali}
+\addcontentsline{toc}{chapter}{Note Legali}
+
+Questo materiale è derivato da \textit{Blades in the Dark} di John Harper,
+pubblicato da One Seven Design, sotto licenza Creative Commons Attribution
+3.0 Unported (\textsc{cc by 3.0}).
+
+\textit{Forged in the Dark} è un marchio di One Seven Design.
+Questo documento non è affiliato né approvato da One Seven Design.
+
+Contenuto storico: i personaggi storici citati (Andrea Doria, Gian Giacomo
+Trivulzio, Luigi~XII) sono figure di dominio pubblico. I personaggi giocanti
+e i PNG sono finzionali e non intendono rappresentare accuratamente persone
+reali.
+
+
+\input{characters/pg_doria_extra}
+%\input{characters/pg_extra_doria}
+\input{characters/pg_fieschi_extra}
+%\input{characters/pg_extra_fieschi}
+\input{characters/pg_grimaldi_extra}
+%\input{characters/pg_extra_grimaldi}
+\input{characters/pg_spinola_extra}
+%\input{characters/pg_extra_spinola}
+
+\end{document}

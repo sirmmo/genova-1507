@@ -1,0 +1,81 @@
+% =============================================================================
+% GENOA 1507 --- THE REVOLT AGAINST FRANCE
+% Complete manual for multi-table TTRPG
+% System: Forged in the Dark / Blades in the Dark (derivative)
+%
+% COMPILATION (run from this directory: genova1507_latex/en/):
+%   lualatex main_en.tex
+%   makeindex -s ../preamble/indexstyle.ist main_en.idx
+%   lualatex main_en.tex
+%   lualatex main_en.tex   <- third pass for index and cross-references
+%
+% REQUIREMENTS:
+%   - LuaLaTeX (TeX Live 2022+ or MiKTeX 22+)
+%   - Fonts: Linux Libertine O, Linux Biolinum O, DejaVu Sans Mono
+%     (included in TeX Live; on MiKTeX: install the libertine package)
+%   - LaTeX packages: geometry, xcolor, tcolorbox, fontawesome5, titlesec,
+%                     booktabs, tabularx, fancyhdr, hyperref, imakeidx,
+%                     multicol, pgffor, enumitem, babel (english), microtype,
+%                     amssymb, dashrule, calc, ifthen, array, graphicx
+%
+% NOTE ON rpg-schema ANNOTATIONS:
+%   Comments prefixed with "% @rpg-schema:" are inline RDF/Turtle triples.
+%   They are invisible in the compiled PDF. To extract:
+%   grep -rh "@rpg-schema:" . | sed 's/.*@rpg-schema: //'
+%
+% PROJECT STRUCTURE (relative to genova1507_latex/):
+%   en/main_en.tex                    <- this file (compile from en/)
+%   en/preamble_en.tex                <- English packages and custom commands
+%   en/sections/01_intro_en.tex       <- historical context and global rules
+%   en/sections/02_playbooks_en.tex   <- 4 house playbooks
+%   en/sections/03_characters_en.tex  <- PC sheets House Doria (complete)
+%   en/sections/04_appendix_en.tex    <- GM reference
+%   preamble/indexstyle.ist           <- shared makeindex style
+% =============================================================================
+
+\documentclass[11pt, a4paper, twoside]{book}
+
+\usepackage[english]{babel}
+\input{preamble/packages}
+
+\begin{document}
+
+% ── Title page ───────────────────────────────────────────────────────────────
+\input{titlepage_en}
+
+% ── Front matter ─────────────────────────────────────────────────────────────
+\frontmatter
+\tableofcontents
+
+% ── Main matter ──────────────────────────────────────────────────────────────
+\mainmatter
+
+\input{sections/01_intro_en}
+\input{sections/02_playbooks_en}
+\input{sections/03_characters_en}
+\input{sections/04_appendix_en}
+
+% ── Expanded historical context and OHM data ─────────────────────────────────
+\input{sections/05_history_en}
+\input{shared/06_ohm_appendix}
+
+% ── Back matter ──────────────────────────────────────────────────────────────
+\backmatter
+\printindex
+
+\chapter*{Legal Notice}
+\addcontentsline{toc}{chapter}{Legal Notice}
+
+This material is derived from \textit{Blades in the Dark} by John Harper,
+published by One Seven Design, under the Creative Commons Attribution
+3.0 Unported licence (\textsc{cc by 3.0}).
+
+\textit{Forged in the Dark} is a trademark of One Seven Design.
+This document is not affiliated with or endorsed by One Seven Design.
+
+Historical figures mentioned (Andrea Doria, Gian Giacomo Trivulzio,
+Louis~XII) are in the public domain. All player characters and named NPCs
+are fictional and are not intended as accurate representations of
+historical persons.
+
+\end{document}

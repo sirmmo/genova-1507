@@ -1,0 +1,320 @@
+% =============================================================================
+% APPENDICE TECNICA: Dati per OpenHistoryMap
+% Appendix: OpenHistoryMap Technical Data
+%
+% Questo file è condiviso tra le versioni italiana e inglese.
+% This file is shared between the Italian and English editions.
+%
+% Contiene:
+% - Triple @ohm: consolidate e pronte per l'importazione
+% - GeoJSON suggerito per i sestieri
+% - Istruzioni per la creazione del layer OHM
+% - Timeline IIIF-compatible
+% =============================================================================
+
+% --- Selezione lingua / Language selection -----------------------------------
+% Questo file usa \iflanguage per adattare i titoli.
+% Compilare sempre tramite main.tex o main_en.tex, mai direttamente.
+
+\chapter{%
+  \iflanguage{italian}{Appendice OHM: Dati Tecnici per OpenHistoryMap}%
+  {OHM Appendix: Technical Data for OpenHistoryMap}%
+}
+\label{ch:ohm-appendix}
+
+% =============================================================================
+% SEZIONE 1: ENTITÀ STORICHE / HISTORICAL ENTITIES
+% =============================================================================
+
+\section{%
+  \iflanguage{italian}{Entità Storiche — Grafo OHM}%
+  {Historical Entities --- OHM Graph}%
+}
+\label{sec:ohm-entities}
+
+\iflanguage{italian}{%
+Le seguenti entità costituiscono i nodi principali del grafo OHM per
+lo scenario \textit{Genova 1507}. Ogni entità è identificata da un
+URI nel namespace \texttt{genova1507:} e annotata con triple RDF.
+}{%
+The following entities form the primary nodes of the OHM graph for
+the \textit{Genoa 1507} scenario. Each entity is identified by a URI
+in the \texttt{genova1507:} namespace and annotated with RDF triples.
+}
+
+\subsection{%
+  \iflanguage{italian}{Famiglie / Istituzioni}%
+  {Houses / Institutions}%
+}
+
+\begin{center}
+\rowcolors{2}{LightBG}{white}
+\begin{tabularx}{\textwidth}{L{3.8cm} L{2.8cm} L{2.2cm} X}
+  \toprule
+  \textbf{\iflanguage{italian}{Entità}{Entity}} &
+  \textbf{OHM URI} &
+  \textbf{\iflanguage{italian}{Tipo}{Type}} &
+  \textbf{\iflanguage{italian}{Arco temporale}{Timespan}} \\
+  \midrule
+  \iflanguage{italian}{Casa Doria}{House Doria}
+    & \texttt{genova1507:CasaDoria} & \texttt{ohm:Dynasty}
+    & \iflanguage{italian}{XII sec. -- oggi}{XII c. -- present} \\
+  \iflanguage{italian}{Casa Spinola}{House Spinola}
+    & \texttt{genova1507:CasaSpinola} & \texttt{ohm:Dynasty}
+    & \iflanguage{italian}{XII sec. -- XIX sec.}{XII c. -- XIX c.} \\
+  \iflanguage{italian}{Casa Fieschi}{House Fieschi}
+    & \texttt{genova1507:CasaFieschi} & \texttt{ohm:Dynasty}
+    & \iflanguage{italian}{XI sec. -- XVII sec.}{XI c. -- XVII c.} \\
+  \iflanguage{italian}{Casa Grimaldi}{House Grimaldi}
+    & \texttt{genova1507:CasaGrimaldi} & \texttt{ohm:Dynasty}
+    & \iflanguage{italian}{XII sec. -- oggi}{XII c. -- present} \\
+  \iflanguage{italian}{Banco di San Giorgio}{Bank of Saint George}
+    & \texttt{genova1507:BancoSanGiorgio} & \texttt{ohm:Institution}
+    & 1407 -- 1805 \\
+  \iflanguage{italian}{Repubblica di Genova}{Republic of Genoa}
+    & \texttt{genova1507:RepubblicaGenova} & \texttt{ohm:State}
+    & \iflanguage{italian}{1005 -- 1797}{1005 -- 1797} \\
+  \iflanguage{italian}{Corona di Francia (Luigi XII)}{Crown of France (Louis XII)}
+    & \texttt{genova1507:FranciaLuigiXII} & \texttt{ohm:State}
+    & 1498 -- 1515 \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{%
+  \iflanguage{italian}{Persone Storiche}{Historical Persons}%
+}
+
+\begin{center}
+\rowcolors{2}{LightBG}{white}
+\begin{tabularx}{\textwidth}{L{3.8cm} L{2.8cm} C{1.8cm} X}
+  \toprule
+  \textbf{\iflanguage{italian}{Nome}{Name}} &
+  \textbf{OHM URI} &
+  \textbf{\iflanguage{italian}{Nato/Morto}{Born/Died}} &
+  \textbf{\iflanguage{italian}{Ruolo rilevante al 1507}{Relevant role at 1507}} \\
+  \midrule
+  Andrea Doria
+    & \texttt{genova1507:AndreaDoria} & 1466/1560
+    & \iflanguage{italian}{Ammiraglio, futuro signore di Genova}{Admiral, future ruler of Genoa} \\
+  G.G.\ Trivulzio
+    & \texttt{genova1507:Trivulzio} & 1441/1518
+    & \iflanguage{italian}{Governatore francese di Genova}{French governor of Genoa} \\
+  Luigi~XII
+    & \texttt{genova1507:LuigiXII} & 1462/1515
+    & \iflanguage{italian}{Re di Francia, signore di Genova}{King of France, lord of Genoa} \\
+  Niccolò Fieschi
+    & \texttt{genova1507:NiccoloFieschi} & c.1462/c.1523
+    & \iflanguage{italian}{Conte di Lavagna}{Count of Lavagna} \\
+  Rainier II Grimaldi
+    & \texttt{genova1507:RainierII} & c.1456/c.1523
+    & \iflanguage{italian}{Signore di Monaco}{Lord of Monaco} \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+% =============================================================================
+% SEZIONE 2: LUOGHI / PLACES
+% =============================================================================
+
+\section{%
+  \iflanguage{italian}{Luoghi — Coordinate e Metadati OHM}%
+  {Places --- Coordinates and OHM Metadata}%
+}
+\label{sec:ohm-places}
+
+\iflanguage{italian}{%
+Coordinate in WGS84. Precisione indicata per ogni luogo.
+\texttt{ohm:accuracy} può essere: \texttt{high} (±10m),
+\texttt{approximate} (±100m), \texttt{estimated} (±500m).
+}{%
+Coordinates in WGS84. Accuracy indicated for each location.
+\texttt{ohm:accuracy} may be: \texttt{high} (±10m),
+\texttt{approximate} (±100m), \texttt{estimated} (±500m).
+}
+
+\begin{center}
+\small
+\rowcolors{2}{LightBG}{white}
+\begin{tabularx}{\textwidth}{L{3.5cm} C{1.6cm} C{1.6cm} C{2cm} X}
+  \toprule
+  \textbf{\iflanguage{italian}{Luogo}{Place}} &
+  \textbf{Lat} & \textbf{Long} &
+  \textbf{\iflanguage{italian}{Precisione}{Accuracy}} &
+  \textbf{OHM URI} \\
+  \midrule
+  \iflanguage{italian}{Città di Genova}{City of Genoa}
+    & 44.4056 & 8.9463 & high & \texttt{genova1507:Genova} \\
+  \iflanguage{italian}{Cattedrale di San Lorenzo}{Cathedral of San Lorenzo}
+    & 44.4071 & 8.9316 & high & \texttt{genova1507:SanLorenzo} \\
+  \iflanguage{italian}{Palazzo Ducale}{Ducal Palace}
+    & 44.4068 & 8.9337 & high & \texttt{genova1507:PalazzoDucale} \\
+  \iflanguage{italian}{Palazzo di San Giorgio}{Palazzo di San Giorgio}
+    & 44.4088 & 8.9269 & high & \texttt{genova1507:PalazzoSanGiorgio} \\
+  \iflanguage{italian}{Porto di Genova}{Harbour of Genoa}
+    & 44.4063 & 8.9237 & high & \texttt{genova1507:Porto} \\
+  \iflanguage{italian}{Il Molo (molo principale)}{Il Molo (main pier)}
+    & 44.4046 & 8.9268 & approx. & \texttt{genova1507:Molo} \\
+  \iflanguage{italian}{Castello di Castelletto (dem. 1536)}{Castle of Castelletto (dem. 1536)}
+    & 44.4120 & 8.9275 & approx. & \texttt{genova1507:Castelletto} \\
+  \iflanguage{italian}{Sestiere di Prè}{Sestiere di Prè}
+    & 44.4080 & 8.9170 & approx. & \texttt{genova1507:SestierePre} \\
+  \iflanguage{italian}{Sestiere di Portoria}{Sestiere di Portoria}
+    & 44.4065 & 8.9420 & approx. & \texttt{genova1507:SestierePortoria} \\
+  \iflanguage{italian}{Sestiere di San Giovanni}{Sestiere di San Giovanni}
+    & 44.4095 & 8.9280 & approx. & \texttt{genova1507:SestiereSanGiovanni} \\
+  \iflanguage{italian}{Sestiere di San Lorenzo}{Sestiere di San Lorenzo}
+    & 44.4071 & 8.9320 & approx. & \texttt{genova1507:SestiereSanLorenzo} \\
+  \iflanguage{italian}{Sestiere di Castello}{Sestiere di Castello}
+    & 44.4060 & 8.9380 & approx. & \texttt{genova1507:SestiereCastello} \\
+  \iflanguage{italian}{Sestiere di Soziglia}{Sestiere di Soziglia}
+    & 44.4082 & 8.9350 & approx. & \texttt{genova1507:SestiereSoziglia} \\
+  \iflanguage{italian}{Castello di Montoggio (Fieschi)}{Castle of Montoggio (Fieschi)}
+    & 44.5023 & 9.0703 & high & \texttt{genova1507:Montoggio} \\
+  \iflanguage{italian}{Principato di Monaco (Grimaldi)}{Principality of Monaco (Grimaldi)}
+    & 43.7384 & 7.4246 & high & \texttt{genova1507:Monaco} \\
+  \iflanguage{italian}{Sampierdarena (molo privato Doria)}{Sampierdarena (Doria private wharf)}
+    & 44.4183 & 8.8985 & approx. & \texttt{genova1507:Sampierdarena} \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+% =============================================================================
+% SEZIONE 3: TIMELINE / TIMELINE
+% =============================================================================
+
+\section{%
+  \iflanguage{italian}{Timeline: 1099–1512}%
+  {Timeline: 1099--1512}%
+}
+\label{sec:ohm-timeline}
+
+\iflanguage{italian}{%
+Timeline degli eventi principali, ordinata cronologicamente,
+da \texttt{genova1507:events}.
+}{%
+Timeline of key events, in chronological order, from the OHM \texttt{genova1507:events} layer.
+}
+
+\begin{center}
+\small
+\rowcolors{2}{LightBG}{white}
+\begin{tabularx}{\textwidth}{C{2cm} L{3cm} X}
+  \toprule
+  \textbf{\iflanguage{italian}{Data}{Date}} &
+  \textbf{\iflanguage{italian}{Tipo}{Type}} &
+  \textbf{\iflanguage{italian}{Evento}{Event}} \\
+  \midrule
+  1099 & \texttt{PoliticalEvent}
+    & \iflanguage{italian}{Fondazione del Comune di Genova}{Foundation of the Commune of Genoa} \\
+  1297 & \texttt{MilitaryEvent}
+    & \iflanguage{italian}{François Grimaldi conquista Monaco}{François Grimaldi seizes Monaco} \\
+  1339 & \texttt{PoliticalEvent}
+    & \iflanguage{italian}{Simone Boccanegra, primo Doge}{Simone Boccanegra, first Doge} \\
+  1353--1421 & \texttt{DiplomaticEvent}
+    & \iflanguage{italian}{Tre protettorati viscontei}{Three Visconti protectorates} \\
+  1407 & \texttt{InstitutionalEvent}
+    & \iflanguage{italian}{Fondazione del Banco di San Giorgio}{Foundation of the Bank of Saint George} \\
+  1453 & \texttt{MilitaryEvent}
+    & \iflanguage{italian}{Caduta di Costantinopoli}{Fall of Constantinople} \\
+  1454 & \texttt{DiplomaticEvent}
+    & \iflanguage{italian}{Pace di Lodi — equilibrio italiano}{Peace of Lodi --- Italian balance} \\
+  1475 & \texttt{MilitaryEvent}
+    & \iflanguage{italian}{Caduta di Caffa agli Ottomani}{Fall of Caffa to the Ottomans} \\
+  1494 & \texttt{MilitaryEvent}
+    & \iflanguage{italian}{Carlo VIII invade l'Italia}{Charles VIII invades Italy} \\
+  1499 & \texttt{MilitaryEvent}
+    & \iflanguage{italian}{Luigi XII occupa Milano e Genova}{Louis XII occupies Milan and Genoa} \\
+  1506-07 & \texttt{SocialEvent}
+    & \iflanguage{italian}{Tensioni fiscali crescenti a Genova}{Growing fiscal tensions in Genoa} \\
+  1507-01 & \texttt{MilitaryEvent}
+    & \iflanguage{italian}{Prime insurrezioni nei caruggi}{First uprisings in the caruggi} \\
+  \textbf{1507-04} & \textbf{\texttt{MilitaryEvent}}
+    & \iflanguage{italian}{\textbf{La Rivolta — scenario del gioco}}{\textbf{The Revolt --- game scenario}} \\
+  1507-05 & \texttt{MilitaryEvent}
+    & \iflanguage{italian}{Riconquista francese di Genova}{French reconquest of Genoa} \\
+  1507-06 & \texttt{DiplomaticEvent}
+    & \iflanguage{italian}{Amnistia e nuovi accordi}{Amnesty and new agreements} \\
+  1512 & \texttt{PoliticalEvent}
+    & \iflanguage{italian}{Fine della prima occupazione francese}{End of first French occupation} \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+% =============================================================================
+% SEZIONE 4: ISTRUZIONI PER IL LAYER OHM / OHM LAYER INSTRUCTIONS
+% =============================================================================
+
+\section{%
+  \iflanguage{italian}{Il Layer OHM: Struttura}%
+  {The OHM Layer: Structure}%
+}
+\label{sec:ohm-instructions}
+
+\begin{multicols}{2}
+
+\begin{description}[leftmargin=1.5cm]
+  \item[\texttt{places}]
+    \iflanguage{italian}{Luoghi fisici con coordinate e metadati}
+    {Physical locations with coordinates and metadata}
+  \item[\texttt{events}]
+    \iflanguage{italian}{Timeline degli eventi con date precise}
+    {Event timeline with precise dates}
+  \item[\texttt{actors}]
+    \iflanguage{italian}{Entità (famiglie, persone, istituzioni)}
+    {Entities (families, persons, institutions)}
+\end{description}
+
+\subsection{%
+  \iflanguage{italian}{Namespace e Prefissi}{Namespaces and Prefixes}%
+}
+
+\begin{verbatim}
+@prefix ohm:
+  <https://www.openhistorymap.org/ontology#> .
+@prefix genova1507:
+  <https://www.openhistorymap.org/
+   relation/genova1507#> .
+@prefix geo:
+  <http://www.w3.org/2003/01/
+   geo/wgs84_pos#> .
+@prefix time:
+  <http://www.w3.org/2006/
+   time#> .
+\end{verbatim}
+
+\columnbreak
+
+\subsection{%
+  \iflanguage{italian}{Esempio di Triple TTL}{Sample TTL Triples}%
+}
+
+\begin{verbatim}
+genova1507:SanLorenzo
+  a ohm:Place ;
+  rdfs:label
+    "Cattedrale di San Lorenzo"@it ,
+    "Cathedral of San Lorenzo"@en ;
+  geo:lat 44.4071 ;
+  geo:long 8.9316 ;
+  ohm:accuracy "high" ;
+  ohm:timespan "1118/"^^xsd:string ;
+  ohm:significance
+    "Signal point of the 1507
+     revolt"@en .
+
+genova1507:rivolta-principale
+  a ohm:Event ;
+  rdfs:label "Rivolta di Genova"@it ,
+    "Revolt of Genoa"@en ;
+  time:hasBeginning "1507-04" ;
+  ohm:place genova1507:Genova ;
+  ohm:actor
+    genova1507:CasaDoria ,
+    genova1507:CasaSpinola ,
+    genova1507:CasaFieschi ,
+    genova1507:CasaGrimaldi .
+\end{verbatim}
+
+\end{multicols}
+

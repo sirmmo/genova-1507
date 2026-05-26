@@ -1,0 +1,470 @@
+% =============================================================================
+% GENOVA 1507 — LA RIVOLTA CONTRO LA FRANCIA
+% Preamble: packages, fonts, colors, custom commands
+% Requires: LuaLaTeX
+% =============================================================================
+
+% --- Encoding & Language -----------------------------------------------------
+\usepackage{fontspec}
+  \setmainfont{Linux Libertine O}[
+    BoldFont       = Linux Libertine O Bold,
+    ItalicFont     = Linux Libertine O Italic,
+    BoldItalicFont = Linux Libertine O Bold Italic,
+  ]
+  \setsansfont{Linux Biolinum O}
+  \setmonofont{DejaVu Sans Mono}[Scale=0.85]
+
+% --- Page geometry -----------------------------------------------------------
+\usepackage[
+  a4paper,
+  top=2.2cm, bottom=2.5cm,
+  left=2cm, right=2cm,
+  columnsep=0.8cm
+]{geometry}
+
+% --- Colors ------------------------------------------------------------------
+\usepackage[dvipsnames, table]{xcolor}
+  \definecolor{GoldRPG}    {HTML}{8B6914}
+  \definecolor{DarkRPG}    {HTML}{1A1A2E}
+  \definecolor{LightBG}    {HTML}{F5F0E8}
+  \definecolor{MidBG}      {HTML}{E8DFC8}
+  \definecolor{SecretRed}  {HTML}{4A0E0E}
+  \definecolor{SecretBG}   {HTML}{F9E8E8}
+  % Family colors
+  \definecolor{DoriaBlue}  {HTML}{1B3A6B}
+  \definecolor{SpinolaCrimson}{HTML}{6B1B1B}
+  \definecolor{FieschiGreen}{HTML}{1B5E20}
+  \definecolor{GrimaldiPurple}{HTML}{4A148C}
+  \definecolor{SharedBrown}{HTML}{4E342E}
+
+% --- Typography & Layout -----------------------------------------------------
+\usepackage{microtype}
+\usepackage{multicol}
+\usepackage{parskip}
+  \setlength{\parskip}{4pt}
+  \setlength{\parindent}{0pt}
+
+% --- Headers & Footers -------------------------------------------------------
+\usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \fancyhead[LE,RO]{\small\textcolor{GoldRPG}{\textit{Genova 1507 — La Rivolta contro la Francia}}}
+  \fancyhead[RE,LO]{\small\textcolor{GoldRPG}{\leftmark}}
+  \fancyfoot[C]{\small\textcolor{GoldRPG}{\thepage}}
+
+% --- Section formatting ------------------------------------------------------
+\usepackage{titlesec}
+  \titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries\color{DarkRPG}}
+    {\textcolor{GoldRPG}{\chaptertitlename\ \thechapter}}{12pt}
+    {\Huge}[\vspace{4pt}\textcolor{GoldRPG}{\rule{\linewidth}{2pt}}]
+  \titleformat{\section}
+    {\normalfont\Large\bfseries\color{DarkRPG}}
+    {\textcolor{GoldRPG}{\thesection}}{0.8em}{}
+    [\vspace{2pt}\textcolor{GoldRPG}{\rule{\linewidth}{0.8pt}}]
+  \titleformat{\subsection}
+    {\normalfont\large\bfseries\color{DarkRPG}}
+    {}{0em}{\MakeUppercase}
+  \titleformat{\subsubsection}
+    {\normalfont\normalsize\bfseries\color{GoldRPG}}
+    {}{0em}{}
+
+% --- Tables ------------------------------------------------------------------
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+  \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+  \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+  \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+% --- Colored boxes -----------------------------------------------------------
+\usepackage[most]{tcolorbox}
+  \tcbuselibrary{breakable, skins}
+
+  % Generic rule box
+  \newtcolorbox{rulebox}[2][GoldRPG]{
+    enhanced, breakable,
+    colback=LightBG, colframe=#1,
+    boxrule=1pt, arc=2pt,
+    title=#2,
+    fonttitle=\bfseries\color{white},
+    colbacktitle=#1,
+    attach boxed title to top left={yshift=-2mm, xshift=4mm},
+    boxed title style={arc=1pt, colframe=#1}
+  }
+
+  % Family-specific box (takes family color as arg)
+  \newtcolorbox{familybox}[2][GoldRPG]{
+    enhanced, breakable,
+    colback=LightBG!60!white, colframe=#1,
+    boxrule=1.2pt, arc=3pt,
+    title={\textbf{#2}},
+    fonttitle=\bfseries\color{white}\large,
+    colbacktitle=#1,
+    attach boxed title to top left={yshift=-2mm, xshift=6mm},
+    boxed title style={arc=2pt}
+  }
+
+  % Secret box
+  \newtcolorbox{secretbox}{
+    enhanced, breakable,
+    colback=SecretBG, colframe=SecretRed,
+    boxrule=1.5pt, arc=2pt,
+    title={\faLock\ \ SEGRETO — DA LEGGERE SOLO TU},
+    fonttitle=\bfseries\color{SecretBG},
+    colbacktitle=SecretRed,
+  }
+
+  % Clock display box
+  \newtcolorbox{clockbox}[1][GoldRPG]{
+    enhanced,
+    colback=LightBG, colframe=#1,
+    boxrule=0.8pt, arc=4pt,
+    left=6pt, right=6pt, top=4pt, bottom=4pt,
+  }
+
+% --- Icons & symbols ---------------------------------------------------------
+\usepackage{fontawesome5}
+\usepackage{amssymb}
+  % Clock dots: filled and empty
+  \newcommand{\clockfull}{\textcolor{GoldRPG}{\Large\textbullet}}
+  \newcommand{\clockempty}{\textcolor{gray!60}{\Large$\circ$}}
+  % Dot rating system
+  \newcommand{\ratingdot}[2]{%  #1=filled, #2=total
+    \foreach \n in {1,...,#2}{%
+      \ifnum\n>#1 \clockempty\else\clockfull\fi
+    }%
+  }
+
+% --- Foreach -----------------------------------------------------------------
+\usepackage{pgffor}
+
+% --- Hyperlinks & PDF metadata -----------------------------------------------
+\usepackage[
+  hidelinks,
+  pdftitle={Genova 1507 — La Rivolta contro la Francia},
+  pdfauthor={Forged in the Dark / Blades in the Dark derivative},
+  pdfsubject={Multi-table TTRPG — One-shot},
+  pdfkeywords={RPG, FitD, Blades in the Dark, Genova, storico, multi-tavolo},
+  bookmarksnumbered=true,
+  bookmarksopen=true,
+]{hyperref}
+
+% --- Index -------------------------------------------------------------------
+\usepackage{imakeidx}
+  \makeindex[
+    columns=2,
+    title={Indice Analitico},
+    intoc,
+    options={-s /home/claude/genova1507_latex/preamble/indexstyle.ist}
+  ]
+
+% --- Misc utilities ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{enumitem}
+  \setlist[itemize]{leftmargin=1.4em, topsep=2pt, itemsep=1pt}
+  \setlist[enumerate]{leftmargin=1.4em, topsep=2pt, itemsep=1pt}
+\usepackage{dashrule}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{xparse}
+
+% =============================================================================
+% CUSTOM COMMANDS
+% =============================================================================
+
+% Family color selector — uses \csname lookup to avoid \edef expansion stack overflow.
+% Define one macro per family key: \familycolorOf@doria, etc.
+\def\familycolorOf@doria{DoriaBlue}
+\def\familycolorOf@spinola{SpinolaCrimson}
+\def\familycolorOf@fieschi{FieschiGreen}
+\def\familycolorOf@grimaldi{GrimaldiPurple}
+% \familycolor{key} expands to the color name; falls back to GoldRPG if unknown.
+\newcommand{\familycolor}[1]{%
+  \ifcsname familycolorOf@#1\endcsname
+    \csname familycolorOf@#1\endcsname
+  \else
+    GoldRPG%
+  \fi
+}
+% \setfc{key} — assigns \fc as a FULLY EXPANDED plain string (e.g. "DoriaBlue").
+% Using \edef + \csname forces complete expansion so \fc is a bare token string,
+% not a \csname wrapper — safe for \colorbox, tcolorbox pgfkeys, and \color{}.
+\newcommand{\setfc}[1]{%
+  \ifcsname familycolorOf@#1\endcsname
+    \expandafter\edef\expandafter\fc%
+      \expandafter{\csname familycolorOf@#1\endcsname}%
+  \else
+    \edef\fc{GoldRPG}%
+  \fi
+}
+
+% Family header for playbook chapters
+\newcommand{\familyheader}[4]{%
+  % #1=family key, #2=name, #3=motto, #4=tagline
+  \begingroup
+  \setfc{#1}%
+  \vspace{4pt}
+  {\color{\fc}\rule{\linewidth}{2pt}}\\[4pt]
+  {\fontsize{32}{36}\selectfont\bfseries\color{\fc} #2}\\[2pt]
+  {\large\itshape\color{GoldRPG} «#3»}\\[4pt]
+  {\normalsize\color{DarkRPG} #4}\\[2pt]
+  {\color{\fc}\rule{\linewidth}{1pt}}
+  \endgroup
+  \vspace{8pt}
+}
+
+% Bilingual labels for charheader and heistphase
+\newcommand{\houseLabel}{\iflanguage{italian}{Casa}{House}}
+\newcommand{\phaseLabel}{\iflanguage{italian}{Fase}{Phase}}
+
+% Character sheet header
+% \charheader{family}{name}{role}{quote}
+\newcommand{\charheader}[4]{%
+  \begingroup
+  \setfc{#1}%
+  {\color{\fc}\rule{\linewidth}{1.5pt}}\\[3pt]%
+  {\small\bfseries\color{\fc}\MakeUppercase{\houseLabel\ #1\ \textperiodcentered\ #3}}\\[2pt]%
+  {\fontsize{22}{26}\selectfont\bfseries\color{\fc} #2}\\[2pt]%
+  {\itshape\color{GoldRPG} \guillemotleft #4\guillemotright}\\[3pt]%
+  {\color{\fc}\rule{\linewidth}{1pt}}%
+  \endgroup
+  \vspace{6pt}%
+}
+
+% Stat row: \statrow{name}{filled}{total}{description}
+\newcommand{\statrow}[4]{%
+  \noindent
+  \begin{tabularx}{\linewidth}{L{3.2cm} C{2cm} X}
+    \textbf{#1} & \ratingdot{#2}{#3} & \textit{\small #4}\\
+  \end{tabularx}
+  \vspace{1pt}
+}
+
+% Attribute block header
+% \attrblock{family}{label}
+\newcommand{\attrblock}[2]{%
+  \begingroup
+  \setfc{#1}%
+  \vspace{6pt}%
+  \noindent\colorbox{\fc}{%
+    \parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+      \vspace{3pt}%
+      \color{white}\bfseries\small\MakeUppercase{#2}%
+      \vspace{3pt}%
+    }%
+  }%
+  \vspace{2pt}%
+  \endgroup
+}
+
+% Clock: \clocktrack{label}{filled}{total}{color}
+\newcommand{\clocktrack}[4][GoldRPG]{%
+  \begin{clockbox}[#1]
+  \textbf{\small #2}\hfill
+  \foreach \n in {1,...,#4}{%
+    \ifnum\n>#3 {\Large\textcolor{gray!50}{$\circ$}}\else{\Large\textcolor{#1}{\textbullet}}\fi\,%
+  }%
+  \end{clockbox}
+  \vspace{4pt}
+}
+
+% Bilingual mechanic label
+\newcommand{\mechanicLabel}{%
+  \iflanguage{italian}{Meccanica}{Mechanic}%
+}
+
+% Ability box: \abilitybox{family}{name}{desc}{mechanic}
+% #4 can be empty — omits the lower rule and mechanic line
+\newcommand{\abilitybox}[4]{%
+  \begingroup
+  \setfc{#1}%
+  % Build tcolorbox options with \fc already expanded to a plain color string
+  \edef\abilityboxargs{%
+    enhanced,
+    colback=LightBG!60,
+    colframe=\fc,
+    colbacktitle=\fc,
+    boxrule=1pt,
+    arc=2pt,
+  }%
+  \begin{tcolorbox}[
+    enhanced,
+    colback=LightBG!60,
+    colframe=\fc,
+    colbacktitle=\fc,
+    boxrule=1pt,
+    arc=2pt,
+    title={\bfseries\small\MakeUppercase{#2}},
+    fonttitle=\bfseries\small\color{white},
+  ]
+  #3%
+  \ifx\relax#4\relax\else
+    \ifthenelse{\equal{#4}{}}{}{%
+      \tcblower
+      \textbf{\mechanicLabel:} \textit{#4}%
+    }%
+  \fi
+  \end{tcolorbox}
+  \endgroup
+  \vspace{4pt}%
+}
+
+% Bond entry: \bondentry{name}{text}
+\newcommand{\bondentry}[2]{%
+  \noindent\textbf{#1:} #2\par\vspace{3pt}
+}
+
+% Phase entry for heist: \heistphase{number}{name}{desc}
+\newcommand{\heistphase}[3]{%
+  \noindent\textbf{\phaseLabel\ #1 --- #2:} #3\par\vspace{3pt}%
+}
+
+% rpg-schema inline comment macro (no-op in PDF, used for annotation)
+\newcommand{\rpgschema}[1]{}
+
+% Index shorthand
+\newcommand{\idx}[1]{#1\index{#1}}
+\newcommand{\idxbold}[1]{\textbf{#1}\index{#1}}
+
+% =============================================================================
+% MACRO PER LE SCHEDE PG (characters/ directory)
+% =============================================================================
+
+% Alias colore Spinola — i file characters/ usano SpinolaRed
+\colorlet{SpinolaRed}{SpinolaCrimson}
+
+% \pgheader[color]{name}{role}{family}
+% Intestazione scheda PG con colore famiglia esplicito
+\newcommand{\pgheader}[4][GoldRPG]{%
+  {\color{#1}\rule{\linewidth}{2pt}}\\[3pt]%
+  {\small\bfseries\color{#1}\MakeUppercase{\houseLabel\ #4\ \textperiodcentered\ #3}}\\[2pt]%
+  {\fontsize{20}{24}\selectfont\bfseries\color{#1} #2}\\[2pt]%
+  {\color{#1}\rule{\linewidth}{1pt}}%
+  \vspace{5pt}%
+}
+
+% \pgquote{text} — citazione in apertura scheda
+\newcommand{\pgquote}[1]{%
+  \medskip
+  \noindent{\itshape\color{GoldRPG}\guillemotleft #1\guillemotright}%
+  \medskip
+}
+
+% \azione{it-name}{en-name}{dots}{desc}
+% Riga azione FitD con pallini riempiti/vuoti
+% #1 = nome italiano, #2 = nome inglese (mostrato tra parentesi),
+% #3 = punti (0-4), #4 = descrizione
+\newcommand{\azione}[4]{%
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}p{3.4cm} C{1.8cm} X@{}}
+    \textbf{#1} {\footnotesize\textit{(#2)}} &
+    \ratingdot{#3}{4} &
+    \textit{\small #4}\\
+  \end{tabularx}%
+  \vspace{1pt}%
+}
+
+% \clock{total}{filled} — traccia stress con cerchi
+\newcommand{\clock}[2]{%
+  \foreach \n in {1,...,#1}{%
+    \ifnum\n>#2%
+      \textcolor{gray!50}{\large$\circ$}\,%
+    \else%
+      \textcolor{GoldRPG}{\large\textbullet}\,%
+    \fi%
+  }%
+}
+
+% environment attributoblock[color]{label}
+% Blocco attributo con intestazione colorata
+\NewDocumentEnvironment{attributoblock}{O{GoldRPG} m}{%
+  \vspace{4pt}%
+  \noindent\colorbox{#1}{%
+    \parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+      \vspace{2pt}%
+      \color{white}\bfseries\small\MakeUppercase{#2}%
+      \vspace{2pt}%
+    }%
+  }%
+  \vspace{2pt}%
+}{%
+  \vspace{2pt}%
+}
+
+% environment pgclockbox{title} — box stress/traumi nelle schede PG
+% (distinto da clockbox che è il tcolorbox per i clock nei playbook)
+\NewDocumentEnvironment{pgclockbox}{m}{%
+  \begin{tcolorbox}[
+    enhanced, colback=LightBG, colframe=GoldRPG,
+    boxrule=0.6pt, arc=3pt,
+    left=6pt, right=6pt, top=3pt, bottom=3pt,
+    title={#1}, fonttitle=\small\bfseries,
+    colbacktitle=MidBG, coltitle=DarkRPG,
+  ]%
+}{%
+  \end{tcolorbox}%
+  \vspace{3pt}%
+}
+
+% environment goldlist — lista equipaggiamento con bullet dorato
+\newenvironment{goldlist}{%
+  \begin{itemize}[
+    leftmargin=1.6em,
+    label={\textcolor{GoldRPG}{$\diamond$}},
+    topsep=2pt, itemsep=1pt
+  ]%
+}{%
+  \end{itemize}%
+}
+
+% Family-specific ability boxes per i characters/
+% Tutti e quattro mappano su tcolorbox con il colore famiglia
+\NewDocumentEnvironment{doriabox}{m}{%
+  \begin{tcolorbox}[
+    enhanced, colback=LightBG!60, colframe=DoriaBlue,
+    colbacktitle=DoriaBlue, boxrule=1pt, arc=2pt,
+    title={\bfseries\small\MakeUppercase{#1}},
+    fonttitle=\bfseries\small\color{white},
+  ]%
+}{%
+  \end{tcolorbox}%
+  \vspace{3pt}%
+}
+
+\NewDocumentEnvironment{spinolabox}{m}{%
+  \begin{tcolorbox}[
+    enhanced, colback=LightBG!60, colframe=SpinolaCrimson,
+    colbacktitle=SpinolaCrimson, boxrule=1pt, arc=2pt,
+    title={\bfseries\small\MakeUppercase{#1}},
+    fonttitle=\bfseries\small\color{white},
+  ]%
+}{%
+  \end{tcolorbox}%
+  \vspace{3pt}%
+}
+
+\NewDocumentEnvironment{fieschibox}{m}{%
+  \begin{tcolorbox}[
+    enhanced, colback=LightBG!60, colframe=FieschiGreen,
+    colbacktitle=FieschiGreen, boxrule=1pt, arc=2pt,
+    title={\bfseries\small\MakeUppercase{#1}},
+    fonttitle=\bfseries\small\color{white},
+  ]%
+}{%
+  \end{tcolorbox}%
+  \vspace{3pt}%
+}
+
+\NewDocumentEnvironment{grimaldibox}{m}{%
+  \begin{tcolorbox}[
+    enhanced, colback=LightBG!60, colframe=GrimaldiPurple,
+    colbacktitle=GrimaldiPurple, boxrule=1pt, arc=2pt,
+    title={\bfseries\small\MakeUppercase{#1}},
+    fonttitle=\bfseries\small\color{white},
+  ]%
+}{%
+  \end{tcolorbox}%
+  \vspace{3pt}%
+}

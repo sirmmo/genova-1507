@@ -1,0 +1,408 @@
+% ============================================================
+% SCHEDE PG — CASA FIESCHI
+% @rpg-schema: <https://rpg-schema.org/instances/genova1507/crew-fieschi>
+%   fitd:hasMember <.../pg-niccolo-fieschi>, <.../pg-gregorio-fieschi>,
+%     <.../pg-fra-tomaso>, <.../pg-margherita-vedova>, <.../pg-ser-elia> .
+% ============================================================
+\chapter{Schede PG --- Casa Fieschi}
+\index{schede PG!Fieschi}
+
+% PG 1: NICCOLO FIESCHI
+% @rpg-schema: <.../pg-niccolo-fieschi> a fitd:Character ;
+%   rdfs:label "Niccol\`o Fieschi" ; fitd:crew <.../crew-fieschi> ;
+%   fitd:action [ fitd:actionName "Skirmish" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Command" ; fitd:dots 4 ] .
+
+\pgheader[FieschiGreen]{Niccol\`o Fieschi}{Il Conte / Il Feudatario}{Fieschi}
+\pgquote{Ho ereditato tre secoli di nobilit\`a. Ho l'obbligo di usarli.}
+
+\section*{Background \& Motivazione}
+\begin{rulebox}{}
+\textbf{Background:} Quarantacinque anni, conte di Lavagna, signore di terre che arrivano fino al passo di Ronco. Non \`e un uomo di citt\`a --- \`e un uomo di colline, di castelli, di giurisdizioni che risalgono a Carlo Magno. A Genova si muove con l'imbarazzo di chi sa di avere autorit\`a ma non sa esattamente come esercitarla.
+
+\medskip\noindent\textcolor{FieschiGreen}{\textbf{Motivazione:}} La dignit\`a. Non sopporta l'umiliazione di vedere i suoi vassalli tassati da stranieri. Il suo nome \`e pi\`u antico di quello di Luigi XII.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+\begin{attributoblock}[FieschiGreen]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{2}{Caccia reale e caccia di uomini nelle campagne}
+  \azione{Studio}{Study}{2}{Storia, diritto feudale, genealogie}
+  \azione{Osserva}{Survey}{2}{Valuta il terreno, la gente, i pericoli}
+  \azione{Ingegno}{Tinker}{0}{Non incline alle sottigliezze tecniche}
+\end{attributoblock}
+\begin{attributoblock}[FieschiGreen]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{1}{Equitazione, arco --- nobili armi da caccia}
+  \azione{Ombra}{Prowl}{0}{Non si nasconde --- non ne sente il bisogno}
+  \azione{Combattimento}{Skirmish}{3}{Spada, lancia --- addestrato da tutta la vita}
+  \azione{Forza bruta}{Wreck}{2}{Sfonda porte, guida assalti}
+\end{attributoblock}
+\begin{attributoblock}[FieschiGreen]{RESOLVE --- Spirito}
+  \azione{Percezione}{Attune}{1}{Legge le situazioni lentamente ma correttamente}
+  \azione{Comando}{Command}{4}{Comanda con la voce, la postura, il nome. Funziona.}
+  \azione{Relazioni}{Consort}{2}{Nobilt\`a minore, vassalli, rete feudale}
+  \azione{Persuasione}{Sway}{1}{Non \`e il suo linguaggio naturale}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+\small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilit\`a Speciale}
+\begin{fieschibox}{Autorit\`a Feudale}
+Quando Niccol\`o richiama la propria autorit\`a in nome del casato Fieschi e del diritto feudale, i PNG di rango inferiore (vassalli, artigiani, popolani) non possono rifiutarsi senza conseguenze immediate. Funziona anche sui soldati genovesi non francesi. Per PNG di rango pari o superiore, richiede Tiro su Comando.
+\end{fieschibox}
+
+\section*{Legami}
+\begin{table}[h]\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.6cm} X@{}}
+\toprule\rowcolor{FieschiGreen}
+\textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+\midrule
+Mons.~Gregorio & Mio cugino. Lo amo come un fratello e lo gestisco come un funzionario. \\
+\rowcolor{FieschiGreen!8}
+Fr\`a Tomaso & Il predicatore. Non lo controllo --- lo oriento. C'\`e una differenza che lui non ha capito. \\
+Margherita Vedova & Ha pi\`u potere nei sestieri di quanto io abbia con tutti i miei titoli. \\
+\rowcolor{FieschiGreen!8}
+Ser Elia & Il mio capitano. Il migliore soldato che conosca. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+\item Spada da conte con le armi dei Fieschi sull'elsa --- pi\`u un simbolo che un'arma
+\item Sigillo comitale --- apre porte che nessun altro documento apre in Liguria
+\item Lettera del vescovo che lo autorizza a parlare in nome della Chiesa
+\item Cavallo e staffieri fuori dalla porta --- mobilit\`a immediata fuori dalla citt\`a
+\end{goldlist}
+
+\clearpage
+\begin{secretbox}
+\textbf{Segreto:} Niccol\`o ha un figlio illegittimo di quindici anni che vive nei feudi con il nome di un contadino. Il ragazzo sa chi \`e il padre. Di recente ha mandato un messaggio: vuole venire a Genova per la rivolta.
+
+\medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}} \textit{Garantire che la liberazione di Genova includa il riconoscimento formale dei diritti feudali dei Fieschi --- scritto nero su bianco, firmato dai capi della nuova amministrazione.}
+\end{secretbox}
+
+\clearpage
+
+% PG 2: MONSIGNORE GREGORIO FIESCHI
+% @rpg-schema: <.../pg-gregorio-fieschi> a fitd:Character ;
+%   rdfs:label "Monsignore Gregorio Fieschi" ;
+%   fitd:action [ fitd:actionName "Study" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Consort" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Sway" ; fitd:dots 4 ] .
+
+\pgheader[FieschiGreen]{Monsignore Gregorio Fieschi}{Il Vescovo Ausiliare / La Voce della Chiesa}{Fieschi}
+\pgquote{La preghiera muove le montagne. La politica le sposta dove servono.}
+
+\section*{Background \& Motivazione}
+\begin{rulebox}{}
+\textbf{Background:} Quarantadue anni, cugino di Niccol\`o, vescovo ausiliare di Genova. Controlla San Lorenzo e quattro chiese minori. Non un mistico, non un riformatore, ma un amministratore ecclesiastico con ambizioni precise. Vuole diventare arcivescovo.
+
+\medskip\noindent\textcolor{FieschiGreen}{\textbf{Motivazione:}} L'arcivescovado. La rivolta \`e l'occasione per dimostrare che i Fieschi sono i difensori della fede a Genova.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+\begin{attributoblock}[FieschiGreen]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{0}{Non caccia --- osserva}
+  \azione{Studio}{Study}{3}{Teologia, diritto canonico, latino, greco}
+  \azione{Osserva}{Survey}{3}{Legge le persone attraverso la loro spiritualit\`a}
+  \azione{Ingegno}{Tinker}{1}{Organizzazione ecclesiastica}
+\end{attributoblock}
+\begin{attributoblock}[FieschiGreen]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{2}{Scrittura, cerimonia, gestualit\`a liturgica}
+  \azione{Ombra}{Prowl}{0}{Un vescovo non si nasconde}
+  \azione{Combattimento}{Skirmish}{0}{Mai}
+  \azione{Forza bruta}{Wreck}{0}{No}
+\end{attributoblock}
+\begin{attributoblock}[FieschiGreen]{RESOLVE --- Spirito}
+  \azione{Percezione}{Attune}{2}{Sente la fede e l'ipocrisia con uguale chiarezza}
+  \azione{Comando}{Command}{2}{L'autorit\`a ecclesiastica ha il suo peso}
+  \azione{Relazioni}{Consort}{3}{Clero, confraternite, ambasciatori pontifici}
+  \azione{Persuasione}{Sway}{4}{La voce di un vescovo porta il peso di Dio}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+\small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilit\`a Speciale}
+\begin{fieschibox}{Interdetto e Assoluzione}
+Gregorio pu\`o dichiarare un luogo o una persona sotto Interdetto ecclesiastico. I PNG cattolici rifiutano di interagire con il bersaglio finch\'e l'Interdetto non viene revocato. Pu\`o anche assolvere pubblicamente qualcuno, ripristinando la sua accettabilit\`a sociale. \textit{Una volta per direzione per sessione.}
+\end{fieschibox}
+
+\section*{Legami}
+\begin{table}[h]\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.6cm} X@{}}
+\toprule\rowcolor{FieschiGreen}
+\textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+\midrule
+Niccol\`o & Mio cugino mi usa. Lo lascio fare perch\'e i nostri obiettivi si sovrappongono. Per ora. \\
+\rowcolor{FieschiGreen!8}
+Fr\`a Tomaso & Mi spaventa. Non perch\'e sia pericoloso --- perch\'e \`e sincero. \\
+Margherita Vedova & La rispetto. Non ha fede. Ma sa cos'\`e il bene comune meglio di me. \\
+\rowcolor{FieschiGreen!8}
+Ser Elia & Non \`e un uomo di Dio. Ma \`e quello che voglio vicino quando serve protezione fisica. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+\item Croce pettorale con documento nascosto nel retro --- autorizzazione vaticana per azioni straordinarie
+\item Chiave della sacrestia di San Lorenzo e di due uscite secondarie
+\item Lista degli uomini di fiducia in ogni parrocchia di Genova
+\item Bozza di lettera per Roma che descrive i Fieschi come difensori della fede --- non ancora inviata
+\end{goldlist}
+
+\clearpage
+\begin{secretbox}
+\textbf{Segreto:} Gregorio ha promesso informazioni ai francesi in cambio del loro supporto alla sua candidatura all'arcivescovado. Non ha ancora consegnato nulla. Ma la promessa esiste.
+
+\medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}} \textit{Suonare le campane di San Lorenzo --- non solo per la rivolta, ma per essere visibilmente il protagonista dell'atto simbolico pi\`u potente della notte. Questo \`e ci\`o che la Santa Sede deve vedere.}
+\end{secretbox}
+
+\clearpage
+
+% PG 3: FRA' TOMASO
+% @rpg-schema: <.../pg-fra-tomaso> a fitd:Character ;
+%   rdfs:label "Fr\`a Tomaso da Bologna" ;
+%   fitd:action [ fitd:actionName "Study" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Attune" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Consort" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Sway" ; fitd:dots 4 ] .
+
+\pgheader[FieschiGreen]{Fr\`a Tomaso da Bologna}{Il Predicatore / La Voce del Popolo}{Fieschi}
+\pgquote{Non parlo per i Fieschi. Parlo per chi non ha voce. A volte coincidono.}
+
+\section*{Background \& Motivazione}
+\begin{rulebox}{}
+\textbf{Background:} Trentaquattro anni, domenicano arrivato a Genova dalla Toscana due anni fa. Non \`e un Fieschi --- \`e un alleato per circostanza. Le sue prediche contro l'occupazione francese sono gi\`a leggendarie. I Fieschi lo usano, lui usa i Fieschi, entrambi sanno che l'alleanza ha una scadenza.
+
+\medskip\noindent\textcolor{FieschiGreen}{\textbf{Motivazione:}} La giustizia vera, non aristocratica. Vuole che Genova libera sia anche Genova giusta, dove i lavoratori del porto e gli artigiani abbiano voce nella governance.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+\begin{attributoblock}[FieschiGreen]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{0}{Non \`e il suo campo}
+  \azione{Studio}{Study}{3}{Teologia, filosofia, Aristotele, Tommaso d'Aquino}
+  \azione{Osserva}{Survey}{2}{Legge le folle, capisce le correnti popolari}
+  \azione{Ingegno}{Tinker}{0}{No}
+\end{attributoblock}
+\begin{attributoblock}[FieschiGreen]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{0}{Nessuna pratica fisica}
+  \azione{Ombra}{Prowl}{1}{Sa muoversi tra la gente come frate}
+  \azione{Combattimento}{Skirmish}{0}{Non combatte. Principio, non codardia.}
+  \azione{Forza bruta}{Wreck}{0}{No}
+\end{attributoblock}
+\begin{attributoblock}[FieschiGreen]{RESOLVE --- Spirito}
+  \azione{Percezione}{Attune}{3}{Sente disperazione, speranza e rabbia di una folla}
+  \azione{Comando}{Command}{1}{Guida con la parola, non con l'autorit\`a}
+  \azione{Relazioni}{Consort}{3}{Popolo, artigiani, lavoratori del porto}
+  \azione{Persuasione}{Sway}{4}{L'oratore pi\`u potente di Genova. Non \`e un'esagerazione.}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+\small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilit\`a Speciale}
+\begin{fieschibox}{La Parola che Muove}
+Quando Fr\`a Tomaso tiene un discorso pubblico, tira su Persuasione. Successo pieno: convince fino a un centinaio di persone a compiere un'azione specifica. Successo parziale: la folla si muove, ma in modo imprevisto. Richiede almeno dieci minuti di scena e un pubblico fisicamente presente.
+\end{fieschibox}
+
+\section*{Legami}
+\begin{table}[h]\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.6cm} X@{}}
+\toprule\rowcolor{FieschiGreen}
+\textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+\midrule
+Niccol\`o & Mi usa come uno strumento. L'ha fatto capire senza dirlo. Rispetto l'onest\`a anche quando \`e cinica. \\
+\rowcolor{FieschiGreen!8}
+Mons.~Gregorio & Un politico in abiti sacri. Lo rispetto pochissimo e ho bisogno di lui moltissimo. \\
+Margherita Vedova & \`E quello che vorrei essere: radicata nel mondo reale, senza le mie ipocrisie. \\
+\rowcolor{FieschiGreen!8}
+Ser Elia & Non ci parliamo. Ma ci rispettiamo --- la spada e la parola capiscono l'utilit\`a reciproca. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+\item Bibbia volgare con note a margine --- alcune sono messaggi in codice per i contatti popolari
+\item Nessuna arma, nessun documento ufficiale, nessun denaro.
+\item Lista di cinquanta artigiani e lavoratori che hanno giurato di seguirlo quando chiede
+\item Un foglio bianco con il sigillo del vescovo --- in bianco, firmato. Non sa ancora perch\'e.
+\end{goldlist}
+
+\clearpage
+\begin{secretbox}
+\textbf{Segreto:} Fr\`a Tomaso ha scoperto che Monsignore Gregorio ha trattato con i francesi. Non lo ha ancora rivelato perch\'e non ha prove scritte --- solo una testimonianza orale. Se lo rivela senza prove, sembra un attacco politico.
+
+\medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}} \textit{Usare la rivolta per ottenere una concessione concreta per i popolani. Se i nobili vincono senza questa garanzia, Fr\`a Tomaso si dissocia pubblicamente dai Fieschi la notte stessa.}
+\end{secretbox}
+
+\clearpage
+
+% PG 4: MARGHERITA LA VEDOVA
+% @rpg-schema: <.../pg-margherita-vedova> a fitd:Character ;
+%   rdfs:label "Margherita la Vedova" ;
+%   fitd:action [ fitd:actionName "Survey" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Attune" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Consort" ; fitd:dots 4 ] ;
+%   fitd:action [ fitd:actionName "Sway" ; fitd:dots 3 ] .
+
+\pgheader[FieschiGreen]{Margherita la Vedova}{La Capo Quartiere / La Voce dei Sestieri}{Fieschi}
+\pgquote{Voi nobili avete i vostri palazzi. Noi abbiamo le strade. E le strade non mentono.}
+
+\section*{Background \& Motivazione}
+\begin{rulebox}{}
+\textbf{Background:} Quarantotto anni, vedova di un calzolaio morto di febbre dieci anni fa. Non ha titoli, non ha denaro, non ha istruzione formale. Ha il rispetto di tre sestieri di Genova, costruito in vent'anni di mediazione e protezione dei deboli. I Fieschi l'hanno cercata --- non lei loro.
+
+\medskip\noindent\textcolor{FieschiGreen}{\textbf{Motivazione:}} Che i suoi figli e i figli dei suoi vicini non crescano in una citt\`a occupata. Non \`e una rivoluzionaria --- \`e una madre esasperata con accesso a trecento persone disposte ad ascoltarla.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+\begin{attributoblock}[FieschiGreen]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{1}{Trova persone nei quartieri che conosce}
+  \azione{Studio}{Study}{0}{Non ha studiato --- ha vissuto}
+  \azione{Osserva}{Survey}{3}{Legge persone e quartieri con precisione assoluta}
+  \azione{Ingegno}{Tinker}{2}{Soluzioni pratiche, improvvisazione quotidiana}
+\end{attributoblock}
+\begin{attributoblock}[FieschiGreen]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{1}{Mani abituate al lavoro}
+  \azione{Ombra}{Prowl}{2}{Si muove nei quartieri popolari come fosse aria}
+  \azione{Combattimento}{Skirmish}{1}{Sa come usare un coltello da cucina se serve}
+  \azione{Forza bruta}{Wreck}{1}{Non la forza fisica --- la capacit\`a di mobilitar chi ce l'ha}
+\end{attributoblock}
+\begin{attributoblock}[FieschiGreen]{RESOLVE --- Spirito}
+  \azione{Percezione}{Attune}{3}{Sente la paura e la speranza di un quartiere}
+  \azione{Comando}{Command}{2}{Nessun titolo, ma le obbediscono lo stesso}
+  \azione{Relazioni}{Consort}{4}{Conosce tutti in tre sestieri --- e i loro segreti}
+  \azione{Persuasione}{Sway}{3}{Parla la lingua della gente. \`E la sua forza pi\`u grande.}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+\small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilit\`a Speciale}
+\begin{fieschibox}{Il Quartiere Si Alza}
+Una volta per sessione, attiva la rete dei contatti popolari. Entro trenta minuti di tempo narrativo, duecento persone dei sestieri fanno esattamente una cosa concreta che lei chiede. Nessun tiro per attivare. Se la richiesta \`e pericolosa per i civili, richiede Tiro su Relazioni.
+\end{fieschibox}
+
+\section*{Legami}
+\begin{table}[h]\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.6cm} X@{}}
+\toprule\rowcolor{FieschiGreen}
+\textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+\midrule
+Niccol\`o & Il conte mi rispetta come uno strumento prezioso. Va bene. L'importante \`e che ascolti. \\
+\rowcolor{FieschiGreen!8}
+Mons.~Gregorio & Non mi fido di lui. Prega troppo bene e troppo poco. \\
+Fr\`a Tomaso & L'unico che capisce davvero cosa vuol dire questa rivolta per la gente di strada. Lo proteggo. \\
+\rowcolor{FieschiGreen!8}
+Ser Elia & Ha soldati. Io ho persone. Ci serve a vicenda. Non \`e amicizia, ma \`e rispetto. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+\item Chiavi di sette magazzini nei sestieri --- punti di raccolta per la rivolta
+\item Lista di cento famiglie che possono nascondere persone nelle loro case
+\item Un vecchio coltello del marito --- lo porta sempre, lo usa raramente
+\item Conoscenza a memoria delle vie secondarie di tre sestieri
+\end{goldlist}
+
+\clearpage
+\begin{secretbox}
+\textbf{Segreto:} Margherita sa dove sono nascosti i rifornimenti di grano che i francesi stanno trattenendo. Non lo ha detto ai Fieschi perch\'e vuole usare questa informazione come merce di scambio: il grano va ai quartieri quando la rivolta vince.
+
+\medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}} \textit{Il grano. Tutto il resto \`e secondario. Prima che la notte finisca, quel magazzino deve essere aperto e il cibo distribuito.}
+\end{secretbox}
+
+\clearpage
+
+% PG 5: SER ELIA DA MONTOGGIO
+% @rpg-schema: <.../pg-ser-elia> a fitd:Character ;
+%   rdfs:label "Ser Elia da Montoggio" ;
+%   fitd:action [ fitd:actionName "Hunt" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Skirmish" ; fitd:dots 4 ] ;
+%   fitd:action [ fitd:actionName "Wreck" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Command" ; fitd:dots 3 ] .
+
+\pgheader[FieschiGreen]{Ser Elia da Montoggio}{Il Capitano / Il Soldato Fedele}{Fieschi}
+\pgquote{Il conte dice dove. Io decido come. Questa \`e la divisione del lavoro.}
+
+\section*{Background \& Motivazione}
+\begin{rulebox}{}
+\textbf{Background:} Trentotto anni, nato nei feudi dei Fieschi a Montoggio, figlio di un sergente. Ha combattuto per i Fieschi da quando aveva sedici anni. Non \`e un nobile --- \`e un soldato professionista con una fedelt\`a che ha scelto, non ereditato.
+
+\medskip\noindent\textcolor{FieschiGreen}{\textbf{Motivazione:}} Completare la missione. Qual \`e la missione? Liberare Genova. Perch\'e? Perch\'e il conte lo ha chiesto. I problemi cominciano quando le missioni si complicano.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+\begin{attributoblock}[FieschiGreen]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{3}{Ricognizione, localizzare nemici, leggere il terreno}
+  \azione{Studio}{Study}{1}{Tattica militare di base, mappe}
+  \azione{Osserva}{Survey}{2}{Valuta minacce e opportunit\`a con occhio militare}
+  \azione{Ingegno}{Tinker}{2}{Armi, fortificationi, trappole}
+\end{attributoblock}
+\begin{attributoblock}[FieschiGreen]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{1}{Arco, coltello lanciato, precisione}
+  \azione{Ombra}{Prowl}{2}{Ricognizione notturna, avanzata silenziosa}
+  \azione{Combattimento}{Skirmish}{4}{Il migliore della sua generazione. Non \`e umilt\`a.}
+  \azione{Forza bruta}{Wreck}{3}{Sfonda, distrugge, rompe ci\`o che deve essere rotto}
+\end{attributoblock}
+\begin{attributoblock}[FieschiGreen]{RESOLVE --- Spirito}
+  \azione{Percezione}{Attune}{1}{Sente il pericolo prima di vederlo}
+  \azione{Comando}{Command}{3}{Comanda con la competenza, non il titolo}
+  \azione{Relazioni}{Consort}{1}{Taverne militari, mercenari}
+  \azione{Persuasione}{Sway}{1}{Diretto fino alla brutalit\`a --- funziona in certi contesti}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+\small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilit\`a Speciale}
+\begin{fieschibox}{Controllo del Campo}
+Quando Ser Elia guida un'azione militare con almeno tre persone sotto i suoi ordini, il tiro del gruppo usa le sue statistiche di Combattimento invece di quella del PG che esegue l'azione. In caso di fallimento, assorbe lui le conseguenze fisiche. \textit{Sempre attiva in contesti militari con almeno tre persone.}
+\end{fieschibox}
+
+\section*{Legami}
+\begin{table}[h]\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.6cm} X@{}}
+\toprule\rowcolor{FieschiGreen}
+\textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+\midrule
+Niccol\`o & Gli devo tutto. Non ho dimenticato da dove vengo n\'e chi mi ha dato la possibilit\`a di essere altro. \\
+\rowcolor{FieschiGreen!8}
+Mons.~Gregorio & Non \`e il mio tipo di uomo. Ma \`e la famiglia del conte --- lo proteggo con la stessa fedelt\`a. \\
+Fr\`a Tomaso & Un monaco che non combatte. In teoria lo rispetterei di pi\`u con una spada. In pratica lo rispetto cos\`i. \\
+\rowcolor{FieschiGreen!8}
+Margherita Vedova & Lei porta duecento persone. Io trenta soldati. Matematicamente, ha ragione lei. L'ho accettato. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+\item Spada lunga e coltello da combattimento --- usurati dall'uso, non dall'ornamento
+\item Mappa di Genova annotata con le posizioni delle guarnigioni francesi (aggiornata ieri)
+\item Fischietto di segnalazione --- tre segnali diversi per i miliziani
+\item Una lettera sigillata da consegnare a un indirizzo specifico se non torna. Non sa il contenuto.
+\end{goldlist}
+
+\clearpage
+\begin{secretbox}
+\textbf{Segreto:} Uno dei trenta miliziani di Ser Elia \`e un informatore dei francesi. Elia lo sospetta ma ha solo una lista di tre nomi possibili. Se non riesce a identificarlo prima del Colpo Globale, i francesi potrebbero essere pronti ad aspettarli.
+
+\medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}} \textit{Identificare la talpa prima che sia troppo tardi. Un'unit\`a con una spia dentro \`e un'unit\`a morta.}
+\end{secretbox}

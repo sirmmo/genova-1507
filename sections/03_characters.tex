@@ -1,0 +1,460 @@
+% =============================================================================
+% SECTION: Schede Personaggio — tutti e 20 i PG
+% @rpg-schema: fitd:Character a owl:Class ;
+%   rdfs:label "Personaggio" .
+% @rpg-schema: fitd:Bond a owl:ObjectProperty ;
+%   rdfs:label "Legame" ;
+%   rdfs:domain fitd:Character ;
+%   rdfs:range fitd:Character .
+% =============================================================================
+
+\chapter{Schede Personaggio — Casa Doria}
+\label{ch:pg-doria}
+
+% ---------------------------------------------------------------------------
+% PG 1: Ottaviano Doria
+% @rpg-schema: pg:OttavianoDoria a fitd:Character ;
+%   rdfs:label "Ottaviano Doria" ;
+%   fitd:crew genova1507:CasaDoria ;
+%   rpg:role "Capofamiglia / Ammiraglio" ;
+%   fitd:insight 7 ; fitd:prowess 6 ; fitd:resolve 6 .
+% ---------------------------------------------------------------------------
+
+\charheader{doria}{Ottaviano Doria}{Il Capofamiglia / L'Ammiraglio}%
+  {Il mare non chiede permesso. Nemmeno io.}
+
+\begin{multicols}{2}
+
+\subsection*{Background \& Motivazione}
+% @rpg-schema: pg:OttavianoDoria rpg:background
+%   "Cinquantadue anni, cicatrici da battaglie navali, comandante dai vent'anni." .
+
+Cinquantadue anni, cicatrici da combattimenti nelle acque greche quando aveva vent'anni.
+È il volto ufficiale della famiglia a Genova — quello che i francesi invitano
+ai banchetti e che sorride mentre pianifica la loro rovina.
+
+\textbf{\textcolor{DoriaBlue}{Motivazione:}} \textit{Vuole rivedere Genova libera prima di
+morire — non per ideologia, ma per orgoglio. I Doria governano il mare
+da trecento anni. Non tollera che un re straniero dica loro dove attraccare.}
+
+\columnbreak
+
+\subsection*{Stress \& Trauma}
+\clocktrack[DoriaBlue]{STRESS}{0}{9}
+\textit{\small Traumi: □ Freddo \ □ Duro \ □ Ossessionato \ □ Paranoico \ □ Spezzato}
+
+\end{multicols}
+
+\attrblock{doria}{INSIGHT — Mente}
+% @rpg-schema: pg:OttavianoDoria fitd:hasAction
+%   [ fitd:actionName "Caccia" ; fitd:rating 2 ] ,
+%   [ fitd:actionName "Studio" ; fitd:rating 1 ] ,
+%   [ fitd:actionName "Osserva" ; fitd:rating 2 ] ,
+%   [ fitd:actionName "Ingegno" ; fitd:rating 0 ] .
+\statrow{Caccia (Hunt)}   {2}{4}{Individua bersagli, traccia rotte, legge le mappe militari}
+\statrow{Studio (Study)}  {1}{4}{Analisi tattica, storia navale, intenzioni nemiche}
+\statrow{Osserva (Survey)}{2}{4}{Valuta situazioni, scansiona l'orizzonte politico}
+\statrow{Ingegno (Tinker)}{0}{4}{Meccanismi, artiglieria, strutture navali}
+
+\attrblock{doria}{PROWESS — Corpo}
+% @rpg-schema: pg:OttavianoDoria fitd:hasAction
+%   [ fitd:actionName "Finezza" ; fitd:rating 1 ] ,
+%   [ fitd:actionName "Ombra" ; fitd:rating 0 ] ,
+%   [ fitd:actionName "Combattimento" ; fitd:rating 3 ] ,
+%   [ fitd:actionName "Forza Bruta" ; fitd:rating 2 ] .
+\statrow{Finezza (Finesse)}{1}{4}{Precisione, mani abili, duello con stile}
+\statrow{Ombra (Prowl)}{0}{4}{Muoversi non visti, infiltrazione}
+\statrow{Combattimento (Skirmish)}{3}{4}{Scontro diretto, spada, corpo a corpo}
+\statrow{Forza Bruta (Wreck)}{2}{4}{Sfondare porte, affondare navi, distruggere}
+
+\attrblock{doria}{RESOLVE — Spirito}
+% @rpg-schema: pg:OttavianoDoria fitd:hasAction
+%   [ fitd:actionName "Percezione" ; fitd:rating 0 ] ,
+%   [ fitd:actionName "Comando" ; fitd:rating 3 ] ,
+%   [ fitd:actionName "Relazioni" ; fitd:rating 2 ] ,
+%   [ fitd:actionName "Persuasione" ; fitd:rating 1 ] .
+\statrow{Percezione (Attune)}{0}{4}{Leggere atmosfere, sentire il non detto}
+\statrow{Comando (Command)}{3}{4}{Guidare uomini, imporre la propria volontà}
+\statrow{Relazioni (Consort)}{2}{4}{Frequentare i potenti, muoversi nei palazzi}
+\statrow{Persuasione (Sway)}{1}{4}{Convincere, manipolare, negoziare}
+
+\vspace{4pt}
+% @rpg-schema: pg:OttavianoDoria fitd:hasSpecialAbility genova1507:AutoritaAmmiraglio .
+% @rpg-schema: genova1507:AutoritaAmmiraglio a fitd:SpecialAbility ;
+%   rdfs:label "Autorità dell'Ammiraglio" ;
+%   fitd:frequency "una volta per colpo" .
+\abilitybox{doria}{Autorità dell'Ammiraglio}{%
+  Quando Ottaviano impartisce un ordine in una situazione di crisi, tutti i PG del
+  tavolo che lo eseguono tirano con Posizione \textbf{Controllata} invece di Rischiosa.%
+}{Una volta per colpo. Deve essere un ordine esplicito pronunciato in scena.}
+
+\subsection*{Legami}
+% @rpg-schema: pg:OttavianoDoria fitd:hasBond
+%   [ fitd:bondTarget pg:FulvioDoria ; fitd:bondText "Luogotenente da trent'anni. Mente quando evita il mio sguardo — e lo fa troppo spesso." ] ,
+%   [ fitd:bondTarget pg:BiancaDoria ; fitd:bondText "Nipote. Più intelligente di chiunque in questa stanza." ] ,
+%   [ fitd:bondTarget pg:FraMatteo ; fitd:bondText "Cappellano. Lo salvai dai turchi nel '78. Mi deve qualcosa che non potrà mai restituire." ] ,
+%   [ fitd:bondTarget pg:GiacomoMoro ; fitd:bondText "Contrabbandiere. Non mi fido di lui, ma è il migliore nel suo mestiere." ] .
+\bondentry{Ser Fulvio}{Il mio luogotenente da trent'anni. So che mente quando evita il mio sguardo — e lo fa troppo spesso ultimamente.}
+\bondentry{Bianca}{Mia nipote. Più intelligente di chiunque in questa stanza. La proteggerei con la vita, ma lei non ne ha bisogno.}
+\bondentry{Fra' Matteo}{Lo salvai dai turchi nel '78. Mi deve qualcosa che non potrà mai restituire, e questo mi pesa.}
+\bondentry{Giacomo il Moro}{Non mi fido di lui, ma è il migliore nel suo mestiere.}
+
+\subsection*{Equipaggiamento}
+\begin{itemize}
+  \item Spada da lato di fattura spagnola — un dono di cui non ricorda l'origine
+  \item Carte nautiche segrete del porto con i fondali reali (non quelli per i francesi)
+  \item Sigillo ufficiale della famiglia — vale più di cento spade
+  \item Fiaschetta d'argento con grappa delle Cinque Terre. Non offre mai da bere.
+\end{itemize}
+
+\begin{secretbox}
+% @rpg-schema: pg:OttavianoDoria rpg:hasSecret
+%   "Ha ipotecato segretamente due galee con un banchiere filofrancese." .
+% @rpg-schema: pg:OttavianoDoria rpg:hasHiddenAgenda
+%   "Completare il Colpo Riservato a qualsiasi costo personale. Mai le navi." .
+Tre anni fa, durante una crisi di liquidità, Ottaviano ha ipotecato in segreto
+due delle quattro galee familiari con un banchiere genovese di simpatie francesi.
+Se la famiglia fallisce nel colpo riservato, il banchiere può confiscare le navi.
+Nessun altro Doria lo sa.
+
+\medskip
+\textbf{\textcolor{SecretRed}{Agenda:}} Completare il Colpo Riservato a qualsiasi costo personale.
+Se necessario, sacrificare la propria reputazione o un compagno — ma non le navi. Mai le navi.
+\end{secretbox}
+
+\newpage
+
+% ---------------------------------------------------------------------------
+% PG 2: Ser Fulvio Doria
+% @rpg-schema: pg:FulvioDoria a fitd:Character ;
+%   rdfs:label "Ser Fulvio Doria" ;
+%   fitd:crew genova1507:CasaDoria ;
+%   rpg:role "Luogotenente / Braccio Destro" .
+% ---------------------------------------------------------------------------
+
+\charheader{doria}{Ser Fulvio Doria}{Il Luogotenente / Il Braccio Destro}%
+  {Un uomo che non mente non sopravvive in questa città. Io sopravvivo.}
+
+\begin{multicols}{2}
+\subsection*{Background \& Motivazione}
+Quarantacinque anni, cugino di secondo grado del capofamiglia.
+Ha gestito le operazioni sporche della famiglia per vent'anni.
+Sa dove sono sepolti i segreti di Genova. Letteralmente.
+
+\textbf{\textcolor{DoriaBlue}{Motivazione:}} \textit{Fedele ai Doria, con riserva mentale:
+la fedeltà ha un prezzo, e qualcuno gli deve ancora molte cose.}
+\columnbreak
+\subsection*{Stress \& Trauma}
+\clocktrack[DoriaBlue]{STRESS}{0}{9}
+\textit{\small Traumi: □ Freddo \ □ Duro \ □ Ossessionato \ □ Paranoico \ □ Spezzato}
+\end{multicols}
+
+\attrblock{doria}{INSIGHT}
+\statrow{Caccia}{2}{4}{Trova persone, localizza bersagli mobili, segue tracce}
+\statrow{Studio}{1}{4}{Legge documenti, valuta testimonianze}
+\statrow{Osserva}{3}{4}{Non sfugge nulla al suo sguardo — soprattutto le menzogne}
+\statrow{Ingegno}{1}{4}{Scassinatore occasionale, meccanismi semplici}
+
+\attrblock{doria}{PROWESS}
+\statrow{Finezza}{2}{4}{Borseggio, veleno, mani veloci}
+\statrow{Ombra}{3}{4}{Sorveglianza, pedinamento, sparire in una folla}
+\statrow{Combattimento}{2}{4}{Coltello, scontri ravvicinati sporchi}
+\statrow{Forza Bruta}{0}{4}{Non è la sua specialità}
+
+\attrblock{doria}{RESOLVE}
+\statrow{Percezione}{1}{4}{Sente le tensioni in una stanza}
+\statrow{Comando}{1}{4}{Impartisce ordini ai subalterni}
+\statrow{Relazioni}{2}{4}{Frequenta taverne, bordelli, e i posti dove si parla}
+\statrow{Persuasione}{3}{4}{Convince, minaccia, ricatta con eleganza}
+
+\abilitybox{doria}{L'Informatore nell'Ombra}{%
+  Una volta per sessione, Fulvio può dichiarare di avere già predisposto
+  una risorsa utile nella scena attuale — un testimone corrotto, una via di
+  fuga, un documento compromettente — senza che fosse annunciato prima.%
+}{Nessun tiro. La risorsa esiste. Il GM determina come entra in gioco.}
+
+\subsection*{Legami}
+% @rpg-schema: pg:FulvioDoria fitd:hasBond
+%   [ fitd:bondTarget pg:OttavianoDoria ; fitd:bondText "L'Ammiraglio mi crede fedele oltre ogni dubbio. Ha ragione — quasi." ] ,
+%   [ fitd:bondTarget pg:GiacomoMoro ; fitd:bondText "Siamo cugini veri, di sangue. Lo proteggerei a dispetto di qualsiasi ordine." ] .
+\bondentry{Ottaviano}{L'Ammiraglio mi crede fedele oltre ogni dubbio. Ha ragione — quasi. C'è una cosa che non sa.}
+\bondentry{Bianca}{La nipote mi spaventa. Vede troppo. Mi ha guardato una volta in un modo che mi ha fatto capire che sa qualcosa.}
+\bondentry{Fra' Matteo}{Lo uso per i messaggi più delicati. Sa che se parlasse, non rivedrebbe il suo convento.}
+\bondentry{Giacomo}{Siamo cresciuti insieme nei caruggi. È mio cugino vero, di sangue. Lo proteggerei a dispetto di qualsiasi ordine.}
+
+\subsection*{Equipaggiamento}
+\begin{itemize}
+  \item Stiletto nascosto nello stivale destro
+  \item Tre documenti falsi con identità diverse, pronti all'uso
+  \item Lista criptata di debitori e creditori — solo lui sa leggerla
+  \item Chiave di una casa nel sestiere di Soziglia che ufficialmente non esiste
+\end{itemize}
+
+\begin{secretbox}
+% @rpg-schema: pg:FulvioDoria rpg:hasSecret
+%   "È in contatto con gli Spinola: crede di usarli, ma l'ultima informazione passata era vera e ha danneggiato i Doria." .
+Fulvio è in contatto con gli Spinola. Li ha convinti di essere un informatore
+quando in realtà filtra ciò che vuole. Ma l'ultima informazione che ha passato
+era vera — e ha danneggiato i Doria.
+
+\medskip
+\textbf{\textcolor{SecretRed}{Agenda:}} Garantirsi una via di uscita personale qualunque sia
+l'esito della rivolta. Ha già trattato la propria sopravvivenza con una terza parte.
+\end{secretbox}
+
+\newpage
+
+% ---------------------------------------------------------------------------
+% PG 3: Bianca Doria
+% @rpg-schema: pg:BiancaDoria a fitd:Character ;
+%   rdfs:label "Bianca Doria" ;
+%   fitd:crew genova1507:CasaDoria ;
+%   rpg:role "La Stratega / L'Erede Ombra" .
+% ---------------------------------------------------------------------------
+
+\charheader{doria}{Bianca Doria}{La Stratega / L'Erede Ombra}%
+  {Mio nonno comanda le galee. Io comando mio nonno.}
+
+\begin{multicols}{2}
+\subsection*{Background \& Motivazione}
+Ventisette anni, nipote di Ottaviano. Non avrebbe dovuto contare nulla —
+è una donna, in un mondo di uomini. Invece è lei che ha pianificato
+il Colpo Riservato e identificato la rotta del convoglio francese.
+Ottaviano lo sa, e la chiama «la mia nipotina» davanti agli altri.
+
+\textbf{\textcolor{DoriaBlue}{Motivazione:}} \textit{Dimostrare che il casato Doria può
+prosperare quando comandano le persone giuste, non solo quelle con la spada più lunga.}
+\columnbreak
+\subsection*{Stress \& Trauma}
+\clocktrack[DoriaBlue]{STRESS}{0}{9}
+\textit{\small Traumi: □ Freddo \ □ Duro \ □ Ossessionato \ □ Paranoico \ □ Spezzato}
+\end{multicols}
+
+\attrblock{doria}{INSIGHT}
+\statrow{Caccia}{1}{4}{Individua pattern, cerca informazioni metodicamente}
+\statrow{Studio}{4}{4}{Analisi, lingue (latino, francese, arabo), cartografia}
+\statrow{Osserva}{3}{4}{Legge stanze, persone, situazioni politiche}
+\statrow{Ingegno}{2}{4}{Codici, meccanismi, trappole logistiche}
+
+\attrblock{doria}{PROWESS}
+\statrow{Finezza}{2}{4}{Scrive, disegna, usa veleni se necessario}
+\statrow{Ombra}{1}{4}{Si muove negli ambienti sociali senza farsi notare}
+\statrow{Combattimento}{0}{4}{Evita lo scontro diretto}
+\statrow{Forza Bruta}{0}{4}{Non è la sua specialità}
+
+\attrblock{doria}{RESOLVE}
+\statrow{Percezione}{2}{4}{Legge le emozioni, sente le dinamiche nascoste}
+\statrow{Comando}{2}{4}{Guida con la logica, non con il volume}
+\statrow{Relazioni}{3}{4}{Eccelle nei salotti, nelle trattative, nelle alleanze}
+\statrow{Persuasione}{3}{4}{Convince razionalmente o emotivamente a scelta}
+
+\abilitybox{doria}{Due Mosse Avanti}{%
+  Quando Bianca pianifica un'azione (non la esegue direttamente), può dichiarare
+  una \textbf{Contingenza}: se l'azione fallisce, la contingenza si attiva
+  automaticamente senza tiro.%
+}{Va dichiarata prima del tiro dell'altro PG. Una volta per colpo.}
+
+\subsection*{Legami}
+\bondentry{Ottaviano}{Lo amo come un padre. Ma sta invecchiando — alcune decisioni le prendo io ormai.}
+\bondentry{Ser Fulvio}{Gli voglio bene come a uno zio. Anche per questo mi spaventa: so che mente, ma non ancora su cosa.}
+\bondentry{Fra' Matteo}{L'unico che non mi sottovaluta. Forse perché è abbastanza vecchio da non importargli di avere torto.}
+\bondentry{Giacomo}{Utile. Pericoloso. Non mi fido di lui, ma ha accesso a canali che noi non abbiamo.}
+
+\subsection*{Equipaggiamento}
+\begin{itemize}
+  \item Taccuino cifrato con la pianificazione completa del Colpo Riservato
+  \item Lettera firmata da un senatore veneziano — un favore da riscuotere
+  \item Abiti da uomo per muoversi nei quartieri chiusi alle donne
+  \item Piccola fiala di sonnifero non letale — «per le emergenze»
+\end{itemize}
+
+\begin{secretbox}
+% @rpg-schema: pg:BiancaDoria rpg:hasSecret
+%   "Ha stabilito un contatto con i Grimaldi per una via di fuga della famiglia se la rivolta fallisce. Il prezzo non è ancora stato accettato." .
+Bianca ha già stabilito un contatto con i Grimaldi per assicurare una via
+di fuga alla famiglia se la rivolta fallisce. L'accordo prevede che i Doria
+possano rifugiarsi a Monaco. Il prezzo non lo ha ancora accettato — ma i
+Grimaldi aspettano la risposta.
+
+\medskip
+\textbf{\textcolor{SecretRed}{Agenda:}} Garantire la sopravvivenza del casato a lungo termine.
+Se il Colpo Riservato mette in pericolo più persone di quante ne salvi,
+proporrà un piano alternativo — anche contro il volere di Ottaviano.
+\end{secretbox}
+
+\newpage
+
+% ---------------------------------------------------------------------------
+% PG 4: Fra' Matteo da Recco
+% @rpg-schema: pg:FraMatteo a fitd:Character ;
+%   rdfs:label "Fra' Matteo da Recco" ;
+%   fitd:crew genova1507:CasaDoria ;
+%   rpg:role "Cappellano / La Coscienza" .
+% ---------------------------------------------------------------------------
+
+\charheader{doria}{Fra' Matteo da Recco}{Il Cappellano / La Coscienza}%
+  {Dio perdona. Io tengo il conto.}
+
+\begin{multicols}{2}
+\subsection*{Background \& Motivazione}
+Sessantun anni, domenicano, cappellano delle galee Doria da trent'anni.
+Ha visto abbastanza battaglie navali da non farsi più illusioni
+sulla natura umana. Crede ancora in Dio — non è sicuro di credere nell'umanità.
+
+\textbf{\textcolor{DoriaBlue}{Motivazione:}} \textit{Un popolo cristiano non può essere
+governato da potenze straniere senza il consenso della Chiesa.
+Il Papa non ha benedetto la dominazione francese. La rivolta è giusta.}
+\columnbreak
+\subsection*{Stress \& Trauma}
+\clocktrack[DoriaBlue]{STRESS}{0}{9}
+\textit{\small Traumi: □ Freddo \ □ Duro \ □ Ossessionato \ □ Paranoico \ □ Spezzato}
+\end{multicols}
+
+\attrblock{doria}{INSIGHT}
+\statrow{Caccia}{0}{4}{Non è il suo campo}
+\statrow{Studio}{3}{4}{Teologia, medicina, storia ecclesiastica, latino e greco}
+\statrow{Osserva}{2}{4}{Osserva le persone come se stesse leggendo le loro anime}
+\statrow{Ingegno}{1}{4}{Preparazione di medicamenti, piccola chimica}
+
+\attrblock{doria}{PROWESS}
+\statrow{Finezza}{1}{4}{Mani ferme da chirurgo di bordo}
+\statrow{Ombra}{0}{4}{Non è la sua specialità}
+\statrow{Combattimento}{0}{4}{Non combatte. Non più.}
+\statrow{Forza Bruta}{0}{4}{No.}
+
+\attrblock{doria}{RESOLVE}
+\statrow{Percezione}{3}{4}{Sente le dinamiche spirituali di un gruppo}
+\statrow{Comando}{2}{4}{L'autorità morale può essere più potente di quella militare}
+\statrow{Relazioni}{3}{4}{Confraternite, ordini religiosi, bassi ranghi del clero}
+\statrow{Persuasione}{2}{4}{La voce da predicatore. Usata raramente, efficace.}
+
+\abilitybox{doria}{Confessione \& Assoluzione}{%
+  Quando un PG del tavolo sta per subire Trauma, Fra' Matteo può intervenire.
+  Il Trauma diventa un semplice punto di Stress — ma il PG deve confessare
+  a Fra' Matteo cosa lo ha portato a quel punto.%
+}{Una volta per PG per sessione. Fra' Matteo deve essere fisicamente presente.}
+
+\subsection*{Legami}
+\bondentry{Ottaviano}{Lo conosco da quando aveva i capelli neri. Ha portato fardelli che non avrebbe dovuto.}
+\bondentry{Ser Fulvio}{Non mi fido di lui. Mi confessa i peccati minori con tale regolarità che mi chiedo cosa stia nascondendo dietro di loro.}
+\bondentry{Bianca}{Lei è il futuro di questa famiglia. Prego per lei ogni mattina.}
+\bondentry{Giacomo}{Un peccatore allegro. Li preferisco ai santi tristi.}
+
+\subsection*{Equipaggiamento}
+\begin{itemize}
+  \item Breviario con fogli sciolti nascosti dentro — messaggi cifrati
+  \item Kit medico da campo: bende, alcol, ago e filo robusto
+  \item Lettera del vescovo che lo autorizza a muoversi in tutti i sestieri
+  \item Rosario di legno di ulivo — l'unica cosa rimasta del suo convento
+\end{itemize}
+
+\begin{secretbox}
+% @rpg-schema: pg:FraMatteo rpg:hasSecret
+%   "Conosce il debito segreto di Ottaviano sulle galee, appreso in confessione da un banchiere. Il sigillo confessionale lo paralizza." .
+Fra' Matteo sa del debito segreto di Ottaviano sulle galee — non dalla confessione
+di Ottaviano, ma da quella del banchiere, che si è confessato con lui.
+Il sigillo confessionale lo paralizza. Non può dirlo.
+Ma potrebbe agire indirettamente per risolvere il problema.
+
+\medskip
+\textbf{\textcolor{SecretRed}{Agenda:}} Proteggere Ottaviano da se stesso. Se il vecchio
+ammiraglio prende una decisione che lo distruggerà, Fra' Matteo farà di tutto
+per impedirlo, anche contro gli ordini espliciti.
+\end{secretbox}
+
+\newpage
+
+% ---------------------------------------------------------------------------
+% PG 5: Giacomo detto il Moro
+% @rpg-schema: pg:GiacomoMoro a fitd:Character ;
+%   rdfs:label "Giacomo detto il Moro" ;
+%   fitd:crew genova1507:CasaDoria ;
+%   rpg:role "Contrabbandiere / L'Uomo di Strada" .
+% ---------------------------------------------------------------------------
+
+\charheader{doria}{Giacomo detto il Moro}{Il Contrabbandiere / L'Uomo di Strada}%
+  {Non sono dei vostri. Ma per stasera, forse sì.}
+
+\begin{multicols}{2}
+\subsection*{Background \& Motivazione}
+Trentasei anni, origini oscure (si dice madre genovese, padre saraceno —
+lui non smentisce perché gli torna utile). Contrabbandiere, sensale,
+e occasionalmente informatore per chiunque paghi.
+
+\textbf{\textcolor{DoriaBlue}{Motivazione:}} \textit{Denaro, prima di tutto. Ma anche un
+senso oscuro che Genova libera sarebbe meglio per la gente come lui:
+quella senza casato, senza nome, senza garanzie.}
+\columnbreak
+\subsection*{Stress \& Trauma}
+\clocktrack[DoriaBlue]{STRESS}{0}{9}
+\textit{\small Traumi: □ Freddo \ □ Duro \ □ Ossessionato \ □ Paranoico \ □ Spezzato}
+\end{multicols}
+
+\attrblock{doria}{INSIGHT}
+\statrow{Caccia}{3}{4}{Trova persone, merci, informazioni in qualsiasi porto}
+\statrow{Studio}{1}{4}{Lingue (arabo, catalano, greco storto)}
+\statrow{Osserva}{3}{4}{Sopravvissuto per trent'anni grazie a questo}
+\statrow{Ingegno}{2}{4}{Barche, reti, nodi, meccanismi semplici}
+
+\attrblock{doria}{PROWESS}
+\statrow{Finezza}{2}{4}{Borseggio, scalata, movimenti precisi in spazi stretti}
+\statrow{Ombra}{3}{4}{Caruggi, tetti, canali — ogni via non ufficiale}
+\statrow{Combattimento}{2}{4}{Coltello, bastone, combattimento sporco}
+\statrow{Forza Bruta}{1}{4}{Sfonda quando necessario}
+
+\attrblock{doria}{RESOLVE}
+\statrow{Percezione}{1}{4}{Istinto animale per il pericolo}
+\statrow{Comando}{0}{4}{Non comanda. Non è nel suo vocabolario.}
+\statrow{Relazioni}{2}{4}{Taverne, mercati neri, basse compagnie}
+\statrow{Persuasione}{2}{4}{Mercanteggia, convince, bluffa}
+
+\abilitybox{doria}{I Caruggi Sono Miei}{%
+  Nel sestiere di Prè, nel porto vecchio, o nei \idx{caruggi} del centro,
+  Giacomo non può essere sorpreso. Ha sempre una via di fuga.
+  Se inseguito, può far sparire sé stesso e un'altra persona senza tiro.%
+}{Sempre attiva nei quartieri indicati. Altrove richiede Tiro su Ombra.}
+
+\subsection*{Legami}
+% @rpg-schema: pg:GiacomoMoro fitd:hasBond
+%   [ fitd:bondTarget pg:FulvioDoria ; fitd:bondText "Siamo cugini veri. Lo ricordo quando fa comodo a me." ] .
+\bondentry{Ottaviano}{Mi rispetta come si rispetta uno strumento utile. Va bene così.}
+\bondentry{Ser Fulvio}{Siamo cugini. Lui lo dimentica quando fa comodo. Lo ricordo io, quando fa comodo a me.}
+\bondentry{Bianca}{L'unica Doria che mi parla come a una persona. Non so se mi piaccia o mi spaventi di più.}
+\bondentry{Fra' Matteo}{Mi confesso da lui perché è l'unico che non si sorprende di nulla.}
+
+\subsection*{Equipaggiamento}
+\begin{itemize}
+  \item Barca a remi nascosta sotto il molo di Sampierdarena — solo lui sa dove
+  \item Mappa mentale delle vie sotterranee sotto il porto (non scritta da nessuna parte)
+  \item Coltello da caccia con manico in osso di balena
+  \item Sacchetto con monete di cinque valute diverse — sempre pronto a partire
+\end{itemize}
+
+\begin{secretbox}
+% @rpg-schema: pg:GiacomoMoro rpg:hasSecret
+%   "Ha venduto agli Spinola informazioni sulla rotta del convoglio francese, centrale nel Colpo Riservato dei Doria." .
+Giacomo ha già venduto informazioni sui Doria agli Spinola — non le più
+pericolose, solo abbastanza per tenersi una porta aperta. Ma una delle
+informazioni riguardava la rotta del convoglio francese — quella al centro
+del Colpo Riservato. Se gli Spinola la usano, il Colpo è compromesso.
+
+\medskip
+\textbf{\textcolor{SecretRed}{Agenda:}} Sopravvivere e uscire da Genova con abbastanza denaro
+da ricominciare altrove. L'unica cosa che potrebbe fermarlo è Fulvio —
+se il cugino è nei guai, Giacomo resta.
+\end{secretbox}
+
+% =============================================================================
+% I restanti 15 PG (Spinola, Fieschi, Grimaldi) seguono la stessa struttura.
+% Per brevità del sorgente, sono inclusi nei file separati che seguono.
+% Il file main.tex li include come \input{characters/spinola}, ecc.
+% =============================================================================
+
+% NOTE PER IL COMPILATORE:
+% I personaggi degli Spinola, Fieschi e Grimaldi seguono
+% esattamente la stessa struttura di questo capitolo.
+% I dati completi sono nei file:
+%   characters/spinola_chars.tex
+%   characters/fieschi_chars.tex
+%   characters/grimaldi_chars.tex
+% inclusi dal main.tex.

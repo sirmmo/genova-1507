@@ -1,0 +1,277 @@
+% ============================================================
+% SCHEDE PG EXTRA — CASA FIESCHI
+% @rpg-schema: <https://rpg-schema.org/instances/genova1507/crew-fieschi>
+%   fitd:hasOptionalMember
+%     <.../pg-caterina-lavagna> ,
+%     <.../pg-hamid-rashid> .
+% ============================================================
+
+\chapter{Schede PG Extra --- Casa Fieschi}
+\index{schede PG!Fieschi!extra}
+
+% ════════════════════════════════════════════════════════════
+% PG EXTRA 1 — CATERINA DA LAVAGNA
+% @rpg-schema: <https://rpg-schema.org/instances/genova1507/pg-caterina-lavagna>
+%   a fitd:Character ;
+%   rdfs:label "Caterina da Lavagna" ;
+%   fitd:crew <.../crew-fieschi> ;
+%   fitd:role "La Spia / L'Infiltrata" ;
+%   fitd:action [ fitd:actionName "Survey" ; fitd:dots 4 ] ;
+%   fitd:action [ fitd:actionName "Prowl" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Sway" ; fitd:dots 3 ] .
+% ════════════════════════════════════════════════════════════
+
+\pgheader[FieschiGreen]{Caterina da Lavagna}{La Spia / L'Infiltrata}{Fieschi}
+\pgquote{Lavorare per i Fieschi significa essere invisibile. Ho dedicato vent'anni a diventare nessuno.}
+
+\section*{Background \& Motivazione}
+
+\begin{rulebox}{}
+  \textbf{Background:} Trentasette anni, nipote di terzo grado di Niccolò,
+  abbastanza lontana dalla linea di successione da non contare nulla
+  sulla carta. Il conte l'ha reclutata quindici anni fa notando una qualità
+  rara: la capacità di essere completamente dimenticabile. Da allora lavora
+  come dama di compagnia presso famiglie neutrali — prima mercanti milanesi,
+  ora nel palazzo del segretario del governatore francese — osservando,
+  ascoltando, e riferendo.
+
+  \medskip\noindent\textcolor{FieschiGreen}{\textbf{Motivazione:}} Caterina
+  vuole la rivolta perché vuole smettere. Quindici anni di doppia vita hanno
+  un costo che non è visibile nei suoi lineamenti — ma lei lo sente ogni
+  mattina. Una Genova libera è una Genova in cui può tornare ad avere
+  un nome suo.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+
+\begin{multicols}{2}
+
+\begin{attributoblock}[FieschiGreen]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{2}{Trova informazioni nell'ambiente domestico e amministrativo}
+  \azione{Studio}{Study}{2}{Francese, latino, protocollo di corte, stenografia}
+  \azione{Osserva}{Survey}{4}{Vent'anni di sopravvivenza basata sull'attenzione}
+  \azione{Ingegno}{Tinker}{2}{Codici, messaggi nascosti, comunicazioni sicure}
+\end{attributoblock}
+
+\columnbreak
+
+\begin{attributoblock}[FieschiGreen]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{3}{Movimenti precisi, presenza fisica calibrata all'invisibilità}
+  \azione{Ombra}{Prowl}{3}{Entra ed esce da posti chiusi senza lasciare tracce}
+  \azione{Combattimento}{Skirmish}{1}{Sa difendersi — non sa attaccare}
+  \azione{Forza bruta}{Wreck}{0}{No}
+\end{attributoblock}
+
+\end{multicols}
+
+\begin{attributoblock}[FieschiGreen]{RESOLVE --- Spirito}
+  \begin{multicols}{2}
+    \azione{Percezione}{Attune}{3}{Sente le tensioni in una stanza prima che diventino visibili}
+    \azione{Comando}{Command}{0}{Non comanda — sparisce}
+    \azione{Relazioni}{Consort}{2}{Si muove tra servitù, donne di corte, impiegati}
+    \azione{Persuasione}{Sway}{3}{Convince con la normalità — è la sua arma principale}
+  \end{multicols}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+  \small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilità Speciale}
+
+% @rpg-schema: <.../pg-caterina-lavagna>
+%   fitd:specialAbility [ rdfs:label "La Persona Sbagliata" ] .
+
+\begin{fieschibox}{La Persona Sbagliata}
+  Caterina può dichiarare di essere stata scambiata per qualcun altro —
+  una dama, una serva, una messaggera — in qualsiasi ambiente sociale.
+  Questa identità falsa regge automaticamente per tutta la scena a meno
+  che qualcuno non la cerchi specificamente per nome.
+
+  \medskip\noindent\textit{Sempre attiva se non ha già attirato attenzione
+  nella scena. Se qualcuno la conosce già, richiede Tiro su Persuasione
+  per mantenere la copertura.}
+\end{fieschibox}
+
+\section*{Legami}
+
+\begin{table}[h]
+\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.6cm} X@{}}
+  \toprule\rowcolor{FieschiGreen}
+  \textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+  \midrule
+  Niccolò & Mi usa da quindici anni. Non mi ha mai ringraziato, ma una volta
+           ha detto a qualcuno che ero «la più brava della famiglia».
+           Mi ha tenuta in vita quella frase. \\
+  \rowcolor{FieschiGreen!8}
+  Mons. Gregorio & So del suo accordo con i francesi. Non so ancora se
+                  questa informazione mi aiuti o mi metta in pericolo. \\
+  Margherita Vedova & Non ci siamo mai parlate. Si capisce che facciamo
+                     lo stesso lavoro su piani diversi. \\
+  \rowcolor{FieschiGreen!8}
+  Ser Elia & L'unico che sa dove sono stanotte. Se non torno, ha istruzioni.
+            Non ha chiesto cosa contengano. \\
+  \bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+  \item Tre identità complete con documenti diversi — dama, serva, messaggera
+  \item Registro mentale delle routine del palazzo del governatore (non scritto)
+  \item Piccolo coltello nascosto nell'orlo della gonna
+  \item Lettera cifrata pronta da inviare a Niccolò se viene scoperta — contiene tutto ciò che sa
+\end{goldlist}
+
+\clearpage
+
+\begin{secretbox}
+  \textbf{Segreto:} Stamattina Caterina ha trovato sul suo tavolo una nota
+  anonima in francese: \textit{«Sappiamo chi sei. Esci dalla casa stanotte
+  o sarai arrestata all'alba.»} Non sa se è vera, se è una trappola per
+  farla muovere, o se qualcuno nell'amministrazione francese l'ha coperta
+  appositamente per usarla. Non lo ha detto ai Fieschi perché non sa di chi
+  fidarsi — inclusi loro.
+
+  \medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}}
+  \textit{Scoprire chi ha scritto quella nota prima della fine della notte.
+  Se è vera, fuggire. Se è una trappola, scoprire per chi. Se qualcuno
+  la protegge, capire il prezzo.}
+\end{secretbox}
+
+\clearpage
+
+% ════════════════════════════════════════════════════════════
+% PG EXTRA 2 — HAMID AL-RASHID
+% @rpg-schema: <https://rpg-schema.org/instances/genova1507/pg-hamid-rashid>
+%   a fitd:Character ;
+%   rdfs:label "Hamid al-Rashid" ;
+%   fitd:crew <.../crew-fieschi> ;
+%   fitd:role "Il Mercante Maghrebino / Il Ponte" ;
+%   fitd:action [ fitd:actionName "Hunt" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Consort" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Sway" ; fitd:dots 3 ] .
+% ════════════════════════════════════════════════════════════
+
+\pgheader[FieschiGreen]{Hamid al-Rashid}{Il Mercante Maghrebino / Il Ponte}{Fieschi}
+\pgquote{A Tunisi mi chiamano genovese. A Genova mi chiamano straniero. Da nessuna parte mi chiamano per nome.}
+
+\section*{Background \& Motivazione}
+
+\begin{rulebox}{}
+  \textbf{Background:} Quarantadue anni, mercante di seta e spezie originario
+  di Tunisi, residente a Genova da dodici anni. Ha il \textit{fondaco} nel
+  sestiere di Soziglia — tecnicamente sotto protezione Grimaldi, praticamente
+  sotto protezione di chiunque gli convenga in quel momento. Il conte Fieschi
+  lo ha cercato tre anni fa: Hamid ha accesso alle rotte maghrebine, ai porti
+  nordafricani, e — cosa più importante — alla comunità mussulmana che
+  commercia con la guarnigione francese senza essere soggetta alle stesse
+  restrizioni dei genovesi.
+
+  \medskip\noindent\textcolor{FieschiGreen}{\textbf{Motivazione:}} Hamid
+  vuole che la rivolta riesca non per amore di Genova, ma perché i francesi
+  hanno tassato il suo \textit{fondaco} al triplo del normale e hanno
+  confiscato un carico di seta tunisina «per ragioni di sicurezza» sei mesi
+  fa. Quella seta vale seicento ducati. Vuole indietro i seicento ducati.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+
+\begin{multicols}{2}
+
+\begin{attributoblock}[FieschiGreen]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{3}{Reti commerciali, flussi di merci, informatori portuali}
+  \azione{Studio}{Study}{2}{Arabo, berbero, italiano, spagnolo, francese commerciale}
+  \azione{Osserva}{Survey}{3}{Legge le transazioni e le persone che le fanno}
+  \azione{Ingegno}{Tinker}{1}{Logistica, stivaggio, contrabbando tecnico}
+\end{attributoblock}
+
+\columnbreak
+
+\begin{attributoblock}[FieschiGreen]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{2}{Mani precise da commerciante, sa valutare qualità e difetti}
+  \azione{Ombra}{Prowl}{2}{Conosce le vie del porto che non sono sulle mappe ufficiali}
+  \azione{Combattimento}{Skirmish}{1}{Sa difendersi — i mercanti a lunga distanza imparano}
+  \azione{Forza bruta}{Wreck}{0}{No}
+\end{attributoblock}
+
+\end{multicols}
+
+\begin{attributoblock}[FieschiGreen]{RESOLVE --- Spirito}
+  \begin{multicols}{2}
+    \azione{Percezione}{Attune}{2}{Legge le intenzioni commerciali con precisione}
+    \azione{Comando}{Command}{1}{Gestisce i suoi impiegati con autorità pratica}
+    \azione{Relazioni}{Consort}{3}{La comunità mercantile straniera a Genova è sua}
+    \azione{Persuasione}{Sway}{3}{Negozia in cinque lingue con uguale fluidità}
+  \end{multicols}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+  \small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilità Speciale}
+
+% @rpg-schema: <.../pg-hamid-rashid>
+%   fitd:specialAbility [ rdfs:label "Il Fondaco Neutro" ] .
+
+\begin{fieschibox}{Il Fondaco Neutro}
+  Il \textit{fondaco} di Hamid è territorio commerciale neutro — non
+  genovese, non francese. Qualsiasi incontro organizzato lì avviene
+  in uno spazio in cui entrambe le parti abbassano la guardia.
+  I tiri sociali condotti nel fondaco partono da Posizione Controllata.
+
+  \medskip\noindent\textit{Sempre attiva quando la scena si svolge nel
+  fondaco. Se scoppia violenza nel fondaco, Hamid perde questa abilità
+  per il resto della sessione — ha rovinato la neutralità.}
+\end{fieschibox}
+
+\section*{Legami}
+
+\begin{table}[h]
+\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.6cm} X@{}}
+  \toprule\rowcolor{FieschiGreen}
+  \textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+  \midrule
+  Niccolò & Mi rispetta come si rispetta un fornitore affidabile. Preferisco
+           questo all'amicizia — l'amicizia crea aspettative. \\
+  \rowcolor{FieschiGreen!8}
+  Frà Tomaso & L'unico in questa famiglia che mi ha chiesto come sto.
+              Non «come vanno gli affari» — come sto. È una persona strana. \\
+  Margherita Vedova & Ha salvato tre dei miei impiegati da un'aggressione
+                     l'anno scorso. Non me l'ha mai fatto pesare. \\
+  \rowcolor{FieschiGreen!8}
+  Ser Elia & Non mi fido dei militari. Ma questo almeno è onesto riguardo
+            a cosa è. Lo rispetto per questo. \\
+  \bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+  \item Lettere di credito su Tunisi, Ceuta e Barcellona — liquidità ovunque
+  \item Rete di cinque informatori tra i commercianti maghrebini che riforniscono la guarnigione francese
+  \item Registro delle confische francesi degli ultimi dodici mesi — nomi, date, valori
+  \item Passaporto emesso dal sultano hafside di Tunisi — lo rende intoccabile per i diplomatici
+\end{goldlist}
+
+\clearpage
+
+\begin{secretbox}
+  \textbf{Segreto:} Il carico di seta confiscato dai francesi sei mesi fa
+  non è andato perduto — Hamid sa dove si trova: in un magazzino del sestiere
+  di Castello, intestato a un funzionario francese che lo rivende
+  sistematicamente. Lo stesso funzionario ha accesso ai piani di
+  difesa del Castelletto. Hamid ha tenuto questa informazione come
+  merce di scambio senza dirlo ai Fieschi — voleva aspettare il momento
+  giusto per massimizzarne il valore.
+
+  \medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}}
+  \textit{Usare la notte della rivolta per recuperare la seta e consegnare
+  i piani del Castelletto ai Fieschi in cambio di una garanzia commerciale
+  permanente. In quest'ordine: prima la seta, poi i piani.}
+\end{secretbox}

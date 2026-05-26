@@ -1,0 +1,413 @@
+% ============================================================
+% SCHEDE PG --- CASA GRIMALDI
+% @rpg-schema: <https://rpg-schema.org/instances/genova1507/crew-grimaldi>
+%   fitd:hasMember <.../pg-rainier-grimaldi>, <.../pg-isabeau>,
+%     <.../pg-costantino>, <.../pg-battista-grimaldi>, <.../pg-serafina> .
+% ============================================================
+\chapter{Schede PG --- Casa Grimaldi}
+\index{schede PG!Grimaldi}
+
+% PG 1: RAINIER GRIMALDI
+% @rpg-schema: <.../pg-rainier-grimaldi> a fitd:Character ;
+%   rdfs:label "Rainier Grimaldi" ;
+%   fitd:action [ fitd:actionName "Survey" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Command" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Consort" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Sway" ; fitd:dots 4 ] .
+
+\pgheader[GrimaldiPurple]{Rainier Grimaldi}{Il Signore / Il Pragmatico}{Grimaldi}
+\pgquote{Monaco esiste perch\'e ogni Grimaldi ha saputo quando cedere e quando no. Stasera scelgo io.}
+
+\section*{Background \& Motivazione}
+\begin{rulebox}{}
+\textbf{Background:} Cinquantun anni, signore di Monaco, patriarca della famiglia. Non \`e a Genova per scelta --- ci \`e venuto perch\'e la rivolta \`e inevitabile e vuole essere dalla parte giusta, qualunque sia.
+
+\medskip\noindent\textcolor{GrimaldiPurple}{\textbf{Motivazione:}} Il riconoscimento formale di Monaco come signoria autonoma. La rivolta \`e il momento migliore per ottenerlo --- dal vincitore, chiunque sia.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+\begin{attributoblock}[GrimaldiPurple]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{2}{Identifica opportunit\`a politiche e debolezze}
+  \azione{Studio}{Study}{2}{Diritto internazionale, storia delle signorie}
+  \azione{Osserva}{Survey}{3}{Decenni di esperienza nel leggere le situazioni}
+  \azione{Ingegno}{Tinker}{1}{Logistica, organizzazione portuale}
+\end{attributoblock}
+\begin{attributoblock}[GrimaldiPurple]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{1}{Mani da signore}
+  \azione{Ombra}{Prowl}{0}{Non \`e nel suo repertorio}
+  \azione{Combattimento}{Skirmish}{1}{Sa usare una spada. Non gli piace farlo.}
+  \azione{Forza bruta}{Wreck}{0}{No}
+\end{attributoblock}
+\begin{attributoblock}[GrimaldiPurple]{RESOLVE --- Spirito}
+  \azione{Percezione}{Attune}{2}{Legge gli equilibri di potere come altri leggono il meteo}
+  \azione{Comando}{Command}{3}{Signore da trent'anni. Il comando \`e nella postura.}
+  \azione{Relazioni}{Consort}{3}{Corti europee, mercanti internazionali}
+  \azione{Persuasione}{Sway}{4}{Negozia da posizione sempre ambigua --- e vince}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+\small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilit\`a Speciale}
+\begin{grimaldibox}{L'Uscita di Sicurezza}
+Monaco \`e territorio neutro. Rainier pu\`o dichiarare che qualsiasi PNG o PG si trova \guillemotleft{}sotto la protezione di Monaco\guillemotright{} --- questa persona \`e intoccabile per il tempo necessario a uscire da Genova. Funziona anche sui nemici. \textit{Una volta per sessione.}
+\end{grimaldibox}
+
+\section*{Legami}
+\begin{table}[h]\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.6cm} X@{}}
+\toprule\rowcolor{GrimaldiPurple}
+\textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+\midrule
+Isabeau & L'agente francese. La sto coltivando. Non sono sicuro di chi stia usando chi. \\
+\rowcolor{GrimaldiPurple!8}
+Costantino & Il mio mercante di fiducia. Vende informazioni a tutti --- incluso me. Lo accetto. \\
+Ser Battista & Il mio capitano. L'ho mandato a chiamare. Arriver\`a stanotte. Se arriva. \\
+\rowcolor{GrimaldiPurple!8}
+Serafina & Mia figlia. Ha diciannove anni e vuole combattere. Ho detto no. Non so per quanto. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+\item Documento bozza del trattato con i francesi --- non firmato, pronto in due versioni
+\item Sigillo di Monaco --- uno dei pochi sigilli sovrani in circolazione a Genova
+\item Lettere di transito che possono far uscire due persone da Genova senza controlli
+\item Mappa delle rotte marittime con le finestre temporali sicure per navigare
+\end{goldlist}
+
+\clearpage
+\begin{secretbox}
+\textbf{Segreto:} Rainier ha gi\`a promesso il riconoscimento di Monaco a entrambe le parti: ai genovesi e ai francesi. Una delle due promesse \`e falsa. Non ha ancora deciso quale.
+
+\medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}} \textit{Uscire da questa notte con Monaco riconosciuta, formalmente, da chiunque governi Genova al mattino. Non importa il costo --- purch\'e non lo paghi lui direttamente.}
+\end{secretbox}
+
+\clearpage
+
+% PG 2: ISABEAU
+% @rpg-schema: <.../pg-isabeau> a fitd:Character ;
+%   rdfs:label "Isabeau de Pr\'ecy" ;
+%   fitd:action [ fitd:actionName "Study" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Survey" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Finesse" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Consort" ; fitd:dots 4 ] ;
+%   fitd:action [ fitd:actionName "Sway" ; fitd:dots 3 ] .
+
+\pgheader[GrimaldiPurple]{Isabeau de Pr\'ecy}{La Dame Fran\c{c}aise / Il Doppio Gioco}{Grimaldi}
+\pgquote{Servo la Francia. Servo Monaco. Servo me stessa. In quest'ordine --- a volte.}
+
+\section*{Background \& Motivazione}
+\begin{rulebox}{}
+\textbf{Background:} Ventinove anni, nobile provenzale legata alla corte di Luigi XII. A Genova ufficialmente come dama in visita. In realt\`a un'osservatrice inviata dalla corte per valutare la stabilit\`a della situazione.
+
+\medskip\noindent\textcolor{GrimaldiPurple}{\textbf{Motivazione:}} La carriera. Vuole tornare a Parigi con informazioni abbastanza buone da garantirsi una posizione a corte. Ama il potere, e il potere \`e dove decide di andare.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+\begin{attributoblock}[GrimaldiPurple]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{2}{Trova info nei canali diplomatici}
+  \azione{Studio}{Study}{3}{Francese, latino, protocollo di corte, codici}
+  \azione{Osserva}{Survey}{3}{Formato alla corte pi\`u intrigante d'Europa}
+  \azione{Ingegno}{Tinker}{2}{Codici, steganografia, documenti}
+\end{attributoblock}
+\begin{attributoblock}[GrimaldiPurple]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{3}{Danza, gestualit\`a di corte, movimenti calibrati}
+  \azione{Ombra}{Prowl}{1}{Si muove negli ambienti aristocratici senza tracce}
+  \azione{Combattimento}{Skirmish}{0}{No}
+  \azione{Forza bruta}{Wreck}{0}{No}
+\end{attributoblock}
+\begin{attributoblock}[GrimaldiPurple]{RESOLVE --- Spirito}
+  \azione{Percezione}{Attune}{2}{Sente le correnti di potere in una stanza}
+  \azione{Comando}{Command}{1}{L'autorit\`a di chi sa cose che gli altri non sanno}
+  \azione{Relazioni}{Consort}{4}{\`E nata per i salotti. Non esiste ambiente dove non sia a casa.}
+  \azione{Persuasione}{Sway}{3}{Seduce nel senso pi\`u ampio e meno ovvio del termine}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+\small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilit\`a Speciale}
+\begin{grimaldibox}{Ambasciatrice Ufficiosa}
+Isabeau pu\`o parlare in nome della corte francese, anche senza mandato formale. I PNG genovesi trattano le sue parole come se provenissero da Luigi XII. \textit{Sempre attiva con PNG. Se i PG degli altri tavoli scoprono che usa questa abilit\`a, il meccanismo decade per la sessione.}
+\end{grimaldibox}
+
+\section*{Legami}
+\begin{table}[h]\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.6cm} X@{}}
+\toprule\rowcolor{GrimaldiPurple}
+\textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+\midrule
+Rainier & Il vecchio signore mi usa con eleganza. Il problema \`e che lo fa cos\`i bene che non so pi\`u chi usa chi. \\
+\rowcolor{GrimaldiPurple!8}
+Costantino & Sa cose su di me che non dovrebbe sapere. Questo mi rende cauta e curiosa allo stesso tempo. \\
+Ser Battista & Il capitano mi studia come se fossi un documento. Ricambio. \\
+\rowcolor{GrimaldiPurple!8}
+Serafina & Troppo giovane e onesta per questo ambiente. Mi ricorda chi ero dieci anni fa. Non \`e un bel pensiero. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+\item Cifra personale per comunicare con la corte francese
+\item Sigillo del governatore (una copia --- ottenuta per vie non ufficiali)
+\item Abiti da uomo per muoversi nei quartieri dove le nobili straniere non vanno
+\item Un memoriale gi\`a scritto su ci\`o che ha osservato a Genova --- aggiornabile
+\end{goldlist}
+
+\clearpage
+\begin{secretbox}
+\textbf{Segreto:} Isabeau ha gi\`a inviato a Parigi un rapporto che suggerisce che la Francia dovrebbe ritirarsi da Genova con dignit\`a prima di essere cacciata. Se il governatore scopre questo rapporto, Isabeau rischia l'arresto.
+
+\medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}} \textit{Tornare a Parigi con la storia giusta da raccontare. In entrambi gli scenari \`e lei quella con le informazioni pi\`u accurate. Questo \`e ci\`o che vale a corte.}
+\end{secretbox}
+
+\clearpage
+
+% PG 3: COSTANTINO
+% @rpg-schema: <.../pg-costantino> a fitd:Character ;
+%   rdfs:label "Costantino Paleologos" ;
+%   fitd:action [ fitd:actionName "Hunt" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Study" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Survey" ; fitd:dots 4 ] ;
+%   fitd:action [ fitd:actionName "Consort" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Sway" ; fitd:dots 4 ] .
+
+\pgheader[GrimaldiPurple]{Costantino Paleologos}{Il Mercante / L'Informatore}{Grimaldi}
+\pgquote{Ogni porto del Mediterraneo ha un suo prezzo. Conosco tutti i prezzi.}
+
+\section*{Background \& Motivazione}
+\begin{rulebox}{}
+\textbf{Background:} Cinquantaquattro anni, veneziano di nascita, genovese di residenza, greco di sangue. Si definisce mercante di sete ma commercia in qualsiasi cosa abbia valore --- informazioni incluse. La sua rete si estende da Alessandria a Barcellona.
+
+\medskip\noindent\textcolor{GrimaldiPurple}{\textbf{Motivazione:}} Denaro e stabilit\`a. Una Genova libera \`e meglio per i commerci. Ma Costantino sopravviverebbe anche sotto i francesi. Ha sempre sopravvissuto.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+\begin{attributoblock}[GrimaldiPurple]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{3}{Trova persone, merci, info ovunque nel Mediterraneo}
+  \azione{Studio}{Study}{3}{Cinque lingue, matematica commerciale}
+  \azione{Osserva}{Survey}{4}{Osserva tutto, ricorda tutto, usa tutto}
+  \azione{Ingegno}{Tinker}{2}{Sistemi logistici, reti, strutture commerciali}
+\end{attributoblock}
+\begin{attributoblock}[GrimaldiPurple]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{2}{Mani precise --- mercante e borseggiatore}
+  \azione{Ombra}{Prowl}{2}{Sa sparire in un mercato}
+  \azione{Combattimento}{Skirmish}{1}{Sa usare una lama. Non ama farlo.}
+  \azione{Forza bruta}{Wreck}{0}{No}
+\end{attributoblock}
+\begin{attributoblock}[GrimaldiPurple]{RESOLVE --- Spirito}
+  \azione{Percezione}{Attune}{2}{Sente quando una trattativa sta per sfuggire di mano}
+  \azione{Comando}{Command}{1}{Non comanda --- coordina}
+  \azione{Relazioni}{Consort}{3}{Mercanti, capitani di porto, doganieri}
+  \azione{Persuasione}{Sway}{4}{Negozia in cinque lingue con uguale efficacia}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+\small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilit\`a Speciale}
+\begin{grimaldibox}{La Rete del Mediterraneo}
+Costantino pu\`o dichiarare di avere informazioni su qualsiasi movimento commerciale o navale avvenuto negli ultimi sette giorni nel Mediterraneo occidentale --- incluse le rotte dei convogli francesi. Queste informazioni sono sempre accurate. \textit{Tre volte per sessione.}
+\end{grimaldibox}
+
+\section*{Legami}
+\begin{table}[h]\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.6cm} X@{}}
+\toprule\rowcolor{GrimaldiPurple}
+\textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+\midrule
+Rainier & Il mio cliente migliore e il mio principale rischio. Se Monaco cade, cado anch'io. \\
+\rowcolor{GrimaldiPurple!8}
+Isabeau & So cose di lei che non avrei dovuto scoprire. Finora mi \`e convenuto non usarle. \\
+Ser Battista & Il capitano \`e l'uomo pi\`u onesto che conosca. Per me \`e un problema e una risorsa. \\
+\rowcolor{GrimaldiPurple!8}
+Serafina & Mi ha chiesto di insegnarle il greco. Sto valutando se sia una buona idea. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+\item Libro contabile con i movimenti dei convogli francesi degli ultimi tre mesi
+\item Lettere di credito di tre banche (genovese, veneziana, fiorentina)
+\item Rete di quattro agenti portuali a Genova, Savona, Monaco, Marsiglia
+\item Vano segreto nel suo ufficio al porto con documenti che nessuno dovrebbe vedere
+\end{goldlist}
+
+\clearpage
+\begin{secretbox}
+\textbf{Segreto:} Costantino vende informazioni anche ai francesi. La settimana scorsa, per un errore di calcolo, ha venduto un'informazione vera e rilevante: il fatto che i Grimaldi stanno trattando con entrambe le parti. Il governatore ora sa che i Grimaldi non sono affidabili.
+
+\medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}} \textit{Neutralizzare la sua gaffe prima che diventi un disastro. Deve trovare un modo per rendere quella informazione inutile o distrarre l'attenzione prima della fine della notte.}
+\end{secretbox}
+
+\clearpage
+
+% PG 4: SER BATTISTA
+% @rpg-schema: <.../pg-battista-grimaldi> a fitd:Character ;
+%   rdfs:label "Ser Battista Grimaldi" ;
+%   fitd:action [ fitd:actionName "Hunt" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Skirmish" ; fitd:dots 4 ] ;
+%   fitd:action [ fitd:actionName "Wreck" ; fitd:dots 2 ] ;
+%   fitd:action [ fitd:actionName "Command" ; fitd:dots 3 ] .
+
+\pgheader[GrimaldiPurple]{Ser Battista Grimaldi}{Il Capitano / Il Custode}{Grimaldi}
+\pgquote{Monaco non \`e un luogo. \`E una promessa. Io sono quello che la mantiene.}
+
+\section*{Background \& Motivazione}
+\begin{rulebox}{}
+\textbf{Background:} Quarantadue anni, cugino di Rainier, capitano delle quaranta guardie di Monaco. \`E arrivato a Genova questa mattina, chiamato da Rainier. Non sa ancora cosa lo aspetta. Sa solo che quando il signore chiama, si risponde.
+
+\medskip\noindent\textcolor{GrimaldiPurple}{\textbf{Motivazione:}} Monaco. Non la politica di Monaco --- Monaco il luogo, le mura, la rocca che la sua famiglia difende da generazioni. Qualsiasi cosa succeda stasera deve servire a quello.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+\begin{attributoblock}[GrimaldiPurple]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{3}{Ricognizione, identificazione di minacce}
+  \azione{Studio}{Study}{1}{Tattica militare pratica, non teorica}
+  \azione{Osserva}{Survey}{2}{Sicurezza perimetrale, minacce ambientali}
+  \azione{Ingegno}{Tinker}{2}{Armi, fortificationi, meccanismi militari}
+\end{attributoblock}
+\begin{attributoblock}[GrimaldiPurple]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{2}{Arco, coltello, precisione}
+  \azione{Ombra}{Prowl}{2}{Pattugliamento notturno, infiltrazione tattica}
+  \azione{Combattimento}{Skirmish}{4}{Decenni di pratica. Non perde facilmente.}
+  \azione{Forza bruta}{Wreck}{2}{Sfonda quando serve, con metodo}
+\end{attributoblock}
+\begin{attributoblock}[GrimaldiPurple]{RESOLVE --- Spirito}
+  \azione{Percezione}{Attune}{2}{Sente il pericolo. Raramente sbaglia.}
+  \azione{Comando}{Command}{3}{Comanda con l'esperienza. Le guardie lo seguono.}
+  \azione{Relazioni}{Consort}{1}{Mercenari, soldati, persone di guardia}
+  \azione{Persuasione}{Sway}{1}{Diretto. Funziona con chi rispetta la direttezza.}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+\small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilit\`a Speciale}
+\begin{grimaldibox}{Guardia del Corpo}
+Quando Ser Battista \`e fisicamente adiacente a un altro PG, pu\`o intercettare qualsiasi attacco fisico o conseguenza violenta diretta a quel PG. Subisce lui le conseguenze. Nessun tiro necessario. \textit{Sempre attiva quando \`e fisicamente presente. Dopo una Conseguenza Grave, non funziona per il resto della scena.}
+\end{grimaldibox}
+
+\section*{Legami}
+\begin{table}[h]\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.6cm} X@{}}
+\toprule\rowcolor{GrimaldiPurple}
+\textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+\midrule
+Rainier & Il mio signore. Non perch\'e non abbia scelta --- perch\'e l'ho scelto. Questa \`e la differenza. \\
+\rowcolor{GrimaldiPurple!8}
+Isabeau & La dame mi studia come se fossi un documento. Ricambio. Nessuno dei due ha ancora agito. \\
+Costantino & Non mi fido dei mercanti. Ma questo \`e competente e onesto quanto uno pu\`o essere. \`E abbastanza. \\
+\rowcolor{GrimaldiPurple!8}
+Serafina & Ho visto crescere la figlia del signore. Se stanotte \`e in pericolo, nulla al mondo mi ferma. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+\item Spada larga e coltello --- usurati dall'uso, affilati ogni giorno
+\item Cotta di maglia leggera sotto gli abiti --- il peso \`e scomodo. Non se ne priva.
+\item Fischietto di segnalazione per le dieci guardie di Monaco che ha portato con s\'e
+\item Lettera sigillata di Rainier --- istruzioni da aprire solo se il signore non \`e pi\`u in grado di dare ordini
+\end{goldlist}
+
+\clearpage
+\begin{secretbox}
+\textbf{Segreto:} Battista ha aperto la lettera sigillata di Rainier prima di partire. Le istruzioni: \guillemotleft{}Se la situazione \`e compromessa, portate Serafina a Monaco. Non aspettate ordini miei.\guillemotright{} Questo significa che Rainier si aspetta la possibilit\`a di non tornare.
+
+\medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}} \textit{Tenere Serafina al sicuro. Tutto il resto \`e secondario. Se Serafina \`e in pericolo, Battista abbandona qualsiasi altra priorit\`a senza esitazione.}
+\end{secretbox}
+
+\clearpage
+
+% PG 5: SERAFINA
+% @rpg-schema: <.../pg-serafina> a fitd:Character ;
+%   rdfs:label "Serafina Grimaldi" ;
+%   fitd:action [ fitd:actionName "Study" ; fitd:dots 4 ] ;
+%   fitd:action [ fitd:actionName "Survey" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Attune" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Sway" ; fitd:dots 3 ] .
+
+\pgheader[GrimaldiPurple]{Serafina Grimaldi}{L'Erede / La Carta Segreta}{Grimaldi}
+\pgquote{Mio padre mi vuole al sicuro. La sicurezza non ha mai liberato nessuno.}
+
+\section*{Background \& Motivazione}
+\begin{rulebox}{}
+\textbf{Background:} Diciannove anni, figlia unica di Rainier. Ha studiato a Monaco con i migliori precettori. Non ha mai combattuto. Non ha mai negoziato da sola. Ha osservato tutto, da dietro porte socchiuse, da un angolo di tavoli di consiglio a cui non era invitata. Sa pi\`u di quanto chiunque le attribuisca.
+
+\medskip\noindent\textcolor{GrimaldiPurple}{\textbf{Motivazione:}} Essere presente. Non essere protetta --- essere l\`a, a fare le cose. La rivolta di Genova \`e la prima cosa reale a cui ha la possibilit\`a di partecipare.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+\begin{attributoblock}[GrimaldiPurple]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{1}{Trova pattern --- ha letto molto di strategia}
+  \azione{Studio}{Study}{4}{Lingue, storia, diplomatica --- formazione solida}
+  \azione{Osserva}{Survey}{3}{Anni ad osservare senza poter agire --- bravissima}
+  \azione{Ingegno}{Tinker}{2}{Codici, sistemi, strutture}
+\end{attributoblock}
+\begin{attributoblock}[GrimaldiPurple]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{2}{Equitazione, danza --- le arti nobili}
+  \azione{Ombra}{Prowl}{1}{Sa muoversi senza farsi notare --- pratica da bambina}
+  \azione{Combattimento}{Skirmish}{0}{Nessuna esperienza reale. Zero.}
+  \azione{Forza bruta}{Wreck}{0}{No}
+\end{attributoblock}
+\begin{attributoblock}[GrimaldiPurple]{RESOLVE --- Spirito}
+  \azione{Percezione}{Attune}{3}{Sente le motivazioni degli altri con precisione quasi imbarazzante}
+  \azione{Comando}{Command}{1}{L'autorit\`a del nome, non dell'esperienza}
+  \azione{Relazioni}{Consort}{2}{Giovani nobili, diplomatici}
+  \azione{Persuasione}{Sway}{3}{La sincerit\`a come strumento --- raro, e per questo efficace}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+\small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilit\`a Speciale}
+\begin{grimaldibox}{L'Occhio Fresco}
+Serafina vede ci\`o che gli altri non vedono perch\'e non hanno pi\`u la freschezza di guardare. Una volta per scena, pu\`o dichiarare di aver notato un dettaglio rilevante che tutti gli altri PG hanno ignorato. Il GM conferma se il dettaglio \`e significativo e lo elabora. \textit{Una volta per scena.}
+\end{grimaldibox}
+
+\section*{Legami}
+\begin{table}[h]\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.6cm} X@{}}
+\toprule\rowcolor{GrimaldiPurple}
+\textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+\midrule
+Rainier & Lo amo e mi fa arrabbiare in misura uguale. Vuole proteggermi da un mondo che dovr\`o governare. \\
+\rowcolor{GrimaldiPurple!8}
+Isabeau & Mi affascina e mi spaventa. \`E quello che potrei diventare se facessi le scelte sbagliate. \\
+Costantino & Mi sta insegnando il greco. In cambio di cosa, non l'ho ancora capito. \\
+\rowcolor{GrimaldiPurple!8}
+Ser Battista & Mi ha vista crescere. Mi vuole bene come a una figlia. Questo mi vincola in modi scomodi. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+\item Taccuino personale con osservazioni sulla famiglia e sugli eventi degli ultimi giorni
+\item Un coltello piccolo, nascosto --- non l'ha mai usato, ma lo porta da tre anni
+\item Lettera per suo padre, scritta stamattina, che non ha ancora consegnato
+\item La chiave di una cassaforte a Monaco --- non sa cosa contiene. Le \`e stata data per emergenze.
+\end{goldlist}
+
+\clearpage
+\begin{secretbox}
+\textbf{Segreto:} Serafina ha letto la lettera che suo padre ha scritto per Battista con le istruzioni di emergenza. Sa che Rainier si aspetta di non tornare. Non lo ha detto a nessuno. Porta questo peso da stamattina.
+
+\medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}} \textit{Parlare con suo padre --- davvero, non diplomaticamente --- prima che la notte finisca. Se Rainier muore senza che si siano detti la verit\`a, non se lo perdoner\`a mai.}
+\end{secretbox}

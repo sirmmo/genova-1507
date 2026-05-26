@@ -1,0 +1,271 @@
+% ============================================================
+% SCHEDE PG EXTRA — CASA DORIA
+% Due personaggi aggiuntivi per tavolo alternativo / quinta sessione
+%
+% @rpg-schema: <https://rpg-schema.org/instances/genova1507/crew-doria>
+%   fitd:hasOptionalMember
+%     <.../pg-elena-doria> ,
+%     <.../pg-luca-grimbert> .
+% ============================================================
+
+\chapter{Schede PG Extra --- Casa Doria}
+\index{schede PG!Doria!extra}
+
+% ════════════════════════════════════════════════════════════
+% PG EXTRA 1 — ELENA DORIA
+% @rpg-schema: <https://rpg-schema.org/instances/genova1507/pg-elena-doria>
+%   a fitd:Character ;
+%   rdfs:label "Elena Doria" ;
+%   fitd:crew <.../crew-doria> ;
+%   fitd:role "La Maestra Calafata / L'Arsenale" ;
+%   fitd:action [ fitd:actionName "Tinker" ; fitd:dots 4 ] ;
+%   fitd:action [ fitd:actionName "Wreck" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Command" ; fitd:dots 2 ] .
+% ════════════════════════════════════════════════════════════
+
+\pgheader[DoriaBlue]{Elena Doria}{La Maestra Calafata / L'Arsenale}{Doria}
+\pgquote{Una nave che non galleggia non è una nave. È un problema.}
+
+\section*{Background \& Motivazione}
+
+\begin{rulebox}{}
+  \textbf{Background:} Quarantaquattro anni, figlia illegittima di un cugino
+  minore della famiglia. Ha imparato il mestiere di calafato nell'arsenale di Prè
+  a fianco del padre prima ancora di sapere leggere. Ora è la caposquadra
+  de facto dell'intero cantiere: nessuna delle quattro galee Doria entra in acqua
+  senza il suo sigillo. I marinai la chiamano semplicemente «la Maestra».
+  La famiglia ufficialmente la ignora. Ufficiosa­mente la consulta su tutto.
+
+  \medskip\noindent\textcolor{DoriaBlue}{\textbf{Motivazione:}} Elena non ha
+  ideologie. Ha galee. Se i francesi vincono, le galee Doria vengono confiscate
+  o affondate — e con esse trent'anni di lavoro suo e dei suoi operai. Questo
+  non è accettabile. La rivolta è quindi, per lei, una questione professionale.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+
+\begin{multicols}{2}
+
+\begin{attributoblock}[DoriaBlue]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{1}{Individua difetti strutturali, materiali di contrabbando}
+  \azione{Studio}{Study}{2}{Architettura navale, contratti d'appalto, materiali}
+  \azione{Osserva}{Survey}{3}{Vede immediatamente cosa non va in una nave o in una persona}
+  \azione{Ingegno}{Tinker}{4}{Costruzione, sabotaggio, riparazione di qualsiasi imbarcazione}
+\end{attributoblock}
+
+\columnbreak
+
+\begin{attributoblock}[DoriaBlue]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{2}{Mani precise da artigiana — sa usare un coltello}
+  \azione{Ombra}{Prowl}{1}{Conosce ogni angolo dell'arsenale al buio}
+  \azione{Combattimento}{Skirmish}{2}{Ruvida, efficace, senza stile}
+  \azione{Forza bruta}{Wreck}{3}{Trent'anni di martello e scalpello}
+\end{attributoblock}
+
+\end{multicols}
+
+\begin{attributoblock}[DoriaBlue]{RESOLVE --- Spirito}
+  \begin{multicols}{2}
+    \azione{Percezione}{Attune}{1}{Sente quando qualcosa nell'arsenale non torna}
+    \azione{Comando}{Command}{2}{Comanda gli operai con autorità guadagnata, non ereditata}
+    \azione{Relazioni}{Consort}{2}{Maestranze, fornitori, capitani di porto}
+    \azione{Persuasione}{Sway}{1}{Diretta al punto dell'impazienza}
+  \end{multicols}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+  \small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilità Speciale}
+
+% @rpg-schema: <.../pg-elena-doria>
+%   fitd:specialAbility [ rdfs:label "Sapere dell'Arsenale" ] .
+
+\begin{doriabox}{Sapere dell'Arsenale}
+  Elena conosce ogni nave nel porto di Genova — scafo, carico, stato di
+  manutenzione, equipaggio reale. Può dichiarare una verità tecnica su
+  qualsiasi imbarcazione (è lenta, ha una falla, può essere affondata con
+  una modifica specifica) e quella verità è sempre accurata.
+
+  \medskip\noindent\textit{Nessun tiro. Una volta per scena. Se la verità
+  dichiarata richiede azione, l'azione richiede un tiro appropriato.}
+\end{doriabox}
+
+\section*{Legami}
+
+\begin{table}[h]
+\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.4cm} X@{}}
+  \toprule\rowcolor{DoriaBlue}
+  \textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+  \midrule
+  Ottaviano & Mi rispetta. Non mi ha mai chiamato figlia, ma mi ha insegnato
+             a nuotare da bambina. È sufficiente. \\
+  \rowcolor{DoriaBlue!8}
+  Ser Fulvio & Sa che posso sabotare una galea senza che nessuno se ne accorga
+              prima di tre giorni di navigazione. Questo ci rende utili a vicenda. \\
+  Bianca & L'unica in famiglia che mi ha chiesto il mio nome per intero.
+           La rispetto per questo. \\
+  \rowcolor{DoriaBlue!8}
+  Giacomo & Mi fornisce i materiali che non posso ordinare ufficialmente.
+            Non chiedo da dove vengono. \\
+  \bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+  \item Martello da calafato con manico in corno di bue --- strumento e arma
+  \item Quaderno tecnico con i difetti strutturali delle galee francesi nel porto
+  \item Chiave dell'arsenale e di tre depositi di materiali
+  \item Sacchetto di stoppa impregnata di pece --- appiccica il fuoco in trenta secondi
+\end{goldlist}
+
+\clearpage
+
+\begin{secretbox}
+  \textbf{Segreto:} Elena sa che due delle galee Doria sono ipotecate --- non
+  perché Ottaviano glielo abbia detto, ma perché ha visto i documenti passare
+  per l'arsenale. Sa anche chi è il banchiere creditore. E sa che quel banchiere
+  ha un magazzino nel porto con materiali rubati dall'arsenale stesso negli
+  ultimi tre anni. Ha prove. Non le ha ancora usate.
+
+  \medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}}
+  \textit{Garantire che le galee rimangano in mani genovesi a qualsiasi costo.
+  Se la situazione lo richiede, è disposta a ricattare il banchiere creditore
+  con le prove che ha — anche senza l'autorizzazione di Ottaviano.}
+\end{secretbox}
+
+\clearpage
+
+% ════════════════════════════════════════════════════════════
+% PG EXTRA 2 — LUCA GRIMBERT
+% @rpg-schema: <https://rpg-schema.org/instances/genova1507/pg-luca-grimbert>
+%   a fitd:Character ;
+%   rdfs:label "Luca Grimbert" ;
+%   fitd:crew <.../crew-doria> ;
+%   fitd:role "L'Ufficiale Francese / Il Traditore" ;
+%   fitd:action [ fitd:actionName "Survey" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Consort" ; fitd:dots 3 ] ;
+%   fitd:action [ fitd:actionName "Sway" ; fitd:dots 3 ] .
+% ════════════════════════════════════════════════════════════
+
+\pgheader[DoriaBlue]{Luca Grimbert}{L'Ufficiale Francese / Il Traditore}{Doria}
+\pgquote{Servo il re di Francia. Ma il re di Francia non sa dove sono stanotte.}
+
+\section*{Background \& Motivazione}
+
+\begin{rulebox}{}
+  \textbf{Background:} Trentuno anni, figlio di un mercante provenzale e di
+  una genovese. Ufficiale subalterno della guarnigione francese al Castelletto,
+  incaricato della logistica dei rifornimenti. Da diciotto mesi passa
+  informazioni ai Doria — non per ideologia, ma perché Andrea Doria gli ha
+  salvato il fratello da un processo per contrabbando e il debito non è stato
+  mai formalizzato né mai dimenticato.
+
+  \medskip\noindent\textcolor{DoriaBlue}{\textbf{Motivazione:}} Sopravvivere
+  alla notte. Luca sa che la rivolta è imminente e sa che essere un ufficiale
+  francese a Genova al mattino dopo sarà pericoloso. Ha bisogno che i Doria
+  vincano abbastanza da proteggerlo — ma non abbastanza da non aver più bisogno
+  di lui.
+\end{rulebox}
+
+\section*{Attributi \& Azioni}
+
+\begin{multicols}{2}
+
+\begin{attributoblock}[DoriaBlue]{INSIGHT --- Mente}
+  \azione{Caccia}{Hunt}{2}{Logistica militare, rotazioni di guardia, movimenti truppe}
+  \azione{Studio}{Study}{2}{Francese, italiano, latino, protocollo militare}
+  \azione{Osserva}{Survey}{3}{Addestrato a rilevare anomalie — le sue e quelle altrui}
+  \azione{Ingegno}{Tinker}{1}{Armi, fortificationi leggere}
+\end{attributoblock}
+
+\columnbreak
+
+\begin{attributoblock}[DoriaBlue]{PROWESS --- Corpo}
+  \azione{Finezza}{Finesse}{2}{Spada da ufficiale, movimenti calibrati}
+  \azione{Ombra}{Prowl}{3}{Muoversi tra le due fazioni senza essere visto}
+  \azione{Combattimento}{Skirmish}{2}{Addestramento militare standard}
+  \azione{Forza bruta}{Wreck}{1}{Non la sua specialità}
+\end{attributoblock}
+
+\end{multicols}
+
+\begin{attributoblock}[DoriaBlue]{RESOLVE --- Spirito}
+  \begin{multicols}{2}
+    \azione{Percezione}{Attune}{2}{Sente quando una copertura sta cedendo}
+    \azione{Comando}{Command}{1}{Comanda i subalterni francesi con disagio crescente}
+    \azione{Relazioni}{Consort}{3}{Frequenta entrambi i mondi — ufficiali francesi e nobili genovesi}
+    \azione{Persuasione}{Sway}{3}{Convince con la plausibilità, non con la forza}
+  \end{multicols}
+\end{attributoblock}
+
+\medskip
+\begin{pgclockbox}{Stress \hfill \clock{9}{0}}
+  \small\textit{Traumi: $\square$ Freddo \quad $\square$ Duro \quad $\square$ Ossessionato \quad $\square$ Paranoico \quad $\square$ Irrazionale \quad $\square$ Spezzato}
+\end{pgclockbox}
+
+\section*{Abilità Speciale}
+
+% @rpg-schema: <.../pg-luca-grimbert>
+%   fitd:specialAbility [ rdfs:label "Ordini Contraffatti" ] .
+
+\begin{doriabox}{Ordini Contraffatti}
+  Luca può produrre ordini militari francesi plausibili — ritiro di pattuglie,
+  riallocazione di guardie, autorizzazione al transito — che funzionano
+  su qualsiasi soldato francese di rango inferiore al suo.
+  Gli ordini reggono finché non vengono verificati con la catena di comando.
+
+  \medskip\noindent\textit{Tiro su Studio per ordini complessi o per truppe
+  sospettose. Ordini semplici non richiedono tiro. Ogni uso aumenta il rischio
+  che la sua copertura venga scoperta — il GM traccia la pressione.}
+\end{doriabox}
+
+\section*{Legami}
+
+\begin{table}[h]
+\centering\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}L{2.4cm} X@{}}
+  \toprule\rowcolor{DoriaBlue}
+  \textcolor{white}{\textbf{PG}} & \textcolor{white}{\textbf{Legame}} \\
+  \midrule
+  Ottaviano & L'Ammiraglio mi tratta come uno strumento. Preferisco così.
+             Gli strumenti non vengono sacrificati per principio. \\
+  \rowcolor{DoriaBlue!8}
+  Ser Fulvio & Mi gestisce direttamente. Sa più di me di quante persone
+              mi conoscano in entrambi i campi. Questo mi spaventa. \\
+  Bianca & Ha letto i miei rapporti prima ancora che li consegnassi.
+           Non so come. Non ho chiesto. \\
+  \rowcolor{DoriaBlue!8}
+  Elena & L'unica che non mi chiede mai informazioni. Mi guarda come
+         se sapesse già tutto. Forse è così. \\
+  \bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Equipaggiamento}
+\begin{goldlist}
+  \item Uniforme da ufficiale francese completa --- include sigillo e documenti di identità
+  \item Abiti borghesi genovesi per muoversi fuori dalla guarnigione
+  \item Chiave del magazzino dei rifornimenti al Castelletto
+  \item Lettera del fratello --- tiene in tasca. Non sa perché.
+\end{goldlist}
+
+\clearpage
+
+\begin{secretbox}
+  \textbf{Segreto:} Il comandante della guarnigione ha ricevuto ieri sera una
+  soffiata: c'è un traditore tra gli ufficiali. Non sa chi. Luca lo sa perché
+  era presente alla riunione. Ha quarantotto ore, forse meno, prima che le
+  indagini lo raggiungano. Non lo ha detto ai Doria perché non vuole che
+  accelerino i piani prima che lui abbia una via di uscita garantita.
+
+  \medskip\noindent\textcolor{SecretRed}{\textbf{Agenda:}}
+  \textit{Ottenere una garanzia scritta di protezione dalla famiglia Doria
+  prima della fine della sessione. Finché non ce l'ha, passa solo le
+  informazioni strettamente necessarie a mantenersi utile — non quelle
+  che li farebbero vincere troppo in fretta.}
+\end{secretbox}

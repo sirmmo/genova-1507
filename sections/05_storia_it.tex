@@ -1,0 +1,503 @@
+% =============================================================================
+% SEZIONE: Contesto Storico Espanso
+% Dall'ascesa delle casate al 1507 e oltre
+% Rilevante per OpenHistoryMap come public history companion
+%
+% @ohm:layer "Genova 1507 — La Superba e le Guerre d'Italia"
+% @ohm:timespan "1100/1512"
+% @ohm:language "it"
+% =============================================================================
+
+\chapter{La Lunga Storia di Genova}
+\label{ch:storia-espansa}
+
+\begin{quote}
+\itshape
+Questo capitolo non è solo sfondo per il gioco. È la materia prima di un
+evento di \textbf{public history}: venti giocatori che incarnano le grandi
+famiglie genovesi del 1507 stanno anche esplorando, attraverso la fiction,
+una delle crisi più acute della storia italiana del Rinascimento.
+Le scelte che faranno questa sera rispecchiano quelle reali — e il
+risultato reale è documentato.
+\end{quote}
+
+% =============================================================================
+\section{Le Origini: dal Comune alla Repubblica (1099–1339)}
+\label{sec:origini}
+% =============================================================================
+
+% @ohm:Event { "id": "genova:fondazione-comune", "date": "1099",
+%   "label": "Fondazione del Comune di Genova",
+%   "type": "ohm:PoliticalEvent", "place": "genova:CittaDiGenova" }
+
+Genova diventa \textit{comune} nel \textbf{1099}, durante la Prima Crociata:
+i mercanti genovesi finanziano le flotte crociate in cambio di quartieri
+commerciali nelle città levantine. Questo è il modello genovese: non
+conquista territoriale, ma \textbf{dominio dei nodi commerciali}.
+Alessandria, Costantinopoli, Caffa in Crimea, Ceuta — ovunque ci sia uno
+scalo strategico, c'è un \textit{fondaco} genovese.
+
+\begin{multicols}{2}
+
+\subsection{Guelfi e Ghibellini}
+
+% @ohm:Actor { "id": "genova:fazione-guelfa", "label": "Fazione Guelfa",
+%   "type": "ohm:PoliticalFaction", "timespan": "1200/1528" }
+% @ohm:Actor { "id": "genova:fazione-ghibellina", "label": "Fazione Ghibellina",
+%   "type": "ohm:PoliticalFaction", "timespan": "1200/1528" }
+
+La divisione tra \idxbold{Guelfi} e \idxbold{Ghibellini} a Genova non è
+meramente ideologica — è strutturale. I \textbf{Fieschi} guidano i Guelfi
+(fedeli al Papa), i \textbf{Doria} e gli \textbf{Spinola} guidano i
+Ghibellini (fedeli all'Imperatore). I \textbf{Grimaldi}, guelfi ma
+pragmatici, oscillano secondo convenienza.
+
+Questa divisione genera un ciclo di colpi di stato ogni decennio: quando
+una fazione prevale, l'altra viene esiliata. Gli esiliati tornano.
+Il ciclo ricomincia. Genova accumula ricchezza malgrado — o forse
+\textit{grazie a} — questa instabilità permanente.
+
+\columnbreak
+
+\subsection{Il Banco di San Giorgio}
+
+% @ohm:Actor { "id": "genova:banco-san-giorgio",
+%   "label": "Banco di San Giorgio",
+%   "type": "ohm:Institution",
+%   "timespan": "1407/1805",
+%   "place": "genova:PalazzoDiSanGiorgio" }
+% @ohm:Place { "id": "genova:PalazzoDiSanGiorgio",
+%   "label": "Palazzo di San Giorgio",
+%   "geo:lat": 44.4088, "geo:long": 8.9269,
+%   "ohm:accuracy": "high" }
+
+Fondato nel \textbf{1407}, il \idxbold{Banco di San Giorgio} è forse la
+prima banca pubblica moderna d'Europa. Gestisce il debito pubblico
+genovese, controlla le colonie oltremare, e — crucialmente — è uno
+\textbf{stato nello stato}: ha proprie leggi, proprie prigioni, propri
+agenti diplomatici. Durante l'occupazione francese del 1507 rimane
+formalmente neutro. Chiunque controlli Genova deve fare i conti con il
+Banco — non il contrario.
+
+\end{multicols}
+
+% =============================================================================
+\section{Il Dominio Visconteo e l'Età delle Crisi (1339–1453)}
+\label{sec:crisi}
+% =============================================================================
+
+% @ohm:Event { "id": "genova:primo-doge", "date": "1339",
+%   "label": "Simone Boccanegra primo Doge di Genova",
+%   "type": "ohm:PoliticalEvent" }
+
+Nel \textbf{1339} Genova istituisce il \textbf{Dogato} — un tentativo di
+uscire dal ciclo fazioso eleggendo un doge a vita. Il primo è Simone
+Boccanegra (la storia che Verdi renderà famosa quattrocento anni dopo).
+Non funziona: i dogi vengono assassinati, esiliati, o deposti con
+regolarità cronometrica.
+
+\begin{multicols}{2}
+
+Tra il 1353 e il 1421 Genova si mette volontariamente sotto la protezione
+dei \textbf{Visconti di Milano} tre volte separate — ogni volta per
+sfuggire a una crisi interna che le fazioni locali non sanno risolvere.
+Questo schema — \textit{cedere la sovranità a una potenza esterna pur di
+avere ordine} — è esattamente ciò che ha prodotto l'occupazione francese
+del 1499.
+
+\columnbreak
+
+\begin{rulebox}[SharedBrown]{Nota per i Giocatori}
+Il vostro personaggio del 1507 porta in sé questa memoria istituzionale.
+Genova ha già \textit{scelto} di cedere la sovranità in passato.
+La domanda non è \textit{se} è possibile — è \textit{a quali condizioni}
+e \textit{con quali garanzie}. Questo spiega perché alcune famiglie
+negoziano con i francesi anche mentre sostengono la rivolta.
+\end{rulebox}
+
+\end{multicols}
+
+% =============================================================================
+\section{L'Apogeo e la Caduta: 1453–1499}
+\label{sec:apogeo}
+% =============================================================================
+
+% @ohm:Event { "id": "genova:caduta-caffa", "date": "1475",
+%   "label": "Caduta di Caffa agli Ottomani",
+%   "type": "ohm:MilitaryEvent",
+%   "place": "ohm:Caffa" }
+% @ohm:Event { "id": "genova:trattato-senlis", "date": "1493",
+%   "label": "Trattato di Senlis — Francia rinuncia alla Borgogna",
+%   "type": "ohm:DiplomaticEvent" }
+
+La caduta di \textbf{Costantinopoli} (1453) e poi di \textbf{Caffa} (1475)
+agli Ottomani decapita il sistema commerciale genovese nel Mediterraneo
+orientale. Genova perde in un decennio ciò che aveva costruito in tre
+secoli. Il vuoto economico è drammatico — e apre la strada alla
+penetrazione dei creditori stranieri.
+
+\begin{multicols}{2}
+
+\subsection{Le Guerre d'Italia cominciano}
+
+% @ohm:Event { "id": "genova:invasione-carlo-viii", "date": "1494",
+%   "label": "Carlo VIII invade l'Italia",
+%   "type": "ohm:MilitaryEvent" }
+
+Nel \textbf{1494} Carlo~VIII di Francia attraversa le Alpi con 25.000
+uomini — il più grande esercito che l'Italia abbia visto da secoli.
+Conquista Napoli in sei mesi. L'equilibrio della penisola, costruito
+dalla Pace di Lodi (1454) e mantenuto da Lorenzo de' Medici, crolla
+in pochi mesi. Le \idxbold{Guerre d'Italia} (1494–1559) trasformeranno
+la penisola in campo di battaglia tra Francia, Spagna e Impero per
+sessant'anni.
+
+\columnbreak
+
+\subsection{Genova come pedina}
+
+Genova è geograficamente cruciale: chiunque voglia controllare il nord
+Italia deve controllare il suo porto. I milanesi Sforza — alleati
+storici di alcune famiglie genovesi — vengono cacciati da Luigi~XII
+nel \textbf{1499}. Con loro cade l'ultimo baluardo contro l'occupazione
+diretta.
+
+% @ohm:Event { "id": "genova:occupazione-francese", "date": "1499",
+%   "label": "Luigi XII occupa il Ducato di Milano e Genova",
+%   "type": "ohm:MilitaryEvent",
+%   "place": "genova:CittaDiGenova" }
+
+\end{multicols}
+
+% =============================================================================
+\section{L'Occupazione Francese (1499–1507)}
+\label{sec:occupazione}
+% =============================================================================
+
+% @ohm:Actor { "id": "genova:luigi-xii",
+%   "label": "Luigi XII re di Francia",
+%   "type": "ohm:Person", "timespan": "1462/1515" }
+% @ohm:Actor { "id": "genova:trivulzio",
+%   "label": "Gian Giacomo Trivulzio",
+%   "type": "ohm:Person", "timespan": "1441/1518",
+%   "ohm:role": "Governatore di Genova 1499-1500, 1507" }
+
+\begin{multicols}{2}
+
+Sotto Luigi~XII, Genova non viene annessa alla Francia — viene trattata
+come un \textbf{feudo personale del re}. La distinzione è importante:
+significa che le sue istituzioni formali (il Doge, il Banco di San Giorgio,
+i consigli delle famiglie) sopravvivono, ma senza potere reale.
+Il governatore francese — prima \textbf{Trivulzio}, poi altri — tiene
+la guarnigione nel castello di \textbf{Castelletto}, che domina la città
+dall'alto.
+
+\subsubsection{Il peso fiscale}
+
+La tassazione francese è sistematica e pesante. Luigi~XII ha bisogno di
+finanziare le sue campagne in Italia, e Genova è una delle sue fonti
+principali. Le dogane vengono ri-tariffate, i monopoli commerciali
+redistribuiti a favori di mercanti francesi, le esenzioni storiche
+delle famiglie genovesi cancellate con decreti.
+
+\columnbreak
+
+\subsubsection{La guarnigione}
+
+% @ohm:Place { "id": "genova:Castelletto",
+%   "label": "Castello di Castelletto",
+%   "type": "ohm:MilitaryStructure",
+%   "geo:lat": 44.4120, "geo:long": 8.9275,
+%   "ohm:accuracy": "approximate",
+%   "ohm:note": "Demolito nel 1536. Posizione approssimativa." }
+
+Il \idxbold{Castelletto} è il simbolo fisico dell'occupazione: una
+fortezza medievale sul colle che sovrasta il porto, rinforzata dai
+francesi e presidiata da una guarnigione permanente. È praticamente
+inespugnabile dall'interno della città. Per questo il piano della
+rivolta del 1507 non prevede di conquistarlo — ma di \textit{isolarlo}.
+
+\begin{rulebox}[SharedBrown]{Nota geografica — OHM}
+Il Castelletto fu demolito definitivamente nel 1536.
+La sua posizione è ricostruibile da fonti cartografiche del XVI sec.
+Layer OHM suggerito: \texttt{genova1507:military\_structures}.
+\end{rulebox}
+
+\end{multicols}
+
+% =============================================================================
+\section{La Rivolta del 1507: Cronologia Precisa}
+\label{sec:rivolta-cronologia}
+% =============================================================================
+
+% @ohm:Event { "id": "genova:rivolta-1507",
+%   "label": "Rivolta di Genova contro la Francia",
+%   "type": "ohm:MilitaryEvent",
+%   "timespan": "1507-01/1507-04",
+%   "place": "genova:CittaDiGenova" }
+
+Questa è la cronologia reale degli eventi che il vostro gioco simula
+e comprime in una singola notte. È utile conoscerla — sia per i
+giocatori che vogliono ancorare la fiction alla storia, sia per
+capire \textit{perché} le scelte dei personaggi avevano un peso reale.
+
+\begin{center}
+\rowcolors{2}{LightBG}{white}
+\begin{tabularx}{\textwidth}{L{3.2cm} X}
+  \toprule
+  \textbf{Data} & \textbf{Evento} \\
+  \midrule
+  \textbf{Estate 1506} &
+    % @ohm:Event { "id":"genova:tensioni-1506","date":"1506-07","label":"Tensioni fiscali crescenti a Genova","type":"ohm:SocialEvent" }
+    Le tensioni fiscali raggiungono il punto critico. I mercanti del porto
+    rifiutano di pagare le nuove imposte sulle merci. Piccoli scontri tra
+    popolani e guardie francesi. \\
+
+  \textbf{Gennaio 1507} &
+    % @ohm:Event { "id":"genova:primo-insurrezione","date":"1507-01","label":"Prima insurrezione popolare nei caruggi","type":"ohm:MilitaryEvent" }
+    Prima insurrezione popolare nei \textit{caruggi}. I francesi rispondono
+    con arresti e rappresaglie. Le famiglie nobili osservano, non intervengono
+    ancora. \\
+
+  \textbf{Febbraio 1507} &
+    Le famiglie genovesi iniziano a coordinare — non pubblicamente, ma
+    attraverso intermediari. Il governatore Trivulzio richiede rinforzi
+    a Luigi~XII. \\
+
+  \textbf{Aprile 1507} &
+    % @ohm:Event { "id":"genova:rivolta-principale","date":"1507-04",
+    %   "label":"Rivolta principale — le famiglie si schierano apertamente",
+    %   "type":"ohm:MilitaryEvent" }
+    La rivolta diventa aperta. Le famiglie nobiliari si schierano.
+    Le campane di San Lorenzo suonano. Trivulzio si ritira nel Castelletto.
+    Genova è de facto libera per alcune settimane. \\
+
+  \textbf{Maggio 1507} &
+    % @ohm:Event { "id":"genova:reconquista-francese","date":"1507-05",
+    %   "label":"Luigi XII riconquista Genova","type":"ohm:MilitaryEvent" }
+    Luigi~XII scende personalmente in Italia con un esercito. Genova viene
+    riconquistata. Le rappresaglie sono severe ma selettive — il re ha
+    bisogno dei mercanti genovesi per finanziare le sue campagne. \\
+
+  \textbf{Giugno 1507} &
+    % @ohm:Event { "id":"genova:amnistia","date":"1507-06",
+    %   "label":"Amnistia parziale e nuovi accordi di governo","type":"ohm:DiplomaticEvent" }
+    Amnistia parziale. Nuovi accordi di governo: Genova ottiene alcune
+    concessioni fiscali in cambio della sottomissione formale.
+    Le famiglie che hanno trattato — come i Grimaldi — ottengono
+    condizioni migliori. \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+% =============================================================================
+\section{Dopo il 1507: Cosa Succede Davvero}
+\label{sec:dopo}
+% =============================================================================
+
+\begin{multicols}{2}
+
+Questa sezione rompe la quarta parete della fiction. I giocatori che
+hanno appena vissuto la notte del 1507 meritano di sapere cosa è
+accaduto davvero ai protagonisti storici.
+
+\subsubsection{Andrea Doria — il personaggio che mancava}
+
+% @ohm:Actor { "id": "genova:andrea-doria",
+%   "label": "Andrea Doria",
+%   "type": "ohm:Person", "timespan": "1466/1560",
+%   "ohm:significance": "Ammiraglio, poi principe di Melfi" }
+
+Il vero Andrea Doria nel 1507 ha quarantun anni ed è già un comandante
+navale affermato. Combatte per i Fieschi, poi per il Papa, poi per
+la Francia, poi per la Spagna. Nel \textbf{1528} cambia definitivamente
+campo: porta Genova dalla parte di Carlo~V d'Asburgo, ottiene il titolo
+di \textit{principe di Melfi}, e di fatto governa la Repubblica fino
+alla morte nel \textbf{1560}. È il personaggio più importante della
+storia genovese del XVI secolo — ed è intenzionalmente assente dalla
+vostra sessione perché il suo destino era già scritto.
+
+\columnbreak
+
+\subsubsection{I Fieschi — la ribellione mancata}
+
+% @ohm:Event { "id": "genova:congiura-fieschi", "date": "1547",
+%   "label": "Congiura dei Fieschi contro i Doria",
+%   "type": "ohm:MilitaryEvent" }
+
+Nel \textbf{1547} Gian Luigi Fieschi — nipote del Niccolò del vostro
+gioco — tenta un colpo di stato contro Andrea Doria. La congiura
+fallisce per caso: Fieschi annegò cadendo in mare da una passerella
+durante la notte del golpe. L'episodio ispira il \textit{Fiesco} di
+Schiller (1783). I Fieschi perdono quasi tutto dopo il 1547.
+
+\subsubsection{Gli Spinola — la continuità del potere}
+
+Gli Spinola sopravvivono a tutto. Nel XVII e XVIII secolo sono tra
+le famiglie più potenti d'Europa, con rami in Spagna, Fiandre, e
+nell'Impero. Il loro modello — capitale finanziario, rete diplomatica,
+adattamento al vincitore di turno — si rivela il più duraturo.
+
+\subsubsection{I Grimaldi — Monaco oggi}
+
+% @ohm:Actor { "id": "genova:grimaldi-monaco",
+%   "label": "Casa Grimaldi di Monaco",
+%   "type": "ohm:Dynasty", "timespan": "1297/" }
+
+La casa Grimaldi governa il Principato di Monaco ancora oggi. È la
+conseguenza diretta della politica di doppio gioco che il vostro
+tavolo Grimaldi ha simulato questa sera. La loro strategia — mantenere
+l'autonomia cedendo il minimo indispensabile alla potenza dominante —
+funzionò per cinquecento anni.
+
+\end{multicols}
+
+% =============================================================================
+\section{Genova come Spazio Geografico: I Sestieri nel 1507}
+\label{sec:geografia}
+% =============================================================================
+
+% @ohm:Place { "id": "genova:CittaDiGenova",
+%   "label": "Genova", "type": "ohm:City",
+%   "geo:lat": 44.4056, "geo:long": 8.9463,
+%   "ohm:accuracy": "high",
+%   "ohm:timespan": "ancient/" }
+
+Genova nel 1507 è organizzata in \textbf{sei sestieri}, ognuno con la
+propria identità sociale, le proprie chiese di riferimento, e le proprie
+famiglie dominanti. La topografia condiziona la tattica della rivolta:
+chi controlla quale sestiere determina chi controlla la città.
+
+\begin{center}
+\rowcolors{2}{LightBG}{white}
+\begin{tabularx}{\textwidth}{L{2.5cm} L{3cm} L{2.5cm} X}
+  \toprule
+  \textbf{Sestiere} & \textbf{Posizione} & \textbf{Famiglia dom.} & \textbf{Carattere} \\
+  \midrule
+
+  % @ohm:Place { "id": "genova:sestiere-pre",
+  %   "label": "Sestiere di Prè", "type": "ohm:District",
+  %   "geo:lat": 44.4080, "geo:long": 8.9170,
+  %   "ohm:accuracy": "approximate",
+  %   "ohm:partOf": "genova:CittaDiGenova" }
+  \textbf{Prè} & Ovest, porto vecchio & Doria & Marinai, arsenali, pescatori. Cuore della resistenza popolare. \\
+
+  % @ohm:Place { "id": "genova:sestiere-portoria",
+  %   "label": "Sestiere di Portoria", "type": "ohm:District",
+  %   "geo:lat": 44.4065, "geo:long": 8.9420,
+  %   "ohm:accuracy": "approximate" }
+  \textbf{Portoria} & Centro-est & Fieschi & Artigiani, botteghe, la base popolare dei Fieschi. \\
+
+  % @ohm:Place { "id": "genova:sestiere-san-giovanni",
+  %   "label": "Sestiere di San Giovanni", "type": "ohm:District",
+  %   "geo:lat": 44.4095, "geo:long": 8.9280,
+  %   "ohm:accuracy": "approximate" }
+  \textbf{San Giovanni} & Centro, porto & Spinola & Mercanti, banchieri, il cuore finanziario. \\
+
+  % @ohm:Place { "id": "genova:sestiere-san-lorenzo",
+  %   "label": "Sestiere di San Lorenzo", "type": "ohm:District",
+  %   "geo:lat": 44.4071, "geo:long": 8.9320,
+  %   "ohm:accuracy": "approximate" }
+  \textbf{San Lorenzo} & Centro storico & Fieschi & La cattedrale, il palazzo ducale, il potere civile e religioso. \\
+
+  % @ohm:Place { "id": "genova:sestiere-castello",
+  %   "label": "Sestiere di Castello", "type": "ohm:District",
+  %   "geo:lat": 44.4060, "geo:long": 8.9380,
+  %   "ohm:accuracy": "approximate" }
+  \textbf{Castello} & Est, collina & Doria/Spinola & Nobiltà mista, palazzi, posizione difensiva elevata. \\
+
+  % @ohm:Place { "id": "genova:sestiere-soziglia",
+  %   "label": "Sestiere di Soziglia", "type": "ohm:District",
+  %   "geo:lat": 44.4082, "geo:long": 8.9350,
+  %   "ohm:accuracy": "approximate" }
+  \textbf{Soziglia} & Centro-nord & Grimaldi & Commercio internazionale, fondachi stranieri, zona di transito. \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{multicols}{2}
+
+\subsection{I Luoghi Chiave della Rivolta}
+
+% @ohm:Place { "id": "genova:SanLorenzo",
+%   "label": "Cattedrale di San Lorenzo",
+%   "type": "ohm:ReligiousBuilding",
+%   "geo:lat": 44.4071, "geo:long": 8.9316,
+%   "ohm:accuracy": "high",
+%   "ohm:significance": "Centro spirituale e politico della rivolta" }
+
+\textbf{Cattedrale di San Lorenzo} — Le campane di San Lorenzo sono
+il segnale della rivolta. La cattedrale è anche il luogo dove si tengono
+le assemblee civiche informali. Chi controlla San Lorenzo controlla il
+\textit{simbolo} della città.
+
+% @ohm:Place { "id": "genova:PalazzoDucale",
+%   "label": "Palazzo Ducale",
+%   "type": "ohm:GovernmentBuilding",
+%   "geo:lat": 44.4068, "geo:long": 8.9337,
+%   "ohm:accuracy": "high" }
+
+\textbf{Palazzo Ducale} — Sede del governo formale. Nel 1507 è
+occupato dall'amministrazione francese. Chi lo controlla alla fine
+della rivolta tiene in mano il potere esecutivo.
+
+\columnbreak
+
+% @ohm:Place { "id": "genova:Porto",
+%   "label": "Porto di Genova",
+%   "type": "ohm:Harbour",
+%   "geo:lat": 44.4063, "geo:long": 8.9237,
+%   "ohm:accuracy": "high" }
+
+\textbf{Porto} — Il cuore economico. Le galee dei Doria vi sono
+ancorate. Chi controlla il porto controlla i rifornimenti e la fuga
+— sia dei francesi che dei rivoluzionari sconfitti.
+
+% @ohm:Place { "id": "genova:Molo",
+%   "label": "Il Molo (molo principale)",
+%   "type": "ohm:Infrastructure",
+%   "geo:lat": 44.4046, "geo:long": 8.9268,
+%   "ohm:accuracy": "approximate" }
+
+\textbf{Il Molo} — Il molo principale, punto di controllo per
+tutte le merci in entrata e uscita. Tassato dai francesi, presidiato
+da una guarnigione mista.
+
+\end{multicols}
+
+% =============================================================================
+\section{Genova come Evento di Public History}
+\label{sec:public-history}
+% =============================================================================
+
+\begin{rulebox}[GoldRPG]{Per Organizzatori e Facilitatori}
+Questo gioco è progettato per funzionare come \textbf{evento di public
+history} — un formato in cui la partecipazione ludica diventa un veicolo
+per la comprensione storica. Alcune indicazioni pratiche:
+
+\medskip
+\textbf{Prima della sessione (30 minuti):}
+Illustrare brevemente il contesto storico usando la cronologia in
+\S\ref{sec:rivolta-cronologia}. Non è necessario che i giocatori
+conoscano ogni dettaglio — l'obiettivo è dare una \textit{sensazione
+di autenticità} che rende le scelte significative.
+
+\medskip
+\textbf{Durante la sessione:}
+I GM possono introdurre dettagli storici come informazioni in-game:
+un PNG che menziona le perdite commerciali dopo Caffa,
+una lettera che cita le tasse di Luigi~XII. La fiction e la storia
+si rinforzano a vicenda.
+
+\medskip
+\textbf{Dopo la sessione (45 minuti):}
+Debrief strutturato in due parti:
+\begin{enumerate}
+  \item \textit{Cosa è successo nel gioco?} — ogni tavolo racconta il proprio epilogo.
+  \item \textit{Cosa è successo davvero?} — confronto con la cronologia reale
+        (\S\ref{sec:dopo}). I giocatori scoprono cosa è accaduto ai
+        ``loro'' personaggi storici nei decenni successivi.
+\end{enumerate}
+
+\medskip
+\end{rulebox}

@@ -1,0 +1,300 @@
+% =============================================================================
+% SECTION: Introduzione e Regole Globali
+% @rpg-schema: <genova1507:> a fitd:Game ;
+%   rdfs:label "Genova 1507 — La Rivolta contro la Francia" ;
+%   fitd:basedOn fitd:BladesInTheDark ;
+%   rpg:setting "Genova, 1507" ;
+%   rpg:playerCount "16-20" ;
+%   rpg:sessionType "one-shot multi-table" .
+% =============================================================================
+
+\chapter{Il Contesto Storico}
+\label{ch:contesto}
+
+% @rpg-schema: genova1507:Setting a rpg:Setting ;
+%   rpg:year "1507" ;
+%   rpg:location "Genova, Repubblica di Genova" ;
+%   rpg:historicalEvent "Rivolta anti-francese del 1507" .
+
+\begin{multicols}{2}
+
+\noindent\textbf{Genova, 1507.} La \idx{Superba} è sotto il tallone francese da quasi un decennio.
+Luigi~XII tiene la città con governatori stranieri, tasse oppressive e guarnigioni che umiliano i cittadini.
+Ma la pazienza ha un limite.
+
+Le grandi famiglie genovesi — divise da secoli di rivalità tra \idx{guelfi} e \idx{ghibellini},
+tra terra e mare — si trovano davanti a una scelta: chi guiderà la \idx{rivolta},
+chi la saborderà per trarne vantaggio, chi venderà la propria anima alla Francia per sopravvivere?
+
+In questa sessione, ogni tavolo interpreta una delle quattro grandi \idx{casate}.
+Il destino di Genova si deciderà nelle prossime ore.
+
+\columnbreak
+
+\begin{rulebox}{Nota Storica}
+La rivolta del 1507 è storicamente documentata: i genovesi insorsero contro il governatore
+francese Gian Giacomo Trivulzio, assediarono il castello di Castelletto, e ottennero
+temporaneamente l'autonomia. Luigi~XII intervenne militarmente nel maggio 1507,
+riprendendo la città. Questo gioco esplora lo spazio narrativo di quella notte.
+\end{rulebox}
+
+\end{multicols}
+
+% =============================================================================
+\chapter{Struttura di Gioco}
+\label{ch:struttura}
+% =============================================================================
+
+% @rpg-schema: genova1507: rpg:sessionDuration "3 ore" .
+
+\begin{rulebox}[GoldRPG]{Durata consigliata: 3 ore}
+L'intera sessione --- tutti i tavoli simultaneamente --- è calibrata per
+\textbf{circa 3 ore} di gioco effettivo. Il clock a 8 segmenti e la
+struttura in due colpi (Riservato + Globale) sono progettati per
+risolversi entro questo arco temporale con 4 tavoli attivi.
+\end{rulebox}
+
+\section{Il Clock Condiviso}
+\label{sec:clock}
+
+% @rpg-schema: genova1507:ControlloGenova a fitd:ProgressClock ;
+%   rdfs:label "Controllo di Genova" ;
+%   fitd:segments "8" ;
+%   fitd:shared "true" ;
+%   rpg:description "Clock condiviso tra tutti i tavoli — rappresenta l'avanzare della rivolta" .
+
+Al centro di tutte le sessioni esiste un unico \idxbold{Clock condiviso} a 8 segmenti:
+\textbf{Il Controllo di Genova}.
+
+\clocktrack[GoldRPG]{CONTROLLO DI GENOVA \ \ [clock condiviso --- aggiornato dal GM coordinatore]}{0}{8}
+
+\textit{\small Il clock a 8 segmenti è pensato per essere completato in
+\textbf{circa 3 ore} di sessione — circa 45 minuti per ogni «fase» narrativa
+(segmenti 1–2, 3–4, 5–6, 7–8).}
+
+\begin{multicols}{2}
+
+\subsection{Interpretazione dei Segmenti}
+
+\begin{itemize}
+  \item[\textbf{1–2}] La Francia è salda. Le famiglie si muovono nell'ombra.
+  \item[\textbf{3–4}] La rivolta fermenta. I francesi cominciano a sospettare.
+  \item[\textbf{5–6}] Genova è in fiamme. I quartieri scelgono i loro campioni.
+  \item[\textbf{7}]   Il governatore francese fugge o chiede rinforzi.
+  \item[\textbf{8}]   \textbf{GENOVA È LIBERA} — ma chi la governa?
+\end{itemize}
+
+\columnbreak
+
+\subsection{Il Clock Avanza Quando}
+
+\begin{itemize}
+  \item Una famiglia completa il \idx{Colpo Riservato} con successo \textbf{(+2)}
+  \item Un tavolo partecipa con successo al \idx{Colpo Globale} \textbf{(+1 per tavolo)}
+  \item Tiro eccezionale su azione narrativa rilevante \textbf{(+1, GM)}
+\end{itemize}
+
+\subsection{Il Clock Arretra Quando}
+
+\begin{itemize}
+  \item Un'interferenza ha successo \textbf{(−1)}
+  \item Un Colpo fallisce con Conseguenze Gravi \textbf{(−1)}
+  \item Una famiglia tradisce ai francesi \textbf{(−2)}
+\end{itemize}
+
+\end{multicols}
+
+% =============================================================================
+\section{I Due Colpi}
+\label{sec:colpi}
+% =============================================================================
+
+% @rpg-schema: genova1507:ColpoRiservato a fitd:Mission ;
+%   rdfs:label "Colpo Riservato" ;
+%   fitd:exclusive "true" ;
+%   fitd:clockAdvance "+2" .
+
+% @rpg-schema: genova1507:ColpoGlobale a fitd:Mission ;
+%   rdfs:label "La Notte dei Vespri Genovesi" ;
+%   fitd:shared "true" ;
+%   fitd:activationCondition "clock >= 4" ;
+%   fitd:clockAdvance "+3 se 3+ successi, +1 se 2, -1 se ≤1" .
+
+\begin{multicols}{2}
+
+\begin{rulebox}[GoldRPG]{Il Colpo Riservato}
+Ogni famiglia ha un Colpo Riservato unico, che solo lei può eseguire.
+Riflette le risorse, i contatti e la storia specifica della casata.
+
+\medskip
+\textbf{Ricompensa:} +2 al Clock Condiviso se completato.
+
+\medskip
+Non richiede coordinazione con gli altri tavoli, ma può essere
+\textbf{sabotato} da un'altra famiglia tramite Interferenza.
+\end{rulebox}
+
+\columnbreak
+
+\begin{rulebox}[GoldRPG]{Il Colpo Globale: La Notte dei Vespri Genovesi}
+Disponibile per tutti i tavoli simultaneamente.
+Si attiva quando il clock raggiunge \textbf{4 segmenti}.
+
+\medskip
+\textbf{Scenario:} Far suonare le campane di San Lorenzo al segnale
+concordato, scatenando l'insurrezione popolare.
+
+\medskip
+Ogni famiglia esegue il proprio ruolo nel Colpo.
+\begin{itemize}
+  \item \textbf{3+ successi:} +3 al clock
+  \item \textbf{2 successi:} +1 al clock
+  \item \textbf{≤1 successo:} −1 al clock
+\end{itemize}
+
+Un tavolo può scegliere di \textbf{Ostacolare} invece di collaborare
+(vedi §\ref{sec:interferenza}).
+\end{rulebox}
+
+\end{multicols}
+
+% =============================================================================
+\section{Regola di Interferenza}
+\label{sec:interferenza}
+% =============================================================================
+
+% @rpg-schema: genova1507:Interferenza a fitd:Rule ;
+%   rdfs:label "Interferenza" ;
+%   rpg:trigger "Colpo di un altro tavolo" ;
+%   rpg:frequency "una volta per sessione per famiglia" .
+
+Una famiglia può tentare di ostacolare il Colpo di un'altra famiglia
+\textbf{una volta per sessione}. Il processo è il seguente:
+
+\begin{enumerate}
+  \item \textbf{Dichiarazione:} Il tavolo interferente lo comunica al GM coordinatore,
+        che informa il GM del tavolo bersaglio.
+  \item \textbf{Tiro di Interferenza:} La famiglia interferente tira su
+        \textsc{Intrigo} o \textsc{Forza} a seconda del metodo.
+        La famiglia bersaglio può contrapporre con \textsc{Attenzione}.
+  \item \textbf{Conseguenze:}
+  \begin{itemize}
+    \item \textit{Successo pieno:} il Colpo bersaglio perde 1 segmento o una Risorsa.
+    \item \textit{Successo parziale:} entrambe le famiglie pagano un prezzo.
+    \item \textit{Fallimento:} la famiglia interferente subisce una Complicazione.
+  \end{itemize}
+\end{enumerate}
+
+% =============================================================================
+\section{Risorse di Famiglia}
+\label{sec:risorse}
+% =============================================================================
+
+% @rpg-schema: genova1507:Moneta a fitd:Resource ;
+%   rdfs:label "Moneta" ; fitd:scale "0-6" .
+% @rpg-schema: genova1507:Reputazione a fitd:Resource ;
+%   rdfs:label "Reputazione" ; fitd:scale "0-6" .
+% @rpg-schema: genova1507:Influenza a fitd:Resource ;
+%   rdfs:label "Influenza" ; fitd:scale "0-6" .
+% @rpg-schema: genova1507:Soldati a fitd:Resource ;
+%   rdfs:label "Soldati" ; fitd:scale "0-6" ; fitd:consumable "true" .
+
+\begin{center}
+\begin{tabular}{L{2.8cm} C{1.5cm} p{9cm}}
+  \toprule
+  \textbf{Risorsa} & \textbf{Scala} & \textbf{Descrizione} \\
+  \midrule
+  \idx{Moneta}      & 0–6 & Denaro per corruzione, equipaggiamento, alleanze. \\
+  \idx{Reputazione} & 0–6 & Peso politico. Influenza i tiri sociali. \\
+  \idx{Influenza}   & 0–6 & Accesso a informazioni e favori pendenti. \\
+  \idx{Soldati}     & 0–6 & Uomini armati disponibili. \textit{Consumabili.} \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+% =============================================================================
+\section{Il Sistema di Tiro (FitD)}
+\label{sec:tiro}
+% =============================================================================
+
+% @rpg-schema: genova1507:SistemaDiTiro a fitd:MechanicSystem ;
+%   rdfs:label "Sistema di Tiro FitD" ;
+%   owl:equivalentClass fitd:DiceResolution .
+
+\begin{multicols}{2}
+
+\subsection{Assemblare i Dadi}
+
+Si raccolgono d6 pari al valore dell'azione rilevante.
+Si prende il risultato \textbf{più alto}.
+In \idx{Posizione Disperata}, si tira sempre con \textbf{1d}
+indipendentemente dal valore.
+
+\begin{center}
+\rowcolors{2}{LightBG}{white}
+\begin{tabular}{C{1.2cm} p{4.5cm}}
+  \toprule
+  \textbf{Dado} & \textbf{Risultato} \\
+  \midrule
+  \textbf{6}    & Successo pieno. Nessuna complicazione. \\
+  \textbf{4–5}  & Successo parziale. Complicazione. \\
+  \textbf{1–3}  & Fallimento. Complicazione grave. \\
+  \textbf{66}   & Successo critico. Effetto potenziato. \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+\columnbreak
+
+\subsection{Posizioni di Tiro}
+
+\begin{description}[leftmargin=2cm, labelindent=0pt]
+  \item[\idx{Controllata}] Hai il vantaggio. Conseguenze leggere.
+  \item[\idx{Rischiosa}]   Standard. Conseguenze moderate.
+  \item[\idx{Disperata}]   Svantaggio: tiri 1d. Conseguenze gravi,
+                           ma un successo vale il doppio.
+\end{description}
+
+\subsection{Resistenza}
+
+Spendi \textbf{Stress} per resistere alle conseguenze.
+Tira il pool dell'attributo rilevante (Insight / Prowess / Resolve):
+\begin{itemize}
+  \item Con \textbf{6}: 0 stress
+  \item Con \textbf{4–5}: 1 stress
+  \item Con \textbf{1–3}: 2 stress
+\end{itemize}
+
+\end{multicols}
+
+% =============================================================================
+\section{Condizioni di Vittoria}
+\label{sec:vittoria}
+% =============================================================================
+
+% @rpg-schema: genova1507:VittoriaCondition a rpg:WinCondition ;
+%   rpg:primaryCondition "Clock raggiunge 8" ;
+%   rpg:tiebreaker "Reputazione, poi Influenza" .
+
+\begin{rulebox}[GoldRPG]{Il Clock raggiunge 8: GENOVA È LIBERA}
+La famiglia con più \textbf{Reputazione} diventa la casata dominante
+del nuovo governo. In caso di parità, quella con più \textbf{Influenza}.
+In caso di ulteriore parità, epilogo da giocare.
+\end{rulebox}
+
+\medskip
+
+\begin{center}
+\begin{tabular}{L{2.5cm} p{11cm}}
+  \toprule
+  \textbf{Famiglia} & \textbf{Vittoria Secondaria} \\
+  \midrule
+  \textbf{Doria}    & Colpo Riservato completato \textit{e} almeno 3 Soldati a fine sessione:
+                      gestiscono la Marina del nuovo governo. \\
+  \textbf{Spinola}  & Influenza 5+ a fine sessione: gestiscono il Banco della Repubblica. \\
+  \textbf{Fieschi}  & Le campane di San Lorenzo hanno suonato: controllo delle nomine ecclesiastiche. \\
+  \textbf{Grimaldi} & Monaco riconosciuta (Colpo Riservato completato): vittoria autonoma
+                      \textit{indipendente dal Clock}. \\
+  \bottomrule
+\end{tabular}
+\end{center}

@@ -1,0 +1,291 @@
+% =============================================================================
+% SECTION: Historical Context and Global Rules (English)
+% @rpg-schema: <genova1507:> a fitd:Game ;
+%   rdfs:label "Genoa 1507 --- The Revolt Against France" ;
+%   fitd:basedOn fitd:BladesInTheDark ;
+%   rpg:setting "Genoa, 1507" ;
+%   rpg:playerCount "16-20" ;
+%   rpg:sessionType "one-shot multi-table" ;
+%   rpg:sessionDuration "3 hours" .
+% =============================================================================
+
+\chapter{Historical Context}
+\label{ch:context}
+
+\begin{multicols}{2}
+
+\noindent\textbf{Genoa, 1507.} La Superba --- \textit{the Proud One} ---
+has chafed under French occupation for nearly a decade.
+Louis~XII holds the city through foreign governors, oppressive taxation,
+and garrisons that humiliate its citizens at every turn. But patience has limits.
+
+The great Genoese families --- split by centuries of rivalry between
+\idx{Guelphs} and \idx{Ghibellines}, between sea and land --- now face
+a decisive choice: who will \textit{lead} the revolt, who will \textit{sabotage}
+it for personal gain, and who will sell their soul to France to survive?
+
+Tonight, each table plays one of the four great \idx{Houses}.
+The fate of Genoa will be settled before dawn.
+
+\columnbreak
+
+\begin{rulebox}{Historical Note}
+The 1507 revolt is well-documented: the Genoese rose against French governor
+Gian Giacomo Trivulzio, besieged the castle of Castelletto, and briefly
+reclaimed their autonomy. Louis~XII returned militarily in May 1507 and
+retook the city. This game explores the narrative space of that night ---
+the choices that history compressed into a handful of hours.
+\end{rulebox}
+
+\end{multicols}
+
+% =============================================================================
+\chapter{Game Structure}
+\label{ch:structure}
+% =============================================================================
+
+% @rpg-schema: genova1507: rpg:sessionDuration "3 hours" .
+
+\begin{rulebox}[GoldRPG]{Recommended Duration: 3 Hours}
+The entire session --- all tables running simultaneously --- is calibrated
+for \textbf{approximately 3 hours} of actual play. The 8-segment clock and
+two-heist structure (House Heist + Global Heist) are designed to resolve
+within this window with 4 active tables.
+\end{rulebox}
+
+\section{The Shared Clock}
+\label{sec:clock}
+
+% @rpg-schema: genova1507:ControlloGenova a fitd:ProgressClock ;
+%   rdfs:label "Control of Genoa" ;
+%   fitd:segments "8" ;
+%   fitd:shared "true" .
+
+At the centre of every table sits a single \idxbold{Shared Clock}
+with 8 segments: \textbf{Control of Genoa}.
+
+\clocktrack[GoldRPG]{CONTROL OF GENOA \ \ [shared clock --- updated by the Coordinator GM]}{0}{8}
+
+\textit{\small The 8-segment clock is paced for \textbf{roughly 3 hours} ---
+about 45 minutes per narrative phase (segments 1--2, 3--4, 5--6, 7--8).}
+
+\begin{multicols}{2}
+
+\subsection{Reading the Segments}
+
+\begin{itemize}
+  \item[\textbf{1--2}] France holds firm. The houses move in shadow.
+  \item[\textbf{3--4}] The revolt smoulders. French officers grow suspicious.
+  \item[\textbf{5--6}] Genoa is burning. The \textit{sestieri} choose their champions.
+  \item[\textbf{7}]    The French governor flees --- or calls for reinforcements.
+  \item[\textbf{8}]    \textbf{GENOA IS FREE} --- but who governs it?
+\end{itemize}
+
+\columnbreak
+
+\subsection{The Clock Advances When}
+\begin{itemize}
+  \item A house completes its \idx{House Heist} successfully \textbf{(+2)}
+  \item A table contributes to the \idx{Global Heist} \textbf{(+1 per table)}
+  \item An exceptional roll on a narratively significant action \textbf{(+1, GM call)}
+\end{itemize}
+
+\subsection{The Clock Falls Back When}
+\begin{itemize}
+  \item An interference action succeeds \textbf{(--1)}
+  \item A heist fails with Serious Consequences \textbf{(--1)}
+  \item A house betrays the others to the French \textbf{(--2)}
+\end{itemize}
+
+\end{multicols}
+
+% =============================================================================
+\section{The Two Heists}
+\label{sec:heists}
+% =============================================================================
+
+\begin{multicols}{2}
+
+\begin{rulebox}[GoldRPG]{The House Heist}
+Every house has a unique House Heist that only \textit{they} can run.
+It reflects that family's specific resources, contacts, and history.
+
+\medskip
+\textbf{Reward:} +2 to the Shared Clock on success.
+
+\medskip
+No coordination with other tables is required --- but another house
+can attempt to \textbf{Interfere} (see \S\ref{sec:interference}).
+\end{rulebox}
+
+\columnbreak
+
+\begin{rulebox}[GoldRPG]{The Global Heist: The Night of the Genoese Vespers}
+Available to all tables simultaneously. Activates when the clock
+reaches \textbf{4 segments}.
+
+\medskip
+\textbf{Scenario:} Ring the bells of San Lorenzo cathedral at the
+agreed signal, triggering a popular uprising across all \textit{sestieri}.
+
+\medskip
+Every house plays its role. Count the successes:
+\begin{itemize}
+  \item \textbf{3+ successes:} +3 to the clock
+  \item \textbf{2 successes:} +1 to the clock
+  \item \textbf{$\leq$1 success:} --1 to the clock
+\end{itemize}
+
+A table may choose to \textbf{Obstruct} instead of cooperate
+(see \S\ref{sec:interference}).
+\end{rulebox}
+
+\end{multicols}
+
+% =============================================================================
+\section{The Interference Rule}
+\label{sec:interference}
+% =============================================================================
+
+% @rpg-schema: genova1507:Interferenza a fitd:Rule ;
+%   rdfs:label "Interference" ;
+%   rpg:frequency "once per session per house" .
+
+A house may attempt to disrupt another house's Heist \textbf{once per session}.
+The procedure:
+
+\begin{enumerate}
+  \item \textbf{Declaration:} The interfering table informs the Coordinator GM,
+        who notifies the target table's GM.
+  \item \textbf{Interference Roll:} The interfering house rolls
+        \textsc{Intrigue} or \textsc{Force} depending on their method.
+        The target house may counter with an \textsc{Awareness} roll.
+  \item \textbf{Consequences:}
+  \begin{itemize}
+    \item \textit{Full success:} the target Heist loses 1 clock segment or 1 Resource.
+    \item \textit{Partial success:} both houses pay a price.
+    \item \textit{Failure:} the interfering house suffers a Complication.
+  \end{itemize}
+\end{enumerate}
+
+% =============================================================================
+\section{House Resources}
+\label{sec:resources}
+% =============================================================================
+
+\begin{center}
+\begin{tabular}{L{2.8cm} C{1.5cm} p{9cm}}
+  \toprule
+  \textbf{Resource} & \textbf{Scale} & \textbf{Description} \\
+  \midrule
+  \idx{Coin}        & 0--6 & Ready money for bribes, equipment, and alliances. \\
+  \idx{Reputation}  & 0--6 & Political weight in the streets and the palaces. Affects social rolls. \\
+  \idx{Influence}   & 0--6 & Access to privileged information and outstanding favours. \\
+  \idx{Soldiers}    & 0--6 & Armed men at your disposal. \textit{Consumable.} \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+% =============================================================================
+\section{The Dice System (FitD)}
+\label{sec:dice}
+% =============================================================================
+
+\begin{multicols}{2}
+
+\subsection{Building the Pool}
+
+Gather d6s equal to the relevant action rating and take
+the \textbf{highest} result. In \idx{Desperate Position},
+always roll \textbf{1d} regardless of rating.
+
+\begin{center}
+\rowcolors{2}{LightBG}{white}
+\begin{tabular}{C{1.2cm} p{4.5cm}}
+  \toprule
+  \textbf{Die} & \textbf{Result} \\
+  \midrule
+  \textbf{6}   & Full success. No complications. \\
+  \textbf{4--5}& Partial success. Complication. \\
+  \textbf{1--3}& Failure. Serious complication. \\
+  \textbf{66}  & Critical success. Enhanced effect. \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+\columnbreak
+
+\subsection{Positions}
+
+\begin{description}[leftmargin=2.4cm, labelindent=0pt]
+  \item[\idx{Controlled}]  Advantage. Minor consequences.
+  \item[\idx{Risky}]       Standard. Moderate consequences.
+  \item[\idx{Desperate}]   1d fixed. Serious consequences ---
+                           but a success counts double.
+\end{description}
+
+\subsection{Resistance}
+
+Spend \textbf{Stress} to resist consequences.
+Roll the relevant attribute pool (Insight / Prowess / Resolve):
+\begin{itemize}
+  \item \textbf{6}: 0 stress \quad \textbf{4--5}: 1 stress \quad \textbf{1--3}: 2 stress
+\end{itemize}
+
+\end{multicols}
+
+% =============================================================================
+\section{Victory Conditions}
+\label{sec:victory}
+% =============================================================================
+
+\begin{rulebox}[GoldRPG]{The Clock Reaches 8: GENOA IS FREE}
+The house with the most \textbf{Reputation} leads the new government.
+Ties broken by \textbf{Influence}. Further ties trigger a short
+played epilogue.
+\end{rulebox}
+
+\medskip
+
+\begin{center}
+\begin{tabular}{L{2.5cm} p{11cm}}
+  \toprule
+  \textbf{House} & \textbf{Secondary Victory} \\
+  \midrule
+  \textbf{Doria}   & House Heist complete \textit{and} at least 3 Soldiers remaining:
+                     they command the new Republic's navy. \\
+  \textbf{Spinola} & Influence 5+ at session end: they control the Republic's bank. \\
+  \textbf{Fieschi} & The bells of San Lorenzo rang: they hold ecclesiastical appointments. \\
+  \textbf{Grimaldi}& Monaco recognised (House Heist complete): independent victory
+                     \textit{regardless of the clock}. \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+% =============================================================================
+\section{A Note on Language}
+\label{sec:language}
+% =============================================================================
+
+\begin{rulebox}[SharedBrown]{Italian Terms in Play}
+Several Italian words are kept untranslated throughout this document because
+they carry specific cultural weight that English equivalents would flatten.
+
+\begin{center}
+\begin{tabular}{L{3cm} p{9.5cm}}
+  \toprule
+  \textbf{Term} & \textbf{Meaning in context} \\
+  \midrule
+  \textit{sestiere}   & City district (Genoa had six: Prè, Portoria, San Giovanni,
+                        San Lorenzo, Castello, Soziglia). \\
+  \textit{caruggi}    & The narrow medieval alleyways of Genoa's old town ---
+                        a labyrinth that only locals navigate freely. \\
+  \textit{podestà}    & A city's chief magistrate, often an outsider appointed
+                        to ensure impartiality. \\
+  \textit{Maona}      & A Genoese commercial consortium, here used for the
+                        informal council of merchant interests at the harbour. \\
+  \textit{condottiero}& A mercenary captain who commands a hired company. \\
+  \bottomrule
+\end{tabular}
+\end{center}
+\end{rulebox}

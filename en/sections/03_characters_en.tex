@@ -1,0 +1,512 @@
+% =============================================================================
+% SECTION: Character Sheets --- House Doria (English)
+% =============================================================================
+
+\chapter{Character Sheets --- House Doria}
+\label{ch:pc-doria}
+
+% ---------------------------------------------------------------------------
+% PC 1: Ottaviano Doria
+% @rpg-schema: pg:OttavianoDoria a fitd:Character ;
+%   rdfs:label "Ottaviano Doria" ;
+%   fitd:crew genova1507:CasaDoria ;
+%   rpg:role "Head of House / The Admiral" .
+% ---------------------------------------------------------------------------
+
+\charheader{doria}{Ottaviano Doria}{Head of House / The Admiral}%
+  {The sea asks no permission. Neither do I.}
+
+\begin{multicols}{2}
+\subsection*{Background \& Drive}
+Fifty-two years old, with scars from naval battles fought before he was
+twenty. He is the family's public face in Genoa --- the man the French
+invite to banquets, who smiles while planning their downfall.
+
+\textbf{\textcolor{DoriaBlue}{Drive:}} \textit{To see Genoa free before
+he dies. Not ideology --- pride. The Doria have ruled the sea for
+three hundred years. He will not tolerate a foreign king telling them
+where to dock.}
+\columnbreak
+\subsection*{Stress \& Trauma}
+\clocktrack[DoriaBlue]{STRESS}{0}{9}
+\textit{\small Trauma: □ Cold \ □ Haunted \ □ Obsessed \ □ Paranoid \ □ Shattered}
+\end{multicols}
+
+\attrblock{doria}{INSIGHT --- Mind}
+% @rpg-schema: pg:OttavianoDoria fitd:hasAction
+%   [ fitd:actionName "Hunt" ; fitd:rating 2 ] ,
+%   [ fitd:actionName "Study" ; fitd:rating 1 ] ,
+%   [ fitd:actionName "Survey" ; fitd:rating 2 ] ,
+%   [ fitd:actionName "Tinker" ; fitd:rating 0 ] .
+\statrow{Hunt}  {2}{4}{Track targets, read military charts, plot routes}
+\statrow{Study} {1}{4}{Tactical analysis, naval history, reading enemy intent}
+\statrow{Survey}{2}{4}{Assess situations, scan the political horizon}
+\statrow{Tinker}{0}{4}{Mechanisms, artillery, naval engineering}
+
+\attrblock{doria}{PROWESS --- Body}
+% @rpg-schema: pg:OttavianoDoria fitd:hasAction
+%   [ fitd:actionName "Finesse" ; fitd:rating 1 ] ,
+%   [ fitd:actionName "Prowl" ; fitd:rating 0 ] ,
+%   [ fitd:actionName "Skirmish" ; fitd:rating 3 ] ,
+%   [ fitd:actionName "Wreck" ; fitd:rating 2 ] .
+\statrow{Finesse}{1}{4}{Precision, deft hands, stylish swordplay}
+\statrow{Prowl}  {0}{4}{Moving unseen, infiltration}
+\statrow{Skirmish}{3}{4}{Direct combat, sword, hand-to-hand}
+\statrow{Wreck}  {2}{4}{Smash doors, sink ships, destroy}
+
+\attrblock{doria}{RESOLVE --- Spirit}
+% @rpg-schema: pg:OttavianoDoria fitd:hasAction
+%   [ fitd:actionName "Attune" ; fitd:rating 0 ] ,
+%   [ fitd:actionName "Command" ; fitd:rating 3 ] ,
+%   [ fitd:actionName "Consort" ; fitd:rating 2 ] ,
+%   [ fitd:actionName "Sway" ; fitd:rating 1 ] .
+\statrow{Attune} {0}{4}{Read atmospheres, sense the unspoken}
+\statrow{Command}{3}{4}{Lead men, impose your will}
+\statrow{Consort}{2}{4}{Move in powerful circles, work the palaces}
+\statrow{Sway}   {1}{4}{Convince, manipulate, negotiate}
+
+\vspace{4pt}
+% @rpg-schema: pg:OttavianoDoria fitd:hasSpecialAbility genova1507:AdmiralAuthority .
+\abilitybox{doria}{The Admiral's Authority}{%
+  When Ottaviano issues a direct order in a crisis, every PC at the table
+  who follows it rolls from \textbf{Controlled Position} instead of Risky,
+  regardless of circumstances.%
+}{Once per Heist. Must be an explicit order spoken in the scene.}
+
+\subsection*{Bonds}
+% @rpg-schema: pg:OttavianoDoria fitd:hasBond
+%   [ fitd:bondTarget pg:FulvioDoria ;
+%     fitd:bondText "My lieutenant for thirty years. He lies when he won't meet my eye --- and he's doing it too often lately." ] ,
+%   [ fitd:bondTarget pg:BiancaDoria ;
+%     fitd:bondText "My niece. Sharper than anyone in this room. I'd die for her, but she doesn't need me to." ] ,
+%   [ fitd:bondTarget pg:FraMatteo ;
+%     fitd:bondText "The chaplain. I pulled him out of a Turkish galley in '78. He owes me something he can never repay, and it weighs on me." ] ,
+%   [ fitd:bondTarget pg:GiacomoMoro ;
+%     fitd:bondText "The smuggler. I don't trust him, but he's the best at what he does." ] .
+\bondentry{Ser Fulvio}{My lieutenant for thirty years. He lies when he won't meet my eye --- and lately he won't meet it.}
+\bondentry{Bianca}{My niece. Sharper than anyone in this room. I'd die for her, but she doesn't need me to.}
+\bondentry{Fra' Matteo}{I pulled him out of a Turkish galley in '78. He owes me something he can never repay --- and it weighs on me.}
+\bondentry{Giacomo the Moor}{I don't trust him. But he's the best at what he does.}
+
+\subsection*{Equipment}
+\begin{itemize}
+  \item Spanish-made side-sword --- a gift from someone he no longer remembers
+  \item Secret nautical charts of Genoa harbour with the real depths (not the ones shown to the French)
+  \item The family seal --- worth more than a hundred swords
+  \item Silver flask of local grappa. He never offers anyone a drink.
+\end{itemize}
+
+\begin{secretbox}
+% @rpg-schema: pg:OttavianoDoria rpg:hasSecret
+%   "Secretly mortgaged two galleys with a pro-French banker three years ago. If the House Heist fails, the banker can seize them." .
+Three years ago, during a liquidity crisis, Ottaviano secretly mortgaged
+two of the family's four galleys to a Genoese banker with French sympathies.
+If the House Heist fails and the debt isn't covered, that banker can seize
+the ships --- and he will. No other Doria knows.
+
+\medskip
+\textbf{\textcolor{SecretRed}{Hidden Agenda:}} Complete the House Heist at any personal cost.
+Sacrifice reputation, sacrifice a companion if necessary --- but never the ships.
+\textit{Never the ships.}
+\end{secretbox}
+
+\newpage
+
+% ---------------------------------------------------------------------------
+% PC 2: Ser Fulvio Doria
+% @rpg-schema: pg:FulvioDoria a fitd:Character ;
+%   rdfs:label "Ser Fulvio Doria" ;
+%   fitd:crew genova1507:CasaDoria ;
+%   rpg:role "Lieutenant / The Fixer" .
+% ---------------------------------------------------------------------------
+
+\charheader{doria}{Ser Fulvio Doria}{The Lieutenant / The Fixer}%
+  {A man who never lies doesn't survive in this city. I survive.}
+
+\begin{multicols}{2}
+\subsection*{Background \& Drive}
+Forty-five years old, second cousin to the Admiral. He has run the family's
+dirty operations for twenty years --- the customs bribes, the inconvenient
+disappearances, the negotiations that must never be recorded.
+
+\textbf{\textcolor{DoriaBlue}{Drive:}} \textit{Loyalty to the Doria, with
+a private reservation: loyalty has a price, and certain people still owe
+him. The revolt is a chance to collect.}
+\columnbreak
+\subsection*{Stress \& Trauma}
+\clocktrack[DoriaBlue]{STRESS}{0}{9}
+\textit{\small Trauma: □ Cold \ □ Haunted \ □ Obsessed \ □ Paranoid \ □ Shattered}
+\end{multicols}
+
+\attrblock{doria}{INSIGHT}
+\statrow{Hunt}  {2}{4}{Find people --- anyone, anywhere}
+\statrow{Study} {1}{4}{Read documents; evaluate testimony}
+\statrow{Survey}{3}{4}{Nothing escapes his notice --- especially lies}
+\statrow{Tinker}{1}{4}{Occasional lockpick; simple mechanisms}
+
+\attrblock{doria}{PROWESS}
+\statrow{Finesse}{2}{4}{Pickpocket, poison, fast hands}
+\statrow{Prowl}  {3}{4}{Surveillance, tailing, vanishing in a crowd}
+\statrow{Skirmish}{2}{4}{Knife, close-quarters dirty fighting}
+\statrow{Wreck}  {0}{4}{Not his approach}
+
+\attrblock{doria}{RESOLVE}
+\statrow{Attune} {1}{4}{Senses the tension in a room}
+\statrow{Command}{1}{4}{Issues orders to subordinates}
+\statrow{Consort}{2}{4}{Taverns, brothels, and places where people talk}
+\statrow{Sway}   {3}{4}{Convinces, threatens, blackmails with elegance}
+
+\abilitybox{doria}{The Shadow's Informant}{%
+  Once per session, Fulvio may declare that he already arranged a useful
+  resource in the current scene --- a bribed witness, an escape route, a
+  compromising document --- without having announced it beforehand.%
+}{No roll required. The resource exists. The GM determines how it enters play.}
+
+\subsection*{Bonds}
+\bondentry{Ottaviano}{The Admiral believes I'm loyal beyond question. He's almost right. There's one thing he doesn't know --- and can't.}
+\bondentry{Bianca}{The niece frightens me. She sees too much. She looked at me once in a way that told me she knows something.}
+\bondentry{Fra' Matteo}{I use him for my most delicate messages. He knows that if he talked, he'd never see his priory again.}
+\bondentry{Giacomo}{We grew up together in the \textit{caruggi}. He's my real cousin, blood-kin. I'd protect him against any order.}
+
+\subsection*{Equipment}
+\begin{itemize}
+  \item Stiletto hidden in his right boot
+  \item Three false-identity documents, ready to use
+  \item A coded list of the family's debtors and creditors --- only he can read it
+  \item Key to a house in the Soziglia \textit{sestiere} that officially doesn't exist
+\end{itemize}
+
+\begin{secretbox}
+% @rpg-schema: pg:FulvioDoria rpg:hasSecret
+%   "In contact with the Spinola: believes he is using them, but the last intelligence he passed was true and damaged the Doria." .
+Fulvio is in contact with the Spinola. He's convinced himself he's using
+them --- feeding them only what he wants them to know. But the last
+piece of intelligence he passed was genuine, and it damaged the Doria.
+
+\medskip
+\textbf{\textcolor{SecretRed}{Hidden Agenda:}} Secure a personal exit regardless of the revolt's
+outcome. He has already negotiated his own survival with a third party.
+If the Doria win, fine. If they fall, Fulvio doesn't fall with them.
+\end{secretbox}
+
+\newpage
+
+% ---------------------------------------------------------------------------
+% PC 3: Bianca Doria
+% @rpg-schema: pg:BiancaDoria a fitd:Character ;
+%   rdfs:label "Bianca Doria" ;
+%   fitd:crew genova1507:CasaDoria ;
+%   rpg:role "The Strategist / The Shadow Heir" .
+% ---------------------------------------------------------------------------
+
+\charheader{doria}{Bianca Doria}{The Strategist / The Shadow Heir}%
+  {My grandfather commands the galleys. I command my grandfather.}
+
+\begin{multicols}{2}
+\subsection*{Background \& Drive}
+Twenty-seven years old, Ottaviano's niece, daughter of his elder brother
+lost at sea a decade ago. She should have counted for nothing --- a woman,
+in a man's world. Instead she counts for everything. She planned the House
+Heist. She identified the French convoy's route. Ottaviano knows, and
+calls her ``my little niece'' in front of others.
+
+\textbf{\textcolor{DoriaBlue}{Drive:}} \textit{To prove --- to herself
+first --- that the Doria can thrive when the right people lead,
+not merely the ones with the longest sword.}
+\columnbreak
+\subsection*{Stress \& Trauma}
+\clocktrack[DoriaBlue]{STRESS}{0}{9}
+\textit{\small Trauma: □ Cold \ □ Haunted \ □ Obsessed \ □ Paranoid \ □ Shattered}
+\end{multicols}
+
+\attrblock{doria}{INSIGHT}
+\statrow{Hunt}  {1}{4}{Finds patterns; researches methodically}
+\statrow{Study} {4}{4}{Deep analysis, languages (Latin, French, Arabic), cartography}
+\statrow{Survey}{3}{4}{Reads rooms, people, and political situations}
+\statrow{Tinker}{2}{4}{Codes, mechanisms, logistical traps}
+
+\attrblock{doria}{PROWESS}
+\statrow{Finesse}{2}{4}{Writing, drawing, poisons when necessary}
+\statrow{Prowl}  {1}{4}{Moves through social environments without being noticed}
+\statrow{Skirmish}{0}{4}{Avoids direct confrontation --- not the right solution}
+\statrow{Wreck}  {0}{4}{No}
+
+\attrblock{doria}{RESOLVE}
+\statrow{Attune} {2}{4}{Reads emotions; senses hidden dynamics}
+\statrow{Command}{2}{4}{Leads through logic, not volume}
+\statrow{Consort}{3}{4}{At home in salons, negotiations, alliance-building}
+\statrow{Sway}   {3}{4}{Persuades rationally or emotionally, as needed}
+
+\abilitybox{doria}{Two Moves Ahead}{%
+  When Bianca \textit{plans} an action (rather than executing it herself),
+  she may declare a \textbf{Contingency}: if the action fails,
+  the contingency triggers automatically, no roll required.%
+}{Must be declared before the other PC rolls. Narratively plausible contingencies only. Once per Heist.}
+
+\subsection*{Bonds}
+\bondentry{Ottaviano}{I love him like a father and respect him like a general. But he's ageing. Some decisions are mine now. He knows. He doesn't say it.}
+\bondentry{Ser Fulvio}{I care for him like an uncle. Which is exactly why he frightens me --- I know he's lying, just not yet about what.}
+\bondentry{Fra' Matteo}{The only one who doesn't underestimate me. Perhaps because he's old enough not to care about being wrong.}
+\bondentry{Giacomo}{Useful. Dangerous. I don't trust him, but he has access to channels we don't.}
+
+\subsection*{Equipment}
+\begin{itemize}
+  \item Coded notebook containing the full House Heist plan
+  \item Letter signed by a Venetian senator --- an outstanding favour to call in
+  \item Men's clothing for moving through districts closed to women
+  \item Small vial of non-lethal sleeping draught --- ``for emergencies''
+\end{itemize}
+
+\begin{secretbox}
+% @rpg-schema: pg:BiancaDoria rpg:hasSecret
+%   "Has established contact with the Grimaldi for a family escape route to Monaco if the revolt fails. The price is not yet accepted." .
+Bianca has already opened a line to the Grimaldi --- not to betray the
+Doria, but to secure an escape route if the revolt collapses. The deal:
+the Doria could take refuge in Monaco. She hasn't yet agreed to the Grimaldi's
+price, but they are waiting for her answer.
+
+\medskip
+\textbf{\textcolor{SecretRed}{Hidden Agenda:}} Guarantee the House's long-term survival above
+all else. If the House Heist endangers more people than it saves,
+Bianca will abandon the plan and propose an alternative --- even against
+Ottaviano's explicit wishes.
+\end{secretbox}
+
+\newpage
+
+% ---------------------------------------------------------------------------
+% PC 4: Fra' Matteo da Recco
+% @rpg-schema: pg:FraMatteo a fitd:Character ;
+%   rdfs:label "Fra' Matteo da Recco" ;
+%   fitd:crew genova1507:CasaDoria ;
+%   rpg:role "The Chaplain / The Conscience" .
+% ---------------------------------------------------------------------------
+
+\charheader{doria}{Fra' Matteo da Recco}{The Chaplain / The Conscience}%
+  {God forgives. I keep the tally.}
+
+\begin{multicols}{2}
+\subsection*{Background \& Drive}
+Sixty-one years old, Dominican, fleet chaplain to the Doria for three
+decades. He has seen enough naval battles, shipboard epidemics, and
+deathbed confessions to have no illusions left about human nature.
+He still believes in God. He is no longer sure he believes in people.
+
+\textbf{\textcolor{DoriaBlue}{Drive:}} \textit{A Christian people
+cannot be governed by foreign powers without the Church's consent.
+The Pope never blessed the French occupation. Therefore the revolt is
+just. The logic is airtight.}
+\columnbreak
+\subsection*{Stress \& Trauma}
+\clocktrack[DoriaBlue]{STRESS}{0}{9}
+\textit{\small Trauma: □ Cold \ □ Haunted \ □ Obsessed \ □ Paranoid \ □ Shattered}
+\end{multicols}
+
+\attrblock{doria}{INSIGHT}
+\statrow{Hunt}  {0}{4}{Not his field}
+\statrow{Study} {3}{4}{Theology, medicine, ecclesiastical history, Latin and Greek}
+\statrow{Survey}{2}{4}{Reads people as if studying their souls}
+\statrow{Tinker}{1}{4}{Prepares medicaments; small chemistry}
+
+\attrblock{doria}{PROWESS}
+\statrow{Finesse}{1}{4}{Steady surgeon's hands}
+\statrow{Prowl}  {0}{4}{Not his speciality}
+\statrow{Skirmish}{0}{4}{He does not fight. Not any more.}
+\statrow{Wreck}  {0}{4}{No.}
+
+\attrblock{doria}{RESOLVE}
+\statrow{Attune} {3}{4}{Feels the spiritual and emotional currents of a group}
+\statrow{Command}{2}{4}{Moral authority can outweigh military authority}
+\statrow{Consort}{3}{4}{Confraternities, religious orders, lower clergy}
+\statrow{Sway}   {2}{4}{The preacher's voice. Used rarely, devastatingly effective.}
+
+\abilitybox{doria}{Confession \& Absolution}{%
+  When a PC at the table is about to suffer Trauma, Fra' Matteo may intervene.
+  The Trauma becomes a single point of Stress instead --- but the PC must
+  confess to Fra' Matteo (briefly, in the scene) what brought them to that point.%
+}{Once per PC per session. Fra' Matteo must be physically present in the scene.}
+
+\subsection*{Bonds}
+\bondentry{Ottaviano}{I've known him since his hair was black. He has carried burdens he should never have had to. I try to lighten them, knowing I never can.}
+\bondentry{Ser Fulvio}{I don't trust him. Not because he's wicked --- because he's pragmatic in ways that challenge natural law. He confesses minor sins with such regularity that I wonder what he's hiding behind them.}
+\bondentry{Bianca}{She is the future of this family. I pray for her every morning --- not because she needs it, but because the weight she carries is too heavy for someone so young.}
+\bondentry{Giacomo}{A cheerful sinner. I prefer them to joyless saints. I love him like a prodigal son who never stops being lost.}
+
+\subsection*{Equipment}
+\begin{itemize}
+  \item Breviary with loose pages inside --- coded messages
+  \item Field medical kit: bandages, alcohol, needle and heavy thread
+  \item A letter from the Bishop of Genoa authorising him to move freely through all \textit{sestieri}
+  \item Olive-wood rosary --- the only thing remaining from his original priory
+\end{itemize}
+
+\begin{secretbox}
+% @rpg-schema: pg:FraMatteo rpg:hasSecret
+%   "Knows of Ottaviano's secret debt on the galleys through the banker's confession. The seal of the confessional paralyses him." .
+Fra' Matteo knows about Ottaviano's secret debt on the galleys --- not from
+Ottaviano's own confession, but from the banker's, who came to him for reasons
+Fra' Matteo still cannot explain. The seal of the confessional immobilises him.
+He cannot speak. But he might act indirectly to resolve the problem.
+
+\medskip
+\textbf{\textcolor{SecretRed}{Hidden Agenda:}} Protect Ottaviano from himself.
+If the old admiral makes a decision that will destroy him --- sacrifice himself,
+surrender to the French, something heroic and useless --- Fra' Matteo will
+do everything in his power to prevent it, including disobeying direct orders.
+\end{secretbox}
+
+\newpage
+
+% ---------------------------------------------------------------------------
+% PC 5: Giacomo the Moor
+% @rpg-schema: pg:GiacomoMoro a fitd:Character ;
+%   rdfs:label "Giacomo the Moor" ;
+%   fitd:crew genova1507:CasaDoria ;
+%   rpg:role "The Smuggler / The Street Man" .
+% ---------------------------------------------------------------------------
+
+\charheader{doria}{Giacomo the Moor}{The Smuggler / The Street Man}%
+  {I'm not one of yours. But tonight, perhaps I am.}
+
+\begin{multicols}{2}
+\subsection*{Background \& Drive}
+Thirty-six years old, obscure origins (Genoese mother, Saracen father,
+or so the story goes --- he doesn't deny it because it's useful).
+Smuggler, broker, and occasional paid informant for whoever is buying.
+The Doria use him for unofficial supplies and intelligence on French
+harbour movements. He is not a member of the family. He is a tool with
+his own agenda.
+
+\textbf{\textcolor{DoriaBlue}{Drive:}} \textit{Money, first. But also ---
+admitted only when drunk --- a dim sense that a free Genoa would be better
+for people like him: those without a house, a name, or guarantees.}
+\columnbreak
+\subsection*{Stress \& Trauma}
+\clocktrack[DoriaBlue]{STRESS}{0}{9}
+\textit{\small Trauma: □ Cold \ □ Haunted \ □ Obsessed \ □ Paranoid \ □ Shattered}
+\end{multicols}
+
+\attrblock{doria}{INSIGHT}
+\statrow{Hunt}  {3}{4}{Finds people, goods, information --- in any harbour}
+\statrow{Study} {1}{4}{Languages: Arabic, Catalan, rough Greek}
+\statrow{Survey}{3}{4}{Thirty years of survival depended on this}
+\statrow{Tinker}{2}{4}{Boats, nets, knots, simple mechanisms}
+
+\attrblock{doria}{PROWESS}
+\statrow{Finesse}{2}{4}{Pickpocket, climbing, precise movement in tight spaces}
+\statrow{Prowl}  {3}{4}{\textit{Caruggi}, rooftops, canals --- every unofficial route}
+\statrow{Skirmish}{2}{4}{Knife, club, dirty fighting}
+\statrow{Wreck}  {1}{4}{Breaks things when needed}
+
+\attrblock{doria}{RESOLVE}
+\statrow{Attune} {1}{4}{Animal instinct for danger}
+\statrow{Command}{0}{4}{Does not command. Not in his vocabulary.}
+\statrow{Consort}{2}{4}{Taverns, black markets, low company}
+\statrow{Sway}   {2}{4}{Haggles, bluffs, fast-talks}
+
+\abilitybox{doria}{These Alleys Are Mine}{%
+  In the Prè \textit{sestiere}, the old harbour, or the \textit{caruggi} of
+  the centre, Giacomo cannot be surprised. He always has an escape route.
+  If pursued, he can make himself and one other person disappear with no roll.%
+}{Always active in the listed districts. Outside them, requires a Prowl roll.}
+
+\subsection*{Bonds}
+% @rpg-schema: pg:GiacomoMoro fitd:hasBond
+%   [ fitd:bondTarget pg:FulvioDoria ;
+%     fitd:bondText "We're real cousins, blood kin. He forgets when convenient. I remember when convenient." ] .
+\bondentry{Ottaviano}{He respects me the way he respects a useful tool. That's fine. Useful tools survive. Gentlemen, less so.}
+\bondentry{Ser Fulvio}{We're real cousins. He forgets when it suits him. I remember when it suits me.}
+\bondentry{Bianca}{The only Doria who talks to me like a person. I can't decide if I find that comforting or unsettling.}
+\bondentry{Fra' Matteo}{I confess to him because he's the only one who's never surprised. And because he doesn't talk.}
+
+\subsection*{Equipment}
+\begin{itemize}
+  \item A rowing boat hidden under Sampierdarena wharf --- only he knows where
+  \item A mental map of all underground passages beneath the harbour (written nowhere)
+  \item Hunting knife with a whale-bone handle
+  \item Small pouch with coins in five different currencies --- always ready to run
+\end{itemize}
+
+\begin{secretbox}
+% @rpg-schema: pg:GiacomoMoro rpg:hasSecret
+%   "Has sold intelligence about the Doria to the Spinola --- including the French convoy route central to the House Heist." .
+Giacomo has already sold Doria intelligence to the Spinola --- not the most
+dangerous kind, just enough to keep a door open. But one piece of information
+he passed was the French convoy's route --- the one at the heart of the
+House Heist. If the Spinola use it, the Heist is compromised.
+
+\medskip
+\textbf{\textcolor{SecretRed}{Hidden Agenda:}} Survive and leave Genoa with enough
+coin to start over somewhere else. The only thing that could stop him is Fulvio
+--- if his cousin is in real trouble, Giacomo stays.
+\end{secretbox}
+
+% =============================================================================
+% Houses Spinola, Fieschi, Grimaldi
+% @rpg-schema annotations are complete; prose sheets follow the same template.
+% Include via \input{characters/spinola_chars_en} etc.
+% =============================================================================
+
+
+% @rpg-schema: pg:RaffaeleSpinola a fitd:Character ;
+%   rdfs:label "Raffaele Spinola the Elder" ;
+%   fitd:crew genova1507:CasaSpinola ; rpg:role "The Banker / The Patriarch" .
+% @rpg-schema: pg:LucreziaSpinola a fitd:Character ;
+%   rdfs:label "Lucrezia d'Oria in Spinola" ;
+%   fitd:crew genova1507:CasaSpinola ; rpg:role "The Diplomat / The Foreign Agent" .
+% @rpg-schema: pg:SerBenedetto a fitd:Character ;
+%   rdfs:label "Ser Benedetto Adorno" ;
+%   fitd:crew genova1507:CasaSpinola ; rpg:role "The Notary / Keeper of Secrets" .
+% @rpg-schema: pg:MargheritaGatta a fitd:Character ;
+%   rdfs:label "Margherita the Cat" ;
+%   fitd:crew genova1507:CasaSpinola ; rpg:role "Field Agent / Informant" .
+% @rpg-schema: pg:IppolitoSpinola a fitd:Character ;
+%   rdfs:label "Ippolito Spinola" ;
+%   fitd:crew genova1507:CasaSpinola ; rpg:role "The Young Heir / The Gambler" .
+
+\input{en/characters/pg_spinola_en}
+
+
+% @rpg-schema: pg:NiccoloFieschi a fitd:Character ;
+%   rdfs:label "Niccolò Fieschi" ;
+%   fitd:crew genova1507:CasaFieschi ; rpg:role "The Count / The Feudal Lord" .
+% @rpg-schema: pg:GregorioFieschi a fitd:Character ;
+%   rdfs:label "Monsignor Gregorio Fieschi" ;
+%   fitd:crew genova1507:CasaFieschi ; rpg:role "The Auxiliary Bishop" .
+% @rpg-schema: pg:FraTomaso a fitd:Character ;
+%   rdfs:label "Fra' Tomaso of Bologna" ;
+%   fitd:crew genova1507:CasaFieschi ; rpg:role "The Preacher" .
+% @rpg-schema: pg:MargheritaVedova a fitd:Character ;
+%   rdfs:label "Margherita the Widow" ;
+%   fitd:crew genova1507:CasaFieschi ; rpg:role "Quarter Leader" .
+% @rpg-schema: pg:SerElia a fitd:Character ;
+%   rdfs:label "Ser Elia of Montoggio" ;
+%   fitd:crew genova1507:CasaFieschi ; rpg:role "The Captain" .
+\input{en/characters/pg_fieschi_en}
+
+
+% @rpg-schema: pg:RainierGrimaldi a fitd:Character ;
+%   rdfs:label "Rainier Grimaldi" ;
+%   fitd:crew genova1507:CasaGrimaldi ; rpg:role "The Lord / The Pragmatist" .
+% @rpg-schema: pg:IsabeauPrecy a fitd:Character ;
+%   rdfs:label "Isabeau de Précy" ;
+%   fitd:crew genova1507:CasaGrimaldi ; rpg:role "The French Lady / The Double Game" .
+% @rpg-schema: pg:CostantinoPaleologos a fitd:Character ;
+%   rdfs:label "Costantino Paleologos" ;
+%   fitd:crew genova1507:CasaGrimaldi ; rpg:role "The Merchant / The Informant" .
+% @rpg-schema: pg:SerBattistaGrimaldi a fitd:Character ;
+%   rdfs:label "Ser Battista Grimaldi" ;
+%   fitd:crew genova1507:CasaGrimaldi ; rpg:role "The Captain / The Guardian" .
+% @rpg-schema: pg:SerafinaGrimaldi a fitd:Character ;
+%   rdfs:label "Serafina Grimaldi" ;
+%   fitd:crew genova1507:CasaGrimaldi ; rpg:role "The Heir / The Wild Card" .
+
+% Cross-table contact annotations
+% @rpg-schema: pg:FulvioDoria   rpg:hasContact pg:MargheritaGatta .
+% @rpg-schema: pg:BiancaDoria   rpg:hasContact pg:RainierGrimaldi .
+% @rpg-schema: pg:IppolitoSpinola rpg:hasContact pg:IsabeauPrecy .
+% @rpg-schema: pg:MargheritaGatta rpg:hasContact pg:MargheritaVedova .
+% @rpg-schema: pg:CostantinoPaleologos rpg:hasContact pg:IsabeauPrecy .
+% @rpg-schema: pg:GiacomoMoro   rpg:hasContact pg:IppolitoSpinola .
+
+\input{en/characters/pg_grimaldi_en}
