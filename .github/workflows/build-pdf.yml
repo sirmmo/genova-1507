@@ -1,0 +1,73 @@
+name: Build PDFs
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify required font packages
+        # Linux Libertine O / Biolinum O ship with TeX Live's `libertine`
+        # package, which is part of the full scheme baked into texlive/texlive.
+        # DejaVu Sans Mono ships with `dejavu`. We sanity-check rather than
+        # install: a missing font here is a deploy bug, not a runtime one.
+        run: |
+          set -eux
+          apt-get update
+          apt-get install -y --no-install-recommends fontconfig
+          fc-cache -fv
+          fc-list | grep -i "libertine" | head -5 || {
+            echo "Linux Libertine O is missing from the TL image"; exit 1; }
+          fc-list | grep -i "biolinum" | head -5 || {
+            echo "Linux Biolinum O is missing from the TL image"; exit 1; }
+          fc-list | grep -i "dejavu sans mono" | head -3 || {
+            echo "DejaVu Sans Mono is missing from the TL image"; exit 1; }
+
+      - name: Build Italian manual
+        run: |
+          set -eux
+          lualatex -interaction=nonstopmode -halt-on-error main.tex
+          makeindex -s preamble/indexstyle.ist main.idx
+          lualatex -interaction=nonstopmode -halt-on-error main.tex
+          lualatex -interaction=nonstopmode -halt-on-error main.tex
+
+      - name: Build English manual
+        working-directory: en
+        run: |
+          set -eux
+          lualatex -interaction=nonstopmode -halt-on-error main_en.tex
+          makeindex -s ../preamble/indexstyle.ist main_en.idx
+          lualatex -interaction=nonstopmode -halt-on-error main_en.tex
+          lualatex -interaction=nonstopmode -halt-on-error main_en.tex
+
+      - name: Collect PDFs
+        run: |
+          mkdir -p out
+          cp main.pdf            out/genova_1507_it.pdf
+          cp en/main_en.pdf      out/genova_1507_en.pdf
+
+      - name: Upload build artefacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: genova-1507-pdfs
+          path: out/*.pdf
+          if-no-files-found: error
+
+      - name: Attach PDFs to release
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: out/*.pdf
