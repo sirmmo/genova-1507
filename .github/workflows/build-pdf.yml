@@ -46,6 +46,11 @@ jobs:
 
       - name: Build English manual
         working-directory: en
+        # en/main_en.tex \input{preamble/packages}, titlepage_en, shared/...
+        # using paths relative to the project root. TEXINPUTS makes kpathsea
+        # also look in the parent dir (matches the Overleaf behaviour).
+        env:
+          TEXINPUTS: ".:..:"
         run: |
           set -eux
           lualatex -interaction=nonstopmode -halt-on-error main_en.tex
